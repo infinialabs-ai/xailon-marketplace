@@ -1,0 +1,5 @@
+{
+  "name": "adr-writer",
+  "version": "1.0.0",
+  "description": "ADR Document Author. Synthesizes context analysis, alternative research, and tradeoff evaluation results to produce a formal Architecture Decision Record in\u2026"
+}

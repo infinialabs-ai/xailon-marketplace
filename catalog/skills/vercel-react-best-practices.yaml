@@ -1,0 +1,25 @@
+name: vercel-react-best-practices
+kind: skill
+title: Vercel React Best Practices
+summary: Review React and Next.js TSX for component structure, hooks, accessibility, performance and TypeScript
+  patterns, with rules.
+category: web
+tags:
+- react
+- nextjs
+- performance
+source:
+  url: https://github.com/vercel/vercel-plugin.git
+  path: skills/react-best-practices
+  sha: 6db9a2690f204ecc53f355895fcc19851dac0cf6
+license: Apache-2.0
+upstream: https://github.com/vercel/vercel-plugin/tree/main/skills/react-best-practices
+official: true
+rank: 11
+featured: false
+notes: From vercel/vercel-plugin (Apache-2.0); the better-known vercel-labs/agent-skills copy has no licence.
+  Frontmatter carries vercel-plugin hook metadata (pathPatterns, validate) that other agents ignore; nudges
+  toward shadcn/ui + Tailwind. 150 rule files.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

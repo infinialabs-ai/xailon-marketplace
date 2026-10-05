@@ -1,0 +1,19 @@
+name: game-narrative
+kind: recipe
+title: Game Narrative
+summary: Game branch architect. Designs story branching structures, ending variations, flag systems, and
+  consequence frameworks.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/game-narrative
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/05-game-narrative
+official: true
+rank: 5
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

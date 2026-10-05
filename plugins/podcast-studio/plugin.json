@@ -1,0 +1,5 @@
+{
+  "name": "podcast-studio",
+  "version": "1.0.0",
+  "description": "Podcast distribution manager. Generates platform-specific metadata, episode descriptions, promotional copy, social media posts, and newsletter introductions."
+}

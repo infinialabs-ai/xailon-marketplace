@@ -1,0 +1,19 @@
+name: debate-simulator
+kind: recipe
+title: Debate Simulator
+summary: Debate topic analyst. Structures the issues within a topic, identifies core points of contention,
+  and designs the debate framework.
+category: education
+tags:
+- education
+- learning
+- multi-agent
+source: ./plugins/debate-simulator
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/60-debate-simulator
+official: true
+rank: 60
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

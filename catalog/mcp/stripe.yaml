@@ -1,0 +1,24 @@
+name: stripe
+kind: mcp
+title: Stripe
+summary: Search and call Stripe API methods (customers, payments, invoices, subscriptions, refunds) and
+  search Stripe docs
+category: payments
+tags:
+- stripe
+- payments
+- billing
+- api
+source: ./plugins/stripe
+license: Hosted
+upstream: https://docs.stripe.com/mcp
+official: true
+rank: 11
+featured: false
+notes: 'The hosted server is Stripe''s documented primary path; the MCP server source is no longer in
+  stripe/ai. It uses OAuth on first use and lets you grant access per live account or sandbox. Without
+  OAuth, send an Agent API key as an Authorization: Bearer header. From 2026-10-31, full-access secret
+  keys and non-Agent restricted keys are rejected. Some write actions, such as refunds and outbound payment'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: compliance-checker
+kind: recipe
+title: Compliance Checker
+summary: Remediation planner. Based on gap analysis results, designs specific corrective action plans,
+  schedules, responsibility assignments, and monitoring frameworks.
+category: legal
+tags:
+- legal
+- compliance
+- multi-agent
+source: ./plugins/compliance-checker
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/67-compliance-checker
+official: true
+rank: 67
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

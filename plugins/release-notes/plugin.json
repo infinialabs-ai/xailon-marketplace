@@ -1,0 +1,5 @@
+{
+  "name": "release-notes",
+  "version": "1.0.0",
+  "description": "Draft user-facing release notes from the commits and merged pull requests since the last tag"
+}

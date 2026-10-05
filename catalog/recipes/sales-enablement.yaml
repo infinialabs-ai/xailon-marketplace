@@ -1,0 +1,19 @@
+name: sales-enablement
+kind: recipe
+title: Sales Enablement
+summary: Sales Follow-up Management Expert. Develops post-proposal follow-up schedules, email templates,
+  objection handling scripts, and action plans through to…
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/sales-enablement
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/48-sales-enablement
+official: true
+rank: 48
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

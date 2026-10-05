@@ -1,0 +1,19 @@
+name: legacy-modernizer
+kind: recipe
+title: Legacy Modernizer
+summary: Refactoring strategy expert. Selects optimal refactoring patterns based on legacy analysis results,
+  determines priorities using a risk-impact matrix, and…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/legacy-modernizer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/22-legacy-modernizer
+official: true
+rank: 22
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,22 @@
+name: stripe-upgrade
+kind: skill
+title: Upgrade Stripe
+summary: Upgrade Stripe API versions, webhook endpoints, server SDKs, Stripe.js and mobile SDKs safely.
+category: payments
+tags:
+- stripe
+- upgrade
+- sdk
+source:
+  url: https://github.com/stripe/ai.git
+  path: skills/upgrade-stripe
+  sha: c40002aa6047acaa72e290cdbb22d9b77739d798
+license: MIT
+upstream: https://github.com/stripe/ai/tree/main/skills/upgrade-stripe
+official: true
+rank: 25
+featured: false
+notes: Single SKILL.md.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

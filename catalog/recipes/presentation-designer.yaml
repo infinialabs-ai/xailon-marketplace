@@ -1,0 +1,19 @@
+name: presentation-designer
+kind: recipe
+title: Presentation Designer
+summary: Information architect. Selects charts, graphs, and diagrams that visualize data effectively,
+  and structures complex information into a form the audience can…
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/presentation-designer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/13-presentation-designer
+official: true
+rank: 13
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

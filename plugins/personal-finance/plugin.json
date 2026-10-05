@@ -1,0 +1,5 @@
+{
+  "name": "personal-finance",
+  "version": "1.0.0",
+  "description": "Budget planner. Designs a monthly budget per category based on the financial analysis results, and establishes savings goals and action strategies."
+}

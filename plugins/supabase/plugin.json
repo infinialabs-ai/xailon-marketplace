@@ -1,0 +1,5 @@
+{
+  "name": "supabase",
+  "version": "1.0.0",
+  "description": "Manage Supabase projects: list projects, run SQL, apply migrations, inspect tables, logs, edge functions and config"
+}

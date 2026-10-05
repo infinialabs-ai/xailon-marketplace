@@ -1,0 +1,19 @@
+name: onboarding-system
+kind: recipe
+title: Onboarding System
+summary: Onboarding architect. Designs the onboarding checklist, schedule, milestones, and stakeholder
+  roles from pre-boarding through the first 90 days.
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/onboarding-system
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/91-onboarding-system
+official: true
+rank: 91
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

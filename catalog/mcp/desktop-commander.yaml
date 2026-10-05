@@ -1,0 +1,22 @@
+name: desktop-commander
+kind: mcp
+title: Desktop Commander
+summary: Run terminal commands and long-lived processes, manage processes, and search, read and edit local
+  files.
+category: dev-tools
+tags:
+- terminal
+- shell
+- files
+source: ./plugins/desktop-commander
+license: MIT
+upstream: https://github.com/wonderwhy-er/DesktopCommanderMCP
+official: true
+rank: 18
+featured: false
+notes: Gives the agent unrestricted shell and filesystem access as the user. Sends limited pseudonymous
+  telemetry by default (no file contents, paths or command arguments); can be disabled via its set_config_value
+  tool (telemetryEnabled=false).
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

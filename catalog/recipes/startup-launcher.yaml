@@ -1,0 +1,19 @@
+name: startup-launcher
+kind: recipe
+title: Startup Launcher
+summary: MVP architect. Performs core feature prioritization, technology stack selection, development
+  roadmap creation, and user flow design.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/startup-launcher
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/43-startup-launcher
+official: true
+rank: 43
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

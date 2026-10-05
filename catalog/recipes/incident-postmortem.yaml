@@ -1,0 +1,19 @@
+name: incident-postmortem
+kind: recipe
+title: Incident Postmortem
+summary: Remediation planning expert. Establishes short/mid/long-term countermeasures for root causes
+  and contributing factors, generating actionable action items with…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/incident-postmortem
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/25-incident-postmortem
+official: true
+rank: 25
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

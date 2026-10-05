@@ -1,0 +1,19 @@
+name: database-architect
+kind: recipe
+title: Database Architect
+summary: Migration Manager. Generates DDL scripts, manages migration versioning, designs rollback strategies,
+  creates seed data, and designs zero-downtime migration…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/database-architect
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/19-database-architect
+official: true
+rank: 19
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

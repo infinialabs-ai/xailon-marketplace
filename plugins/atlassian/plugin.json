@@ -1,0 +1,5 @@
+{
+  "name": "atlassian",
+  "version": "1.0.0",
+  "description": "Search, read, create and update Jira issues and Confluence pages, plus other Atlassian Cloud products."
+}

@@ -1,0 +1,19 @@
+name: competency-modeler
+kind: recipe
+title: Competency Modeler
+summary: Competency Architect. Defines competencies based on job analysis results, creates behavioral
+  indicators, and designs proficiency level frameworks.
+category: education
+tags:
+- education
+- learning
+- multi-agent
+source: ./plugins/competency-modeler
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/61-competency-modeler
+official: true
+rank: 61
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

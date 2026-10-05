@@ -1,0 +1,19 @@
+name: patent-drafter
+kind: recipe
+title: Patent Drafter
+summary: Claim drafter. Designs optimal claim scope based on prior art search results and systematically
+  drafts independent and dependent claims.
+category: legal
+tags:
+- legal
+- compliance
+- multi-agent
+source: ./plugins/patent-drafter
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/68-patent-drafter
+official: true
+rank: 68
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

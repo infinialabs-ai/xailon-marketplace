@@ -1,0 +1,19 @@
+name: data-migration
+kind: recipe
+title: Data Migration
+summary: Rollback and emergency response specialist. Develops backup strategies, rollback scripts, emergency
+  procedures, decision trees, and communication plans.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/data-migration
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/34-data-migration
+official: true
+rank: 34
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

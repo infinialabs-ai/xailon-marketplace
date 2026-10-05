@@ -1,0 +1,27 @@
+name: metabase
+kind: mcp
+title: Metabase
+summary: Search Metabase dashboards, cards and databases, run saved questions and SQL queries, and export
+  results.
+category: data
+tags:
+- analytics
+- bi
+- sql
+- dashboards
+source: ./plugins/metabase
+license: MIT
+upstream: https://github.com/jerichosequitin/metabase-mcp
+official: false
+rank: 29
+featured: false
+env:
+  METABASE_URL: Base URL of your Metabase instance, e.g. https://metabase.example.com
+  METABASE_API_KEY: Metabase API key from Admin > Settings > Authentication > API keys
+notes: Metabase also ships an official MCP server built into each instance at https://<your-metabase>/api/metabase-mcp
+  (OAuth, enable in Admin > AI > MCP, all plans), but the URL differs per instance, so a fixed plugin
+  config cannot use it. This community server was chosen instead (MIT, ~90 stars, active). Read-only mode
+  is on by default (METABASE_READ_ONLY_MODE=true). Email/password auth (METABASE_USER_
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

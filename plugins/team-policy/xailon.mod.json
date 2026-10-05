@@ -1,0 +1,12 @@
+{
+  "api_version": 1,
+  "name": "team-policy",
+  "description": "A shared development checklist and lifecycle context.",
+  "panels": [
+    {
+      "id": "checklist",
+      "title": "Team checklist",
+      "markdown": "| Before shipping | Check |\n|---|---|\n| Tests | Run the affected suite |\n| Review | Inspect the diff |\n\n- [ ] Document user-facing changes\n- [ ] Keep credentials out of commits"
+    }
+  ]
+}

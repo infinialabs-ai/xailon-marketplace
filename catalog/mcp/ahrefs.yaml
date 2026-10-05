@@ -1,0 +1,23 @@
+name: ahrefs
+kind: mcp
+title: Ahrefs
+summary: 'Query Ahrefs SEO data: backlinks, keywords, site audit, rank tracking and Brand Radar.'
+category: marketing
+tags:
+- seo
+- backlinks
+- keywords
+source: ./plugins/ahrefs
+license: Hosted
+upstream: https://docs.ahrefs.com/docs/mcp/reference/introduction
+official: true
+rank: 32
+featured: false
+notes: 'Requires a paid Ahrefs plan (Lite or higher). Auth via OAuth, or header ''Authorization: Bearer
+  <MCP key>'' using an MCP key generated under Account Settings -> API Keys (MCP keys differ from API
+  v3 keys). The local npm server @ahrefs/mcp (github ahrefs/ahrefs-mcp-server) is archived and marked
+  outdated by Ahrefs, so it is not used. Ahrefs terms forbid using the endpoint from custom scripts or
+  bridg'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: fullstack-webapp
+kind: recipe
+title: Fullstack Webapp
+summary: System architect. Analyzes requirements and performs system architecture, technology stack selection,
+  DB modeling, and API design.
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/fullstack-webapp
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/16-fullstack-webapp
+official: true
+rank: 16
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

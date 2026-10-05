@@ -1,0 +1,19 @@
+name: design-system
+kind: recipe
+title: Design System
+summary: 'Design token specialist. Systematically designs the foundational tokens of the design system:
+  colors, typography, spacing, shadows, motion, and responsive…'
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/design-system
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/36-design-system
+official: true
+rank: 36
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,5 @@
+{
+  "name": "compliance-checker",
+  "version": "1.0.0",
+  "description": "Remediation planner. Based on gap analysis results, designs specific corrective action plans, schedules, responsibility assignments, and monitoring frameworks."
+}

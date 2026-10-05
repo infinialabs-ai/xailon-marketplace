@@ -1,0 +1,19 @@
+name: newsletter-engine
+kind: recipe
+title: Newsletter Engine
+summary: Newsletter Editor-in-Chief. Performs final review of brand tone consistency, content flow, and
+  layout structure, and finalizes the publish-ready version.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/newsletter-engine
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/03-newsletter-engine
+official: true
+rank: 3
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: strategy-framework
+kind: recipe
+title: Strategy Framework
+summary: Strategy Document Writer. Synthesizes OKR, BSC, and SWOT results to produce the vision & mission
+  statement and strategy execution roadmap.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/strategy-framework
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/47-strategy-framework
+official: true
+rank: 47
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

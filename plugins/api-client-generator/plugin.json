@@ -1,0 +1,5 @@
+{
+  "name": "api-client-generator",
+  "version": "1.0.0",
+  "description": "API spec parser. Parses API specifications in OpenAPI (Swagger), GraphQL SDL, gRPC Proto, and other formats to systematically extract endpoints, models\u2026"
+}

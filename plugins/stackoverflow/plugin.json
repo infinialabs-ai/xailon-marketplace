@@ -1,0 +1,5 @@
+{
+  "name": "stackoverflow",
+  "version": "1.0.0",
+  "description": "Search Stack Overflow questions and fetch full questions, answers and comments by ID"
+}

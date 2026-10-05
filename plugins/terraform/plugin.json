@@ -1,0 +1,5 @@
+{
+  "name": "terraform",
+  "version": "1.0.0",
+  "description": "Look up Terraform Registry providers, modules and policies with docs; optionally manage HCP Terraform or TFE workspaces"
+}

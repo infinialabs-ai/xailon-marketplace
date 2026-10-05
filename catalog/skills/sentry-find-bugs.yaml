@@ -1,0 +1,23 @@
+name: sentry-find-bugs
+kind: skill
+title: Find Bugs
+summary: Review the current branch diff for bugs, security vulnerabilities and code-quality issues with
+  a structured checklist.
+category: dev-tools
+tags:
+- code-review
+- security
+- bugs
+source:
+  url: https://github.com/getsentry/skills.git
+  path: skills/find-bugs
+  sha: d18b7aa8ba878354e5c348310230e652f7690f9c
+license: Apache-2.0
+upstream: https://github.com/getsentry/skills/tree/main/skills/find-bugs
+official: true
+rank: 15
+featured: false
+notes: General-purpose; uses git and gh to get the diff against the default branch.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

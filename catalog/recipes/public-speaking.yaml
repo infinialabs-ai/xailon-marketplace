@@ -1,0 +1,19 @@
+name: public-speaking
+kind: recipe
+title: Public Speaking
+summary: Q&A strategist. Prepares for the question-and-answer session after a presentation by classifying
+  expected questions, and writes the optimal answer strategy and…
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/public-speaking
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/85-public-speaking
+official: true
+rank: 85
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

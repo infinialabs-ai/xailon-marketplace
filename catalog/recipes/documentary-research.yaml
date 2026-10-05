@@ -1,0 +1,19 @@
+name: documentary-research
+kind: recipe
+title: Documentary Research
+summary: Documentary story architect. Converts research results into a 3-act treatment, designing scene
+  division, narrative arc, emotion curves, and sequence structure.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/documentary-research
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/09-documentary-research
+official: true
+rank: 9
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

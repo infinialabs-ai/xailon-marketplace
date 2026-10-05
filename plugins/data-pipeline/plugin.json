@@ -1,0 +1,5 @@
+{
+  "name": "data-pipeline",
+  "version": "1.0.0",
+  "description": "Data quality manager. Performs data profiling, validation rule design, anomaly detection logic, and data lineage tracking to ensure data reliability across the\u2026"
+}

@@ -1,0 +1,19 @@
+name: privacy-engineer
+kind: recipe
+title: Privacy Engineer
+summary: Process designer. Designs the full lifecycle of personal data processing, specifies technical
+  and administrative safeguards, and defines operational processes.
+category: legal
+tags:
+- legal
+- compliance
+- multi-agent
+source: ./plugins/privacy-engineer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/69-privacy-engineer
+official: true
+rank: 69
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

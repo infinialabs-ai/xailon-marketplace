@@ -1,0 +1,24 @@
+name: serena
+kind: mcp
+title: Serena
+summary: 'Semantic code navigation and editing via language servers: find symbols, references and insert
+  or replace code by symbol'
+category: dev-tools
+tags:
+- code
+- lsp
+- refactoring
+- navigation
+source: ./plugins/serena
+license: MIT
+upstream: https://github.com/oraios/serena
+official: true
+rank: 17
+featured: false
+notes: 'LICENCE: v1.7.0 is the last MIT release. On 2026-09-06 (commit 6707cd9b) the repo relicensed the
+  Serena application to GPL-3.0-or-later for v2; the change is not retroactive and the maintainers state
+  all releases up to v1.7.0 / tag mit-final (74c38a65) remain MIT. The repo-level SPDX now reads NOASSERTION,
+  and LICENSE at the v1.7.0 tag is plain MIT. Do NOT bump past v1.7.0 without re-checking the '
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

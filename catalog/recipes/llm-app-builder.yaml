@@ -1,0 +1,19 @@
+name: llm-app-builder
+kind: recipe
+title: Llm App Builder
+summary: RAG pipeline designer. Designs and implements the full RAG pipeline including document processing,
+  chunking, embedding, vector store, retrieval, and reranking.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/llm-app-builder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/41-llm-app-builder
+official: true
+rank: 41
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

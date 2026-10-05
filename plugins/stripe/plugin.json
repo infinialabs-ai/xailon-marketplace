@@ -1,0 +1,5 @@
+{
+  "name": "stripe",
+  "version": "1.0.0",
+  "description": "Search and call Stripe API methods (customers, payments, invoices, subscriptions, refunds) and search Stripe docs"
+}

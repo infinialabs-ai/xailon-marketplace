@@ -1,0 +1,5 @@
+{
+  "name": "serena",
+  "version": "1.0.0",
+  "description": "Semantic code navigation and editing via language servers: find symbols, references and insert or replace code by symbol"
+}

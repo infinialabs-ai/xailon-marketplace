@@ -1,0 +1,24 @@
+name: ibkr
+kind: mcp
+title: Interactive Brokers
+summary: Read IBKR account balances, positions, trades and market data, search contracts and options,
+  and draft order instructions.
+category: finance
+tags:
+- brokerage
+- trading
+- portfolio
+- market-data
+source: ./plugins/ibkr
+license: Hosted
+upstream: https://www.ibkrguides.com/releasenotes/connector-v1.1.5.htm
+official: true
+rank: 33
+featured: false
+notes: 'OAuth 2.1 + PKCE + dynamic client registration; browser sign-in on first use; revoke in Client
+  Portal > Settings > Manage Third-Party Consents. IBKR''s WAF reportedly rejects OAuth discovery/registration
+  requests without a User-Agent header. Trading tools draft order instructions and do not place orders
+  on their own. https://api.ibkr.com/v1/api/mcp also answers but the vendor guide for third-party '
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

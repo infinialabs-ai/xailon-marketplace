@@ -1,0 +1,5 @@
+{
+  "name": "adr",
+  "version": "1.0.0",
+  "description": "Write Architecture Decision Records that capture context, options and consequences"
+}

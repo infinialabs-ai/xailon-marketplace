@@ -1,0 +1,23 @@
+name: vercel-cli
+kind: skill
+title: Vercel CLI
+summary: 'Deploy, inspect and troubleshoot Vercel projects from the CLI: env vars, domains, logs, builds,
+  metrics and teams.'
+category: infra
+tags:
+- vercel
+- deploy
+- cli
+source:
+  url: https://github.com/vercel/vercel.git
+  path: skills/vercel-cli
+  sha: c628be7835e03a965b93e9cf9e2bd5ac2acbf5eb
+license: Apache-2.0
+upstream: https://github.com/vercel/vercel/tree/main/skills/vercel-cli
+official: true
+rank: 17
+featured: false
+notes: Pinned the copy in vercel/vercel (Apache-2.0). A near-identical variant lives in vercel/vercel-plugin.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

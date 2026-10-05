@@ -1,0 +1,5 @@
+{
+  "name": "ml-experiment",
+  "version": "1.0.0",
+  "description": "Training manager. Handles experiment tracking (MLflow/W&B), GPU resource management, training loop implementation, checkpoint management, reproducibility and\u2026"
+}

@@ -1,0 +1,25 @@
+name: sentry-guide
+kind: skill
+title: Sentry Issues
+summary: 'Read-only inspection of Sentry issues and events with the sentry CLI: list recent errors, view
+  events, run root-cause explain.'
+category: observability
+tags:
+- sentry
+- errors
+- monitoring
+source:
+  url: https://github.com/openai/skills.git
+  path: skills/.curated/sentry
+  sha: 49f948faa9258a0c61caceaf225e179651397431
+license: Apache-2.0
+upstream: https://github.com/openai/skills/tree/main/skills/.curated/sentry
+official: false
+rank: 14
+featured: false
+notes: Published by OpenAI, not getsentry. Folder LICENSE.txt Apache-2.0. Tells the user to install the
+  CLI via curl | bash; needs SENTRY_AUTH_TOKEN. Chosen over getsentry sentry-fix-issues/sentry-debug-issue,
+  which link outside their folders.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

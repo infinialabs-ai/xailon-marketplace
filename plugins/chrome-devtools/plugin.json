@@ -1,0 +1,5 @@
+{
+  "name": "chrome-devtools",
+  "version": "1.0.0",
+  "description": "Drive and inspect a live Chrome: navigate, click, fill forms, read console and network, take screenshots, record performance traces."
+}

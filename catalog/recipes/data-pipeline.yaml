@@ -1,0 +1,19 @@
+name: data-pipeline
+kind: recipe
+title: Data Pipeline
+summary: Data quality manager. Performs data profiling, validation rule design, anomaly detection logic,
+  and data lineage tracking to ensure data reliability across the…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/data-pipeline
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/27-data-pipeline
+official: true
+rank: 27
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

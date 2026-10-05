@@ -1,0 +1,5 @@
+{
+  "name": "n8n",
+  "version": "1.0.0",
+  "description": "Look up n8n node docs and templates, and validate, create, update and run workflows on an n8n instance."
+}

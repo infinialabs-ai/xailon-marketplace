@@ -1,0 +1,19 @@
+name: pricing-strategy
+kind: recipe
+title: Pricing Strategy
+summary: Value-based pricing expert. Analyzes perceived customer value (WTP, Willingness to Pay), value
+  drivers, and derives optimal pricing by customer segment.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/pricing-strategy
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/50-pricing-strategy
+official: true
+rank: 50
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

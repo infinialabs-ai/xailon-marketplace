@@ -1,0 +1,19 @@
+name: security-audit
+kind: recipe
+title: Security Audit
+summary: Security consultant. Writes improvement recommendations for discovered vulnerabilities, proposes
+  security architecture, maps findings to frameworks (ISO 27001…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/security-audit
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/28-security-audit
+official: true
+rank: 28
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

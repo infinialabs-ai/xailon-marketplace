@@ -1,0 +1,5 @@
+{
+  "name": "apify",
+  "version": "1.0.0",
+  "description": "Search and run Apify Actors to scrape websites, social media, maps and search engines, and fetch their results and docs."
+}

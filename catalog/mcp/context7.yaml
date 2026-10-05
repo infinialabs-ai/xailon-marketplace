@@ -1,0 +1,16 @@
+name: context7
+kind: mcp
+title: Context7
+summary: Up-to-date, version-specific library documentation pulled into the prompt.
+category: docs
+tags:
+- documentation
+- libraries
+source: ./plugins/context7
+license: MIT
+upstream: https://github.com/upstash/context7
+rank: 3
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

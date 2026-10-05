@@ -1,0 +1,24 @@
+name: cloudflare-wrangler
+kind: skill
+title: Cloudflare Wrangler
+summary: Run and troubleshoot Wrangler CLI commands and configure Workers projects for local dev, previews,
+  deploys and resources.
+category: infra
+tags:
+- cloudflare
+- workers
+- wrangler
+- cli
+source:
+  url: https://github.com/cloudflare/skills.git
+  path: skills/wrangler
+  sha: 41e0d19858946d18af9ee2c2feebbe2e11d829ff
+license: Apache-2.0
+upstream: https://github.com/cloudflare/skills/tree/main/skills/wrangler
+official: true
+rank: 18
+featured: false
+notes: Single SKILL.md; links point to developers.cloudflare.com docs.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

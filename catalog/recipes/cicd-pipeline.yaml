@@ -1,0 +1,19 @@
+name: cicd-pipeline
+kind: recipe
+title: Cicd Pipeline
+summary: CI/CD Pipeline Designer. Designs build, test, security scan, and deployment stages; defines branch
+  strategies (GitFlow, Trunk-based), trigger conditions, and…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/cicd-pipeline
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/20-cicd-pipeline
+official: true
+rank: 20
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

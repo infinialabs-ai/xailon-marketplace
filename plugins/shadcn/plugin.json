@@ -1,0 +1,5 @@
+{
+  "name": "shadcn",
+  "version": "1.0.0",
+  "description": "Browse, search and add shadcn/ui components and blocks from configured registries into the current project"
+}

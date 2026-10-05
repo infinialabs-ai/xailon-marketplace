@@ -1,0 +1,19 @@
+name: language-tutor
+kind: recipe
+title: Language Tutor
+summary: Foreign language curriculum design expert. Designs customized curricula including learning objectives,
+  phased study plans, textbook selection, and milestones…
+category: education
+tags:
+- education
+- learning
+- multi-agent
+source: ./plugins/language-tutor
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/56-language-tutor
+official: true
+rank: 56
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

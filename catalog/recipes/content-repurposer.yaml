@@ -1,0 +1,19 @@
+name: content-repurposer
+kind: recipe
+title: Content Repurposer
+summary: Source content analyst. Analyzes the source's structure, core messages, target audience, and
+  tone, then develops optimal conversion strategies for each output…
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/content-repurposer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/04-content-repurposer
+official: true
+rank: 4
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

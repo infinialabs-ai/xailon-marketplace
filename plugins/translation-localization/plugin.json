@@ -1,0 +1,5 @@
+{
+  "name": "translation-localization",
+  "version": "1.0.0",
+  "description": "Terminology manager. Builds and maintains the translation project's glossary and ensures consistent translation of specialized terms."
+}

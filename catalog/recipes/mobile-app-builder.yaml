@@ -1,0 +1,19 @@
+name: mobile-app-builder
+kind: recipe
+title: Mobile App Builder
+summary: App store deployment manager. Prepares metadata, screenshot guides, privacy policies, and review
+  response strategies needed for App Store Connect and Google…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/mobile-app-builder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/17-mobile-app-builder
+official: true
+rank: 17
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

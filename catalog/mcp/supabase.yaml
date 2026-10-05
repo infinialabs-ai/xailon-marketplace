@@ -1,0 +1,24 @@
+name: supabase
+kind: mcp
+title: Supabase
+summary: 'Manage Supabase projects: list projects, run SQL, apply migrations, inspect tables, logs, edge
+  functions and config'
+category: data
+tags:
+- supabase
+- postgres
+- database
+- backend
+source: ./plugins/supabase
+license: Apache-2.0
+upstream: https://github.com/supabase/mcp
+official: true
+rank: 6
+featured: false
+notes: The hosted server is Supabase's documented primary path; the repo README no longer documents an
+  npx stdio launch. It uses OAuth 2.1 on first use, where you pick the organisation. The URL accepts query
+  options such as project_ref=<ref> and read_only=true to scope access; consider read_only for safety.
+  Read Supabase's MCP security guidance on prompt injection through database contents. The source is
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

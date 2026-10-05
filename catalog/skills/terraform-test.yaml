@@ -1,0 +1,23 @@
+name: terraform-test
+kind: skill
+title: Terraform Test
+summary: 'Write and run Terraform tests (.tftest.hcl): run blocks, assertions, mocked providers and CI
+  integration.'
+category: testing
+tags:
+- terraform
+- testing
+- iac
+source:
+  url: https://github.com/hashicorp/agent-skills.git
+  path: plugins/terraform/skills/terraform-test
+  sha: f706481af9b8fedb66de909f6243ad29601afa0c
+license: MPL-2.0
+upstream: https://github.com/hashicorp/agent-skills/tree/main/plugins/terraform/skills/terraform-test
+official: true
+rank: 26
+featured: false
+notes: Licence MPL-2.0.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

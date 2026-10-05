@@ -1,0 +1,5 @@
+{
+  "name": "llm-app-builder",
+  "version": "1.0.0",
+  "description": "RAG pipeline designer. Designs and implements the full RAG pipeline including document processing, chunking, embedding, vector store, retrieval, and reranking."
+}

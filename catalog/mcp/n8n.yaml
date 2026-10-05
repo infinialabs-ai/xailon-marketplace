@@ -1,0 +1,27 @@
+name: n8n
+kind: mcp
+title: n8n
+summary: Look up n8n node docs and templates, and validate, create, update and run workflows on an n8n
+  instance.
+category: productivity
+tags:
+- automation
+- workflows
+- integrations
+source: ./plugins/n8n
+license: MIT
+upstream: https://github.com/czlonkowski/n8n-mcp
+official: false
+rank: 21
+featured: false
+env:
+  N8N_API_URL: Base URL of your n8n instance, e.g. https://n8n.example.com (only needed for workflow management
+    tools)
+  N8N_API_KEY: n8n API key from Settings > n8n API (only needed for workflow management tools)
+notes: Community server, not by n8n GmbH (~23k stars, commits daily). MCP_MODE, LOG_LEVEL and DISABLE_CONSOLE_OUTPUT
+  are fixed values from the upstream stdio config, and stdout logging would corrupt the protocol. Documentation
+  and validation tools work without N8N_API_URL/N8N_API_KEY. n8n itself offers an instance-level MCP endpoint,
+  but its URL differs per instance.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

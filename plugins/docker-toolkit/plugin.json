@@ -1,0 +1,5 @@
+{
+  "name": "docker-toolkit",
+  "version": "1.0.0",
+  "description": "Single gateway to the MCP servers enabled in Docker's MCP Toolkit, each run in an isolated container with managed secrets."
+}

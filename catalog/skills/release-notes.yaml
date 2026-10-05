@@ -1,0 +1,15 @@
+name: release-notes
+kind: skill
+title: Release Notes
+summary: Draft user-facing release notes from the commits and pull requests since the last tag.
+category: docs
+tags:
+- changelog
+- release
+source: ./plugins/release-notes
+license: Apache-2.0
+rank: 28
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

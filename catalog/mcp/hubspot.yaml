@@ -1,0 +1,23 @@
+name: hubspot
+kind: mcp
+title: HubSpot
+summary: Search, read, create and update HubSpot CRM records such as contacts, companies, deals and tickets.
+category: marketing
+tags:
+- crm
+- sales
+- contacts
+- deals
+source: ./plugins/hubspot
+license: Hosted
+upstream: https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server
+official: true
+rank: 28
+featured: false
+notes: OAuth 2.1 with PKCE only, no token path. HubSpot docs say generic clients must first create an
+  MCP connector in the HubSpot account and use its Client ID and Client secret; dynamic client registration
+  is not documented, so the client needs pre-registered OAuth client support. The local npm package @hubspot/mcp-server
+  (MIT, token-based) is a beta last published 0.4.0 on 2025-06-18 and was not chose
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

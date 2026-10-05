@@ -1,0 +1,5 @@
+{
+  "name": "patent-drafter",
+  "version": "1.0.0",
+  "description": "Claim drafter. Designs optimal claim scope based on prior art search results and systematically drafts independent and dependent claims."
+}

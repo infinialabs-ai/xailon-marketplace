@@ -1,0 +1,23 @@
+name: notion-spec-to-implementation
+kind: skill
+title: Notion Spec to Implementation
+summary: Turn product or tech spec pages in Notion into implementation plans and tracked Notion tasks
+  with acceptance criteria.
+category: project-management
+tags:
+- notion
+- planning
+- specs
+source:
+  url: https://github.com/makenotion/notion-cookbook.git
+  path: skills/claude/spec-to-implementation
+  sha: 74713cb42df8c7c728b789b0b63c577f9f72aef2
+license: MIT
+upstream: https://github.com/makenotion/notion-cookbook/tree/main/skills/claude/spec-to-implementation
+official: true
+rank: 22
+featured: false
+notes: Needs the Notion MCP server connected. Folder contains evaluations/*.json used for skill evals.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

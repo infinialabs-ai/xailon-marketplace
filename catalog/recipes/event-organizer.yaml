@@ -1,0 +1,19 @@
+name: event-organizer
+kind: recipe
+title: Event Organizer
+summary: Promotion lead. Handles per-channel promotion strategy, content creation, registration management,
+  and attendee communication.
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/event-organizer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/89-event-organizer
+official: true
+rank: 89
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,22 @@
+name: cloudflare-workers-best-practices
+kind: skill
+title: Cloudflare Workers Best Practices
+summary: 'Write, review and configure Cloudflare Workers for production: bindings, streaming, config,
+  observability, runtime pitfalls.'
+category: infra
+tags:
+- cloudflare
+- workers
+- serverless
+source:
+  url: https://github.com/cloudflare/skills.git
+  path: skills/workers-best-practices
+  sha: 41e0d19858946d18af9ee2c2feebbe2e11d829ff
+license: Apache-2.0
+upstream: https://github.com/cloudflare/skills/tree/main/skills/workers-best-practices
+official: true
+rank: 12
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: code-reviewer
+kind: recipe
+title: Code Reviewer
+summary: Code Review Synthesizer (QA). Synthesizes style, security, performance, and architecture review
+  results; determines priorities and verifies cross-domain…
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/code-reviewer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/21-code-reviewer
+official: true
+rank: 21
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: rfp-responder
+kind: recipe
+title: Rfp Responder
+summary: Pricing strategy expert. Creates optimal price proposals considering cost estimation, pricing
+  strategy, and competitive positioning.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/rfp-responder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/55-rfp-responder
+official: true
+rank: 55
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

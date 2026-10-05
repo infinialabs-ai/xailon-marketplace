@@ -1,0 +1,19 @@
+name: personal-branding
+kind: recipe
+title: Personal Branding
+summary: Positioning Strategist. Analyzes an individual's strengths, experience, and goals, and designs
+  differentiation points and brand narratives for the target…
+category: docs
+tags:
+- research
+- documentation
+- multi-agent
+source: ./plugins/personal-branding
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/65-personal-branding
+official: true
+rank: 65
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

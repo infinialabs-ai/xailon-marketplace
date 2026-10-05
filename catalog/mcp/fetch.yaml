@@ -1,0 +1,17 @@
+name: fetch
+kind: mcp
+title: Fetch
+summary: Fetch a URL and return it as Markdown for the model to read.
+category: web
+tags:
+- http
+- web
+- markdown
+source: ./plugins/fetch
+license: Apache-2.0 OR MIT
+upstream: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
+rank: 15
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

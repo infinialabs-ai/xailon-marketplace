@@ -1,0 +1,5 @@
+{
+  "name": "cli-tool-builder",
+  "version": "1.0.0",
+  "description": "CLI command designer. Designs subcommand hierarchy, option/argument structure, and UX guidelines. Applies POSIX conventions and modern CLI best practices."
+}

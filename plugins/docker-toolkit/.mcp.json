@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "docker-toolkit": {
+      "command": "docker",
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ]
+    }
+  }
+}

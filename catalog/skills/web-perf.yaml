@@ -1,0 +1,24 @@
+name: web-perf
+kind: skill
+title: Web Performance Audit
+summary: Audit and fix page load and interaction performance, Core Web Vitals and Lighthouse scores for
+  any website.
+category: web
+tags:
+- performance
+- core-web-vitals
+- lighthouse
+source:
+  url: https://github.com/cloudflare/skills.git
+  path: skills/web-perf
+  sha: 41e0d19858946d18af9ee2c2feebbe2e11d829ff
+license: Apache-2.0
+upstream: https://github.com/cloudflare/skills/tree/main/skills/web-perf
+official: true
+rank: 19
+featured: false
+notes: Expects Chrome DevTools MCP; its setup example uses chrome-devtools-mcp@latest (unpinned) - pin
+  it when configuring.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

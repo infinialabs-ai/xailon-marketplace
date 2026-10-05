@@ -1,0 +1,18 @@
+name: web-scraper
+kind: recipe
+title: Web Scraper
+summary: Data manager. Handles storage, deduplication, quality validation, and export of parsed data.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/web-scraper
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/37-web-scraper
+official: true
+rank: 37
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

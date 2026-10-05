@@ -1,0 +1,19 @@
+name: comic-creator
+kind: recipe
+title: Comic Creator
+summary: Comic storyboarder. Develops synopses, breaks scenes into panels, designs panel layouts, and
+  creates storyboards.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/comic-creator
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/07-comic-creator
+official: true
+rank: 7
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

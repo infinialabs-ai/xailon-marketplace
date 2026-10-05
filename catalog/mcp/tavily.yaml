@@ -1,0 +1,25 @@
+name: tavily
+kind: mcp
+title: Tavily
+summary: Web search, page extraction, site crawl and site map tools backed by the Tavily search API
+category: web
+tags:
+- search
+- web
+- crawl
+- extract
+source: ./plugins/tavily
+license: MIT
+upstream: https://github.com/tavily-ai/tavily-mcp
+official: true
+rank: 22
+featured: false
+env:
+  TAVILY_API_KEY: Tavily API key (tvly-...) from app.tavily.com
+notes: 'Tavily also hosts https://mcp.tavily.com/mcp, which takes the key as a ?tavilyApiKey= query parameter
+  or uses OAuth. The local stdio launch was chosen so the key stays in an env var. Usage counts against
+  Tavily API credits, with a free tier. Optional: DEFAULT_PARAMETERS (JSON of default search params) and
+  TAVILY_HUMAN_ID.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

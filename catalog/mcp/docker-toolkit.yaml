@@ -1,0 +1,23 @@
+name: docker-toolkit
+kind: mcp
+title: Docker MCP Toolkit
+summary: Single gateway to the MCP servers enabled in Docker's MCP Toolkit, each run in an isolated container
+  with managed secrets.
+category: infra
+tags:
+- docker
+- gateway
+- containers
+source: ./plugins/docker-toolkit
+license: MIT
+upstream: https://github.com/docker/mcp-gateway
+official: true
+rank: 25
+featured: false
+notes: Uses the vendor-documented 'docker mcp gateway run' CLI plugin, which ships with Docker Desktop
+  (or is installed from docker/mcp-gateway releases); its version is set by that install, not by these
+  args. Enable servers first in Docker Desktop's MCP Toolkit or with 'docker mcp server enable'. A container
+  launch (docker/mcp-gateway:v0.44.1 with the Docker socket and ~/.docker/mcp mounted) is possible
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

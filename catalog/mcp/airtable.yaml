@@ -1,0 +1,23 @@
+name: airtable
+kind: mcp
+title: Airtable
+summary: 'Read and write Airtable bases: list bases and tables, query and filter records, create, update
+  and delete records, edit schema.'
+category: data
+tags:
+- database
+- spreadsheet
+- records
+source: ./plugins/airtable
+license: Hosted
+upstream: https://airtable.com/developers/agents/mcp/getting-started
+official: true
+rank: 27
+featured: false
+notes: 'Official hosted server, available on all plans. OAuth on first use; alternatively send ''Authorization:
+  Bearer <personal access token>'' with a PAT from https://airtable.com/create/tokens. Capabilities follow
+  the user''s base role. A popular unofficial local alternative is npm airtable-mcp-server 1.14.0 (domdomegg/airtable-mcp-server,
+  MIT, needs AIRTABLE_API_KEY).'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

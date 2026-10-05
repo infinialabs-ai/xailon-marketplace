@@ -1,0 +1,23 @@
+name: atlassian
+kind: mcp
+title: Atlassian
+summary: Search, read, create and update Jira issues and Confluence pages, plus other Atlassian Cloud
+  products.
+category: project-management
+tags:
+- jira
+- confluence
+- issues
+- wiki
+source: ./plugins/atlassian
+license: Hosted
+upstream: https://github.com/atlassian/atlassian-mcp-server
+official: true
+rank: 8
+featured: false
+notes: Atlassian Rovo MCP Server, Atlassian Cloud only. OAuth on first use. The GitHub repo (Apache-2.0)
+  holds docs and skills, not server source. The legacy /v1/sse endpoint is no longer supported after 30
+  June 2026.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

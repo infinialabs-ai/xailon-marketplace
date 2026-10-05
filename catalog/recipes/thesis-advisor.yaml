@@ -1,0 +1,19 @@
+name: thesis-advisor
+kind: recipe
+title: Thesis Advisor
+summary: Thesis writing coach. Designs the overall structure of the thesis, drafts each chapter, and strengthens
+  the argumentation.
+category: education
+tags:
+- education
+- learning
+- multi-agent
+source: ./plugins/thesis-advisor
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/58-thesis-advisor
+official: true
+rank: 58
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

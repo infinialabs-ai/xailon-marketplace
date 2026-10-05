@@ -1,0 +1,5 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "Data manager. Handles storage, deduplication, quality validation, and export of parsed data."
+}

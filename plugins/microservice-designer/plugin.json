@@ -1,0 +1,5 @@
+{
+  "name": "microservice-designer",
+  "version": "1.0.0",
+  "description": "Microservice design expert. Maps bounded contexts to services, defines API contracts, and designs data ownership and deployment units."
+}

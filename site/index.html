@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xailon Marketplace</title>
+  <meta name="description" content="Curated plugins, skills, MCP servers and mods for Xailon, each pinned to a reviewed commit.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23161412'/%3E%3Cpath d='M9 9l14 14M23 9L9 23' stroke='%23ff5b1f' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#ledger">Skip to the catalog</a>
+
+  <header class="masthead">
+    <div class="masthead__rail">
+      <span class="mark" aria-hidden="true">✕</span>
+      <span>Xailon</span><span class="rail-sep">/</span><span>Marketplace</span>
+      <span class="rail-spacer"></span>
+      <a id="repo-link" class="rail-link" href="#">Source repository ↗</a>
+    </div>
+    <div class="masthead__body">
+      <div class="masthead__title">
+        <p class="eyebrow" id="manifest-no">Manifest</p>
+        <h1 id="title">Xailon Marketplace</h1>
+        <p class="lede" id="description"></p>
+      </div>
+      <aside class="hookup" aria-labelledby="hookup-title">
+        <h2 id="hookup-title" class="hookup__title">Connect once</h2>
+        <p class="hookup__text">Add this marketplace to Xailon, then install anything below by name.</p>
+        <div class="cmd" data-copy-target>
+          <code id="add-command">xailon plugin marketplace add …</code>
+          <button class="copy" type="button" aria-label="Copy command">Copy</button>
+        </div>
+        <p class="hookup__note">Desktop: <em>Extensions → Plugins &amp; hooks → Add marketplace</em>.</p>
+      </aside>
+    </div>
+    <dl class="tally" id="tally"></dl>
+  </header>
+
+  <main>
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title">Most used</h2>
+        <p>The items teams reach for first, in curator order.</p>
+      </div>
+      <div class="tickets" id="tickets"></div>
+    </section>
+
+    <section class="ledger" id="ledger" aria-labelledby="ledger-title">
+      <div class="section-head">
+        <h2 id="ledger-title">The full ledger</h2>
+        <p>Every entry is pinned to one commit and lists exactly what it runs.</p>
+      </div>
+
+      <div class="controls" role="search">
+        <label class="search">
+          <span class="visually-hidden">Search the catalog</span>
+          <input id="search" type="search" placeholder="Search names, tags, categories" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </label>
+        <div class="kinds" id="kinds" role="tablist" aria-label="Filter by kind"></div>
+        <label class="toggle">
+          <input id="no-code" type="checkbox">
+          <span>Instructions only, no code</span>
+        </label>
+      </div>
+
+      <div class="rows" id="rows" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h2>Curating this marketplace</h2>
+      <p>Items are added by pull request: one YAML file in <code>catalog/</code>, pinned to a full commit SHA, with an allow-listed licence and a named reviewer. <code>npm run check</code> rejects anything else, and regenerates the index Xailon reads.</p>
+    </div>
+    <p class="footer__meta" id="footer-meta"></p>
+  </footer>
+
+  <dialog class="drawer" id="drawer" aria-labelledby="drawer-title">
+    <div class="drawer__inner" id="drawer-body"></div>
+  </dialog>
+
+  <noscript><p class="noscript">This catalog needs JavaScript to render. The raw index is in <a href="catalog.json">catalog.json</a>.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "risk-register",
+  "version": "1.0.0",
+  "description": "Risk monitoring planner. Designs KRIs (key risk indicators), trigger conditions, monitoring cycles, and the review process."
+}

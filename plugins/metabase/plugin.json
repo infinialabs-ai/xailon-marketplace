@@ -1,0 +1,5 @@
+{
+  "name": "metabase",
+  "version": "1.0.0",
+  "description": "Search Metabase dashboards, cards and databases, run saved questions and SQL queries, and export results."
+}

@@ -1,0 +1,24 @@
+name: supabase-postgres
+kind: skill
+title: Supabase Postgres Best Practices
+summary: Postgres schema design, indexing, query performance, RLS and migration guidance maintained by
+  Supabase, for any Postgres.
+category: data
+tags:
+- postgres
+- sql
+- database
+- performance
+source:
+  url: https://github.com/supabase/agent-skills.git
+  path: skills/supabase-postgres-best-practices
+  sha: c9be0e931b7930f7d02126d04774d904c381e7d7
+license: MIT
+upstream: https://github.com/supabase/agent-skills/tree/main/skills/supabase-postgres-best-practices
+official: true
+rank: 9
+featured: false
+notes: Applies to Postgres anywhere, not only Supabase. 34 rule files under references/; markdown only.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

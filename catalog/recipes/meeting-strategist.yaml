@@ -1,0 +1,19 @@
+name: meeting-strategist
+kind: recipe
+title: Meeting Strategist
+summary: Meeting agenda designer. Clearly defines the meeting's purpose and designs the agenda structure,
+  time allocation, participant roles, and facilitation method.
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/meeting-strategist
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/84-meeting-strategist
+official: true
+rank: 84
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

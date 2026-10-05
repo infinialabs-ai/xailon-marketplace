@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "stackoverflow": {
+      "type": "http",
+      "url": "https://mcp.stackoverflow.com"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+name: chrome
+kind: mcp
+title: Chrome MCP (mcp-chrome)
+summary: 'Control your everyday Chrome via an extension: tabs, navigation, clicks, forms, screenshots,
+  network capture, history and bookmarks.'
+category: browser
+tags:
+- chrome
+- extension
+- automation
+source: ./plugins/chrome
+license: MIT
+upstream: https://github.com/hangwin/mcp-chrome
+official: false
+rank: 26
+featured: false
+notes: 'Community project (Chrome has no vendor equivalent besides chrome-devtools). Prerequisites: install
+  the mcp-chrome Chrome extension from the GitHub releases, then ''npm install -g mcp-chrome-bridge@1.0.31''
+  (or ''mcp-chrome-bridge register'') so the extension can start the native host, and click Connect in
+  the extension. The stdio launcher proxies to the native host at http://127.0.0.1:12306/mcp (the '
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

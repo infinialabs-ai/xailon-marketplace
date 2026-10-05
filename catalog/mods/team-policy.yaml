@@ -1,0 +1,17 @@
+name: team-policy
+kind: mod
+title: Team Policy
+summary: A shared pre-ship checklist panel, session context, and a confirmation before deploy tools run.
+category: team
+tags:
+- hooks
+- checklist
+- policy
+source: ./plugins/team-policy
+license: Apache-2.0
+upstream: https://github.com/infinialabs-ai/xailon-marketplace
+rank: 1
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

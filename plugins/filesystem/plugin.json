@@ -1,0 +1,5 @@
+{
+  "name": "filesystem",
+  "version": "1.0.0",
+  "description": "Read, write and search files inside the directories you allow"
+}

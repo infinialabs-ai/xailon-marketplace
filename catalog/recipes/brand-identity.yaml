@@ -1,0 +1,18 @@
+name: brand-identity
+kind: recipe
+title: Brand Identity
+summary: Visual director. Designs the brand color system, typography, logo concepts, and visual guidelines.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/brand-identity
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/06-brand-identity
+official: true
+rank: 6
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

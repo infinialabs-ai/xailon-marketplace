@@ -1,0 +1,5 @@
+{
+  "name": "database-architect",
+  "version": "1.0.0",
+  "description": "Migration Manager. Generates DDL scripts, manages migration versioning, designs rollback strategies, creates seed data, and designs zero-downtime migration\u2026"
+}

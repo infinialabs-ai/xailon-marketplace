@@ -1,0 +1,19 @@
+name: podcast-studio
+kind: recipe
+title: Podcast Studio
+summary: Podcast distribution manager. Generates platform-specific metadata, episode descriptions, promotional
+  copy, social media posts, and newsletter introductions.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/podcast-studio
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/02-podcast-studio
+official: true
+rank: 2
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

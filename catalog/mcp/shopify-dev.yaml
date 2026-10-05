@@ -1,0 +1,24 @@
+name: shopify-dev
+kind: mcp
+title: Shopify Dev
+summary: Search Shopify docs and API schemas, validate GraphQL, Liquid, theme and UI-extension code, and
+  resolve API versions
+category: commerce
+tags:
+- shopify
+- graphql
+- liquid
+- docs
+source: ./plugins/shopify-dev
+license: ISC
+upstream: https://shopify.dev/docs/apps/build/ai-toolkit
+official: true
+rank: 30
+featured: false
+notes: 'Shopify''s developer MCP, not a store or Admin API server. It runs locally with no auth. Licence:
+  the npm package declares ISC and ships an ISC LICENSE (Copyright Shopify Inc.). It has no public source
+  repo: github.com/Shopify/dev-mcp returns 404, so the gh api licence check could not be done; the related
+  Shopify/Shopify-AI-Toolkit repo is MIT. Release builds send usage telemetry, including tool in'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

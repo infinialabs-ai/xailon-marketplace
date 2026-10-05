@@ -1,0 +1,19 @@
+name: api-designer
+kind: recipe
+title: Api Designer
+summary: API Architect. Designs resource modeling, endpoints, URL naming, HTTP method mapping, versioning
+  strategies, pagination, and filtering.
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/api-designer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/18-api-designer
+official: true
+rank: 18
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,19 @@
+name: feedback-analyzer
+kind: recipe
+title: Feedback Analyzer
+summary: Insight report writing expert. Synthesizes sentiment analysis, topic classification, and trend
+  results to produce tailored insight reports for executives and…
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/feedback-analyzer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/93-feedback-analyzer
+official: true
+rank: 93
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

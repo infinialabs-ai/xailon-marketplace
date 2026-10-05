@@ -1,0 +1,22 @@
+name: notion
+kind: mcp
+title: Notion
+summary: Search a Notion workspace and read, create and edit pages and databases in Markdown.
+category: productivity
+tags:
+- notes
+- wiki
+- docs
+- databases
+source: ./plugins/notion
+license: Hosted
+upstream: https://developers.notion.com/docs/mcp
+official: true
+rank: 7
+featured: false
+notes: 'OAuth on first use and respects the user''s Notion permissions. The local makenotion/notion-mcp-server
+  (MIT, npm @notionhq/notion-mcp-server 2.5.2) states in its README that it is no longer actively maintained
+  and points users to the remote server, so it was not chosen. SSE fallback: https://mcp.notion.com/sse.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

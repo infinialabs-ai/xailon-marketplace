@@ -1,0 +1,19 @@
+name: gov-funding-plan
+kind: recipe
+title: Gov Funding Plan
+summary: Budget planner. Performs government R&D budget allocation by cost category, personnel cost calculation,
+  indirect cost estimation, private co-funding…
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/gov-funding-plan
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/45-gov-funding-plan
+official: true
+rank: 45
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,5 @@
+{
+  "name": "debate-simulator",
+  "version": "1.0.0",
+  "description": "Debate topic analyst. Structures the issues within a topic, identifies core points of contention, and designs the debate framework."
+}

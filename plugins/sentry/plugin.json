@@ -1,0 +1,5 @@
+{
+  "name": "sentry",
+  "version": "1.0.0",
+  "description": "Look up Sentry issues, events, stack traces, releases and projects in your organization."
+}

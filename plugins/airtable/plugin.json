@@ -1,0 +1,5 @@
+{
+  "name": "airtable",
+  "version": "1.0.0",
+  "description": "Read and write Airtable bases: list bases and tables, query and filter records, create, update and delete records, edit schema."
+}

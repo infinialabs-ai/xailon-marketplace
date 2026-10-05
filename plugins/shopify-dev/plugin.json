@@ -1,0 +1,5 @@
+{
+  "name": "shopify-dev",
+  "version": "1.0.0",
+  "description": "Search Shopify docs and API schemas, validate GraphQL, Liquid, theme and UI-extension code, and resolve API versions"
+}

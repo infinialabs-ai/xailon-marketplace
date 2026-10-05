@@ -1,0 +1,24 @@
+name: gh-fix-ci
+kind: skill
+title: Fix GitHub CI Failures
+summary: Inspect failing GitHub Actions checks on a PR with the gh CLI, summarise the logs, plan a fix
+  and apply it after approval.
+category: dev-tools
+tags:
+- github
+- ci
+- github-actions
+source:
+  url: https://github.com/openai/skills.git
+  path: skills/.curated/gh-fix-ci
+  sha: 49f948faa9258a0c61caceaf225e179651397431
+license: Apache-2.0
+upstream: https://github.com/openai/skills/tree/main/skills/.curated/gh-fix-ci
+official: false
+rank: 7
+featured: false
+notes: Published by OpenAI (openai/skills .curated), not GitHub. Skill folder LICENSE.txt is Apache-2.0;
+  repo has no root licence. Ships an executable Python helper; needs gh auth.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${HOOK_ROOT}/dist/mod.mjs\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${HOOK_ROOT}/dist/mod.mjs\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

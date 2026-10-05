@@ -1,0 +1,19 @@
+name: course-builder
+kind: recipe
+title: Course Builder
+summary: Curriculum designer. Establishes learning objectives, designs curriculum structure, breaks content
+  into modules and lessons, maps prerequisites, and designs…
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/course-builder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/08-course-builder
+official: true
+rank: 8
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

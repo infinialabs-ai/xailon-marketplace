@@ -1,0 +1,5 @@
+{
+  "name": "chrome",
+  "version": "1.0.0",
+  "description": "Control your everyday Chrome via an extension: tabs, navigation, clicks, forms, screenshots, network capture, history and bookmarks."
+}

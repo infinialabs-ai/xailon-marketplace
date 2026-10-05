@@ -1,0 +1,5 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "description": "Inspect PostgreSQL schemas, run SQL, and check queries, indexes, locks and database health."
+}

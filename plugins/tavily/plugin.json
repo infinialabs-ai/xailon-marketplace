@@ -1,0 +1,5 @@
+{
+  "name": "tavily",
+  "version": "1.0.0",
+  "description": "Web search, page extraction, site crawl and site map tools backed by the Tavily search API"
+}

@@ -1,0 +1,19 @@
+name: real-estate-analyst
+kind: recipe
+title: Real Estate Analyst
+summary: Investment report writing expert. Synthesizes market research, location analysis, profitability,
+  and risk analysis results to produce reports with investment…
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/real-estate-analyst
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/96-real-estate-analyst
+official: true
+rank: 96
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

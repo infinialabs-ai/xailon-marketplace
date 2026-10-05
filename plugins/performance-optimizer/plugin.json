@@ -1,0 +1,5 @@
+{
+  "name": "performance-optimizer",
+  "version": "1.0.0",
+  "description": "Benchmark manager. Designs and runs performance tests, compares and analyzes results before and after optimization, and builds a CI-integrated benchmark system\u2026"
+}

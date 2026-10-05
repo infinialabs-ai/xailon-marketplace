@@ -1,0 +1,5 @@
+{
+  "name": "desktop-commander",
+  "version": "1.0.0",
+  "description": "Run terminal commands and long-lived processes, manage processes, and search, read and edit local files."
+}

@@ -1,0 +1,19 @@
+name: mcp-builder
+kind: skill
+title: MCP Builder
+summary: Guide for designing and building high-quality MCP servers in Python or TypeScript.
+category: dev-tools
+tags:
+- mcp
+- servers
+source:
+  url: https://github.com/anthropics/skills.git
+  path: skills/mcp-builder
+  sha: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+license: Apache-2.0
+upstream: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
+rank: 2
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

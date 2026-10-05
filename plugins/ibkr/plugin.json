@@ -1,0 +1,5 @@
+{
+  "name": "ibkr",
+  "version": "1.0.0",
+  "description": "Read IBKR account balances, positions, trades and market data, search contracts and options, and draft order instructions."
+}

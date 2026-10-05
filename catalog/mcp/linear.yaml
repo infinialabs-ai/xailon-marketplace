@@ -1,0 +1,20 @@
+name: linear
+kind: mcp
+title: Linear
+summary: Find, create and update Linear issues, projects, cycles and comments.
+category: project-management
+tags:
+- issues
+- tickets
+- planning
+source: ./plugins/linear
+license: Hosted
+upstream: https://linear.app/docs/mcp
+official: true
+rank: 9
+featured: false
+notes: 'OAuth 2.1 with dynamic client registration on first use. Alternatively send a Linear API key as
+  ''Authorization: Bearer <key>''. A read-only endpoint exists at https://mcp.linear.app/mcp/readonly.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

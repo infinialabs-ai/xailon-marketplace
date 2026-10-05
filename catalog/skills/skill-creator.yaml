@@ -1,0 +1,19 @@
+name: skill-creator
+kind: skill
+title: Skill Creator
+summary: Create, improve and evaluate skills.
+category: authoring
+tags:
+- skills
+- authoring
+source:
+  url: https://github.com/anthropics/skills.git
+  path: skills/skill-creator
+  sha: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+license: Apache-2.0
+upstream: https://github.com/anthropics/skills/tree/main/skills/skill-creator
+rank: 3
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

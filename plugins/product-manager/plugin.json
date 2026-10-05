@@ -1,0 +1,5 @@
+{
+  "name": "product-manager",
+  "version": "1.0.0",
+  "description": "Sprint Planner. Calculates team capacity, sets sprint goals, allocates stories, manages risks, and designs retrospective templates."
+}

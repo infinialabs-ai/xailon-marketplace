@@ -1,0 +1,5 @@
+{
+  "name": "figma",
+  "version": "1.0.0",
+  "description": "Fetch Figma file and frame layout, styles and components as compact context, and download images, to implement designs in code."
+}

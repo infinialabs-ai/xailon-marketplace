@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "metabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jerichosequitin/metabase-mcp@1.1.7"
+      ],
+      "env": {
+        "METABASE_URL": "${METABASE_URL}",
+        "METABASE_API_KEY": "${METABASE_API_KEY}"
+      }
+    }
+  }
+}

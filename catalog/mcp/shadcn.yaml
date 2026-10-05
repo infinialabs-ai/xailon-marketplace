@@ -1,0 +1,23 @@
+name: shadcn
+kind: mcp
+title: shadcn/ui
+summary: Browse, search and add shadcn/ui components and blocks from configured registries into the current
+  project
+category: design
+tags:
+- ui
+- components
+- react
+- registry
+source: ./plugins/shadcn
+license: MIT
+upstream: https://github.com/shadcn-ui/ui
+official: true
+rank: 19
+featured: false
+notes: Launched through the shadcn CLI's mcp subcommand (ui.shadcn.com/docs/mcp). Works on a project with
+  components.json. Private registries can need tokens such as REGISTRY_TOKEN set in .env.local, as defined
+  by that registry's config. No env is needed for the public registry.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

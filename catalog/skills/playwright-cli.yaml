@@ -1,0 +1,24 @@
+name: playwright-cli
+kind: skill
+title: Playwright CLI
+summary: 'Automate browsers and test web pages with playwright-cli: navigate, fill forms, snapshot, trace,
+  mock requests, generate tests.'
+category: testing
+tags:
+- playwright
+- browser
+- testing
+- e2e
+source:
+  url: https://github.com/microsoft/playwright-cli.git
+  path: skills/playwright-cli
+  sha: b85c7a736bb473bf55b584e54a09ffa698d6d871
+license: Apache-2.0
+upstream: https://github.com/microsoft/playwright-cli/tree/main/skills/playwright-cli
+official: true
+rank: 5
+featured: false
+notes: Requires the @playwright/cli package installed on PATH.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

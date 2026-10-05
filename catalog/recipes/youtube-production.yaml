@@ -1,0 +1,19 @@
+name: youtube-production
+kind: recipe
+title: Youtube Production
+summary: YouTube content strategist. Performs topic analysis, target audience definition, competitive
+  channel benchmarking, content positioning, and video concept…
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/youtube-production
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/01-youtube-production
+official: true
+rank: 1
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

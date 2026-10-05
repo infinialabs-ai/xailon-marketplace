@@ -1,0 +1,5 @@
+{
+  "name": "bi-dashboard",
+  "version": "1.0.0",
+  "description": "KPI designer. Derives key performance indicators from business objectives and defines calculation logic, targets, benchmarks, and drill-down paths."
+}

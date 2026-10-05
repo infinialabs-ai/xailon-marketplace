@@ -1,0 +1,5 @@
+{
+  "name": "notion",
+  "version": "1.0.0",
+  "description": "Search a Notion workspace and read, create and edit pages and databases in Markdown."
+}

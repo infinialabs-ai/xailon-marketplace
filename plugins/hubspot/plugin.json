@@ -1,0 +1,5 @@
+{
+  "name": "hubspot",
+  "version": "1.0.0",
+  "description": "Search, read, create and update HubSpot CRM records such as contacts, companies, deals and tickets."
+}

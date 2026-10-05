@@ -1,0 +1,5 @@
+{
+  "name": "cicd-pipeline",
+  "version": "1.0.0",
+  "description": "CI/CD Pipeline Designer. Designs build, test, security scan, and deployment stages; defines branch strategies (GitFlow, Trunk-based), trigger conditions, and\u2026"
+}

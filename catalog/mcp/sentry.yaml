@@ -1,0 +1,21 @@
+name: sentry
+kind: mcp
+title: Sentry
+summary: Look up Sentry issues, events, stack traces, releases and projects in your organization.
+category: observability
+tags:
+- errors
+- monitoring
+- debugging
+source: ./plugins/sentry
+license: Hosted
+upstream: https://mcp.sentry.dev
+official: true
+rank: 10
+featured: false
+notes: 'OAuth on first use. Can be scoped by path: /mcp/{organizationSlug}/{projectSlug}. The source (getsentry/sentry-mcp,
+  npm @sentry/mcp-server 0.42.0, stdio for self-hosted Sentry) is FSL-1.1-ALv2, which is outside the allowed
+  licences, so only the hosted endpoint is listed.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

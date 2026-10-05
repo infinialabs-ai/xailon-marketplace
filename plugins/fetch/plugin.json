@@ -1,0 +1,5 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "description": "Fetch a URL and return it as Markdown for the model to read"
+}

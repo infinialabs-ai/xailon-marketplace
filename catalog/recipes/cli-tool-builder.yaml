@@ -1,0 +1,19 @@
+name: cli-tool-builder
+kind: recipe
+title: Cli Tool Builder
+summary: CLI command designer. Designs subcommand hierarchy, option/argument structure, and UX guidelines.
+  Applies POSIX conventions and modern CLI best practices.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/cli-tool-builder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/40-cli-tool-builder
+official: true
+rank: 40
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

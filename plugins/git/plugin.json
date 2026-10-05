@@ -1,0 +1,5 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "Inspect and operate on a local git repository: status, diff, log, branches, commits"
+}

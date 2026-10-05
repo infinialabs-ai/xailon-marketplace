@@ -1,0 +1,5 @@
+{
+  "name": "gov-funding-plan",
+  "version": "1.0.0",
+  "description": "Budget planner. Performs government R&D budget allocation by cost category, personnel cost calculation, indirect cost estimation, private co-funding\u2026"
+}

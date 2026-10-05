@@ -1,0 +1,23 @@
+name: neon-postgres
+kind: skill
+title: Neon Postgres
+summary: 'Work with Neon serverless Postgres: connections and pooling, migrations, branching, autoscaling,
+  replicas and search.'
+category: data
+tags:
+- postgres
+- neon
+- database
+source:
+  url: https://github.com/neondatabase/agent-skills.git
+  path: skills/neon-postgres
+  sha: 9e4a5705922fddb540c396111a7979e0dca79cc2
+license: Apache-2.0
+upstream: https://github.com/neondatabase/agent-skills/tree/main/skills/neon-postgres
+official: true
+rank: 20
+featured: false
+notes: Refers to a parent `neon` skill for auth/functions/new backends (soft pointer, no file link).
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

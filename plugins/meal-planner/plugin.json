@@ -1,0 +1,5 @@
+{
+  "name": "meal-planner",
+  "version": "1.0.0",
+  "description": "Shopping & cooking coordinator. Consolidates recipe ingredients to generate a shopping list, and establishes an efficient cooking order and meal prep plan."
+}

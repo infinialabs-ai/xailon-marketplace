@@ -1,0 +1,5 @@
+{
+  "name": "api-designer",
+  "version": "1.0.0",
+  "description": "API Architect. Designs resource modeling, endpoints, URL naming, HTTP method mapping, versioning strategies, pagination, and filtering."
+}

@@ -1,0 +1,19 @@
+name: social-media-manager
+kind: recipe
+title: Social Media Manager
+summary: SNS strategist. Performs channel-specific analysis, target audience definition, content calendar
+  design and campaign structure planning.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/social-media-manager
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/10-social-media-manager
+official: true
+rank: 10
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

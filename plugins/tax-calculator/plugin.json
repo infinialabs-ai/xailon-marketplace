@@ -1,0 +1,5 @@
+{
+  "name": "tax-calculator",
+  "version": "1.0.0",
+  "description": "Tax savings strategy advisor. Simulates legal tax reduction measures based on tax analysis results and provides a filing preparation guide."
+}

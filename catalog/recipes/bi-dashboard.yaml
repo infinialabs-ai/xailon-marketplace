@@ -1,0 +1,19 @@
+name: bi-dashboard
+kind: recipe
+title: Bi Dashboard
+summary: KPI designer. Derives key performance indicators from business objectives and defines calculation
+  logic, targets, benchmarks, and drill-down paths.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/bi-dashboard
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/42-bi-dashboard
+official: true
+rank: 42
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

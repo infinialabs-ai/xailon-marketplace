@@ -1,0 +1,5 @@
+{
+  "name": "threat-model",
+  "version": "1.0.0",
+  "description": "Produce a STRIDE threat model for a feature or service, grounded in the actual code"
+}

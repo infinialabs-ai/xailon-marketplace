@@ -1,0 +1,1915 @@
+{
+  "name": "infinia",
+  "description": "Curated MCP servers, skills, recipes and mods for Xailon, each pinned to a reviewed commit.",
+  "plugins": [
+    {
+      "name": "github",
+      "description": "Issues, pull requests, code search and Actions on GitHub.",
+      "source": "./plugins/github",
+      "category": "dev-tools",
+      "tags": [
+        "git",
+        "issues",
+        "pull-requests"
+      ]
+    },
+    {
+      "name": "playwright",
+      "description": "Drive a real browser: navigate, click, fill forms and read pages through accessibility snapshots.",
+      "source": "./plugins/playwright",
+      "category": "browser",
+      "tags": [
+        "browser",
+        "testing",
+        "automation"
+      ]
+    },
+    {
+      "name": "context7",
+      "description": "Up-to-date, version-specific library documentation pulled into the prompt.",
+      "source": "./plugins/context7",
+      "category": "docs",
+      "tags": [
+        "documentation",
+        "libraries"
+      ]
+    },
+    {
+      "name": "filesystem",
+      "description": "Read, write and search files inside the directories you allow.",
+      "source": "./plugins/filesystem",
+      "category": "files",
+      "tags": [
+        "files",
+        "search"
+      ]
+    },
+    {
+      "name": "chrome-devtools",
+      "description": "Drive and inspect a live Chrome: navigate, click, fill forms, read console and network, take screenshots, record performance traces.",
+      "source": "./plugins/chrome-devtools",
+      "category": "browser",
+      "tags": [
+        "chrome",
+        "debugging",
+        "performance",
+        "automation"
+      ]
+    },
+    {
+      "name": "supabase",
+      "description": "Manage Supabase projects: list projects, run SQL, apply migrations, inspect tables, logs, edge functions and config",
+      "source": "./plugins/supabase",
+      "category": "data",
+      "tags": [
+        "supabase",
+        "postgres",
+        "database",
+        "backend"
+      ]
+    },
+    {
+      "name": "notion",
+      "description": "Search a Notion workspace and read, create and edit pages and databases in Markdown.",
+      "source": "./plugins/notion",
+      "category": "productivity",
+      "tags": [
+        "notes",
+        "wiki",
+        "docs",
+        "databases"
+      ]
+    },
+    {
+      "name": "atlassian",
+      "description": "Search, read, create and update Jira issues and Confluence pages, plus other Atlassian Cloud products.",
+      "source": "./plugins/atlassian",
+      "category": "project-management",
+      "tags": [
+        "jira",
+        "confluence",
+        "issues",
+        "wiki"
+      ]
+    },
+    {
+      "name": "linear",
+      "description": "Find, create and update Linear issues, projects, cycles and comments.",
+      "source": "./plugins/linear",
+      "category": "project-management",
+      "tags": [
+        "issues",
+        "tickets",
+        "planning"
+      ]
+    },
+    {
+      "name": "sentry",
+      "description": "Look up Sentry issues, events, stack traces, releases and projects in your organization.",
+      "source": "./plugins/sentry",
+      "category": "observability",
+      "tags": [
+        "errors",
+        "monitoring",
+        "debugging"
+      ]
+    },
+    {
+      "name": "stripe",
+      "description": "Search and call Stripe API methods (customers, payments, invoices, subscriptions, refunds) and search Stripe docs",
+      "source": "./plugins/stripe",
+      "category": "payments",
+      "tags": [
+        "stripe",
+        "payments",
+        "billing",
+        "api"
+      ]
+    },
+    {
+      "name": "figma",
+      "description": "Fetch Figma file and frame layout, styles and components as compact context, and download images, to implement designs in code.",
+      "source": "./plugins/figma",
+      "category": "design",
+      "tags": [
+        "figma",
+        "design",
+        "ui"
+      ]
+    },
+    {
+      "name": "slack",
+      "description": "Read Slack channels, threads and DMs, search messages, list users and channels; posting is opt-in per channel",
+      "source": "./plugins/slack",
+      "category": "communication",
+      "tags": [
+        "slack",
+        "chat",
+        "messaging",
+        "search"
+      ]
+    },
+    {
+      "name": "postgres",
+      "description": "Inspect PostgreSQL schemas, run SQL, and check queries, indexes, locks and database health.",
+      "source": "./plugins/postgres",
+      "category": "data",
+      "tags": [
+        "database",
+        "sql",
+        "postgres"
+      ]
+    },
+    {
+      "name": "fetch",
+      "description": "Fetch a URL and return it as Markdown for the model to read.",
+      "source": "./plugins/fetch",
+      "category": "web",
+      "tags": [
+        "http",
+        "web",
+        "markdown"
+      ]
+    },
+    {
+      "name": "git",
+      "description": "Inspect and operate on a local git repository: status, diff, log, branches and commits.",
+      "source": "./plugins/git",
+      "category": "dev-tools",
+      "tags": [
+        "git",
+        "vcs"
+      ]
+    },
+    {
+      "name": "serena",
+      "description": "Semantic code navigation and editing via language servers: find symbols, references and insert or replace code by symbol",
+      "source": "./plugins/serena",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "lsp",
+        "refactoring",
+        "navigation"
+      ]
+    },
+    {
+      "name": "desktop-commander",
+      "description": "Run terminal commands and long-lived processes, manage processes, and search, read and edit local files.",
+      "source": "./plugins/desktop-commander",
+      "category": "dev-tools",
+      "tags": [
+        "terminal",
+        "shell",
+        "files"
+      ]
+    },
+    {
+      "name": "shadcn",
+      "description": "Browse, search and add shadcn/ui components and blocks from configured registries into the current project",
+      "source": "./plugins/shadcn",
+      "category": "design",
+      "tags": [
+        "ui",
+        "components",
+        "react",
+        "registry"
+      ]
+    },
+    {
+      "name": "terraform",
+      "description": "Look up Terraform Registry providers, modules and policies with docs; optionally manage HCP Terraform or TFE workspaces",
+      "source": "./plugins/terraform",
+      "category": "infra",
+      "tags": [
+        "terraform",
+        "iac",
+        "registry",
+        "hashicorp"
+      ]
+    },
+    {
+      "name": "n8n",
+      "description": "Look up n8n node docs and templates, and validate, create, update and run workflows on an n8n instance.",
+      "source": "./plugins/n8n",
+      "category": "productivity",
+      "tags": [
+        "automation",
+        "workflows",
+        "integrations"
+      ]
+    },
+    {
+      "name": "tavily",
+      "description": "Web search, page extraction, site crawl and site map tools backed by the Tavily search API",
+      "source": "./plugins/tavily",
+      "category": "web",
+      "tags": [
+        "search",
+        "web",
+        "crawl",
+        "extract"
+      ]
+    },
+    {
+      "name": "apify",
+      "description": "Search and run Apify Actors to scrape websites, social media, maps and search engines, and fetch their results and docs.",
+      "source": "./plugins/apify",
+      "category": "web",
+      "tags": [
+        "scraping",
+        "crawling",
+        "automation"
+      ]
+    },
+    {
+      "name": "sequential-thinking",
+      "description": "A scratchpad tool for breaking a hard problem into revisable steps.",
+      "source": "./plugins/sequential-thinking",
+      "category": "reasoning",
+      "tags": [
+        "planning",
+        "reasoning"
+      ]
+    },
+    {
+      "name": "docker-toolkit",
+      "description": "Single gateway to the MCP servers enabled in Docker's MCP Toolkit, each run in an isolated container with managed secrets.",
+      "source": "./plugins/docker-toolkit",
+      "category": "infra",
+      "tags": [
+        "docker",
+        "gateway",
+        "containers"
+      ]
+    },
+    {
+      "name": "chrome",
+      "description": "Control your everyday Chrome via an extension: tabs, navigation, clicks, forms, screenshots, network capture, history and bookmarks.",
+      "source": "./plugins/chrome",
+      "category": "browser",
+      "tags": [
+        "chrome",
+        "extension",
+        "automation"
+      ]
+    },
+    {
+      "name": "airtable",
+      "description": "Read and write Airtable bases: list bases and tables, query and filter records, create, update and delete records, edit schema.",
+      "source": "./plugins/airtable",
+      "category": "data",
+      "tags": [
+        "database",
+        "spreadsheet",
+        "records"
+      ]
+    },
+    {
+      "name": "hubspot",
+      "description": "Search, read, create and update HubSpot CRM records such as contacts, companies, deals and tickets.",
+      "source": "./plugins/hubspot",
+      "category": "marketing",
+      "tags": [
+        "crm",
+        "sales",
+        "contacts",
+        "deals"
+      ]
+    },
+    {
+      "name": "metabase",
+      "description": "Search Metabase dashboards, cards and databases, run saved questions and SQL queries, and export results.",
+      "source": "./plugins/metabase",
+      "category": "data",
+      "tags": [
+        "analytics",
+        "bi",
+        "sql",
+        "dashboards"
+      ]
+    },
+    {
+      "name": "shopify-dev",
+      "description": "Search Shopify docs and API schemas, validate GraphQL, Liquid, theme and UI-extension code, and resolve API versions",
+      "source": "./plugins/shopify-dev",
+      "category": "commerce",
+      "tags": [
+        "shopify",
+        "graphql",
+        "liquid",
+        "docs"
+      ]
+    },
+    {
+      "name": "stackoverflow",
+      "description": "Search Stack Overflow questions and fetch full questions, answers and comments by ID",
+      "source": "./plugins/stackoverflow",
+      "category": "docs",
+      "tags": [
+        "stackoverflow",
+        "q-and-a",
+        "search",
+        "knowledge"
+      ]
+    },
+    {
+      "name": "ahrefs",
+      "description": "Query Ahrefs SEO data: backlinks, keywords, site audit, rank tracking and Brand Radar.",
+      "source": "./plugins/ahrefs",
+      "category": "marketing",
+      "tags": [
+        "seo",
+        "backlinks",
+        "keywords"
+      ]
+    },
+    {
+      "name": "ibkr",
+      "description": "Read IBKR account balances, positions, trades and market data, search contracts and options, and draft order instructions.",
+      "source": "./plugins/ibkr",
+      "category": "finance",
+      "tags": [
+        "brokerage",
+        "trading",
+        "portfolio",
+        "market-data"
+      ]
+    },
+    {
+      "name": "frontend-design",
+      "description": "Distinctive, intentional visual design for new UI: typography, colour, layout and motion.",
+      "source": {
+        "url": "https://github.com/anthropics/skills.git",
+        "path": "skills/frontend-design",
+        "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+      },
+      "category": "design",
+      "tags": [
+        "ui",
+        "css",
+        "design"
+      ]
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Guide for designing and building high-quality MCP servers in Python or TypeScript.",
+      "source": {
+        "url": "https://github.com/anthropics/skills.git",
+        "path": "skills/mcp-builder",
+        "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+      },
+      "category": "dev-tools",
+      "tags": [
+        "mcp",
+        "servers"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create, improve and evaluate skills.",
+      "source": {
+        "url": "https://github.com/anthropics/skills.git",
+        "path": "skills/skill-creator",
+        "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+      },
+      "category": "authoring",
+      "tags": [
+        "skills",
+        "authoring"
+      ]
+    },
+    {
+      "name": "webapp-testing",
+      "description": "Test local web applications with Playwright: verify behaviour, capture screenshots and read browser logs.",
+      "source": {
+        "url": "https://github.com/anthropics/skills.git",
+        "path": "skills/webapp-testing",
+        "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+      },
+      "category": "testing",
+      "tags": [
+        "testing",
+        "playwright",
+        "browser"
+      ]
+    },
+    {
+      "name": "playwright-cli",
+      "description": "Automate browsers and test web pages with playwright-cli: navigate, fill forms, snapshot, trace, mock requests, generate tests.",
+      "source": {
+        "url": "https://github.com/microsoft/playwright-cli.git",
+        "path": "skills/playwright-cli",
+        "sha": "b85c7a736bb473bf55b584e54a09ffa698d6d871"
+      },
+      "category": "testing",
+      "tags": [
+        "playwright",
+        "browser",
+        "testing",
+        "e2e"
+      ]
+    },
+    {
+      "name": "github-issues",
+      "description": "Create, update, label, link and triage GitHub issues, sub-issues, milestones and projects through the GitHub MCP server.",
+      "source": {
+        "url": "https://github.com/github/awesome-copilot.git",
+        "path": "skills/github-issues",
+        "sha": "143a3d976b3c1603cc8932984d5e1f28501cb5fc"
+      },
+      "category": "project-management",
+      "tags": [
+        "github",
+        "issues",
+        "triage"
+      ]
+    },
+    {
+      "name": "gh-fix-ci",
+      "description": "Inspect failing GitHub Actions checks on a PR with the gh CLI, summarise the logs, plan a fix and apply it after approval.",
+      "source": {
+        "url": "https://github.com/openai/skills.git",
+        "path": "skills/.curated/gh-fix-ci",
+        "sha": "49f948faa9258a0c61caceaf225e179651397431"
+      },
+      "category": "dev-tools",
+      "tags": [
+        "github",
+        "ci",
+        "github-actions"
+      ]
+    },
+    {
+      "name": "gh-address-comments",
+      "description": "Fetch and work through review and issue comments on the current branch's GitHub PR using the gh CLI.",
+      "source": {
+        "url": "https://github.com/openai/skills.git",
+        "path": "skills/.curated/gh-address-comments",
+        "sha": "49f948faa9258a0c61caceaf225e179651397431"
+      },
+      "category": "dev-tools",
+      "tags": [
+        "github",
+        "pull-requests",
+        "code-review"
+      ]
+    },
+    {
+      "name": "supabase-postgres",
+      "description": "Postgres schema design, indexing, query performance, RLS and migration guidance maintained by Supabase, for any Postgres.",
+      "source": {
+        "url": "https://github.com/supabase/agent-skills.git",
+        "path": "skills/supabase-postgres-best-practices",
+        "sha": "c9be0e931b7930f7d02126d04774d904c381e7d7"
+      },
+      "category": "data",
+      "tags": [
+        "postgres",
+        "sql",
+        "database",
+        "performance"
+      ]
+    },
+    {
+      "name": "supabase-guide",
+      "description": "Build on Supabase: database, auth, Edge Functions, Realtime, Storage, supabase-js and SSR integrations, CLI and MCP.",
+      "source": {
+        "url": "https://github.com/supabase/agent-skills.git",
+        "path": "skills/supabase",
+        "sha": "c9be0e931b7930f7d02126d04774d904c381e7d7"
+      },
+      "category": "infra",
+      "tags": [
+        "supabase",
+        "backend",
+        "auth",
+        "postgres"
+      ]
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "description": "Review React and Next.js TSX for component structure, hooks, accessibility, performance and TypeScript patterns, with rules.",
+      "source": {
+        "url": "https://github.com/vercel/vercel-plugin.git",
+        "path": "skills/react-best-practices",
+        "sha": "6db9a2690f204ecc53f355895fcc19851dac0cf6"
+      },
+      "category": "web",
+      "tags": [
+        "react",
+        "nextjs",
+        "performance"
+      ]
+    },
+    {
+      "name": "cloudflare-workers-best-practices",
+      "description": "Write, review and configure Cloudflare Workers for production: bindings, streaming, config, observability, runtime pitfalls.",
+      "source": {
+        "url": "https://github.com/cloudflare/skills.git",
+        "path": "skills/workers-best-practices",
+        "sha": "41e0d19858946d18af9ee2c2feebbe2e11d829ff"
+      },
+      "category": "infra",
+      "tags": [
+        "cloudflare",
+        "workers",
+        "serverless"
+      ]
+    },
+    {
+      "name": "stripe-best-practices",
+      "description": "Choose and build Stripe integrations: Checkout vs PaymentIntents, Billing, Connect, Tax, Treasury, webhooks and key security.",
+      "source": {
+        "url": "https://github.com/stripe/ai.git",
+        "path": "skills/stripe-best-practices",
+        "sha": "c40002aa6047acaa72e290cdbb22d9b77739d798"
+      },
+      "category": "payments",
+      "tags": [
+        "stripe",
+        "payments",
+        "billing"
+      ]
+    },
+    {
+      "name": "sentry-guide",
+      "description": "Read-only inspection of Sentry issues and events with the sentry CLI: list recent errors, view events, run root-cause explain.",
+      "source": {
+        "url": "https://github.com/openai/skills.git",
+        "path": "skills/.curated/sentry",
+        "sha": "49f948faa9258a0c61caceaf225e179651397431"
+      },
+      "category": "observability",
+      "tags": [
+        "sentry",
+        "errors",
+        "monitoring"
+      ]
+    },
+    {
+      "name": "sentry-find-bugs",
+      "description": "Review the current branch diff for bugs, security vulnerabilities and code-quality issues with a structured checklist.",
+      "source": {
+        "url": "https://github.com/getsentry/skills.git",
+        "path": "skills/find-bugs",
+        "sha": "d18b7aa8ba878354e5c348310230e652f7690f9c"
+      },
+      "category": "dev-tools",
+      "tags": [
+        "code-review",
+        "security",
+        "bugs"
+      ]
+    },
+    {
+      "name": "terraform-style-guide",
+      "description": "Write and review Terraform HCL following HashiCorp style conventions: layout, naming, variables, outputs and module structure.",
+      "source": {
+        "url": "https://github.com/hashicorp/agent-skills.git",
+        "path": "plugins/terraform/skills/terraform-style-guide",
+        "sha": "f706481af9b8fedb66de909f6243ad29601afa0c"
+      },
+      "category": "infra",
+      "tags": [
+        "terraform",
+        "hcl",
+        "iac"
+      ]
+    },
+    {
+      "name": "vercel-cli",
+      "description": "Deploy, inspect and troubleshoot Vercel projects from the CLI: env vars, domains, logs, builds, metrics and teams.",
+      "source": {
+        "url": "https://github.com/vercel/vercel.git",
+        "path": "skills/vercel-cli",
+        "sha": "c628be7835e03a965b93e9cf9e2bd5ac2acbf5eb"
+      },
+      "category": "infra",
+      "tags": [
+        "vercel",
+        "deploy",
+        "cli"
+      ]
+    },
+    {
+      "name": "cloudflare-wrangler",
+      "description": "Run and troubleshoot Wrangler CLI commands and configure Workers projects for local dev, previews, deploys and resources.",
+      "source": {
+        "url": "https://github.com/cloudflare/skills.git",
+        "path": "skills/wrangler",
+        "sha": "41e0d19858946d18af9ee2c2feebbe2e11d829ff"
+      },
+      "category": "infra",
+      "tags": [
+        "cloudflare",
+        "workers",
+        "wrangler",
+        "cli"
+      ]
+    },
+    {
+      "name": "web-perf",
+      "description": "Audit and fix page load and interaction performance, Core Web Vitals and Lighthouse scores for any website.",
+      "source": {
+        "url": "https://github.com/cloudflare/skills.git",
+        "path": "skills/web-perf",
+        "sha": "41e0d19858946d18af9ee2c2feebbe2e11d829ff"
+      },
+      "category": "web",
+      "tags": [
+        "performance",
+        "core-web-vitals",
+        "lighthouse"
+      ]
+    },
+    {
+      "name": "neon-postgres",
+      "description": "Work with Neon serverless Postgres: connections and pooling, migrations, branching, autoscaling, replicas and search.",
+      "source": {
+        "url": "https://github.com/neondatabase/agent-skills.git",
+        "path": "skills/neon-postgres",
+        "sha": "9e4a5705922fddb540c396111a7979e0dca79cc2"
+      },
+      "category": "data",
+      "tags": [
+        "postgres",
+        "neon",
+        "database"
+      ]
+    },
+    {
+      "name": "hf-cli",
+      "description": "Use the hf CLI to download, upload and manage models, datasets, Spaces, repos, cache, buckets and jobs on the Hugging Face Hub.",
+      "source": {
+        "url": "https://github.com/huggingface/skills.git",
+        "path": "skills/hf-cli",
+        "sha": "ca0325bb20b2d0a1b2efa893670c4c72f79e707b"
+      },
+      "category": "ai",
+      "tags": [
+        "huggingface",
+        "models",
+        "datasets",
+        "cli"
+      ]
+    },
+    {
+      "name": "notion-spec-to-implementation",
+      "description": "Turn product or tech spec pages in Notion into implementation plans and tracked Notion tasks with acceptance criteria.",
+      "source": {
+        "url": "https://github.com/makenotion/notion-cookbook.git",
+        "path": "skills/claude/spec-to-implementation",
+        "sha": "74713cb42df8c7c728b789b0b63c577f9f72aef2"
+      },
+      "category": "project-management",
+      "tags": [
+        "notion",
+        "planning",
+        "specs"
+      ]
+    },
+    {
+      "name": "notion-knowledge-capture",
+      "description": "Turn conversations and decisions into structured Notion wiki pages, FAQs, how-tos and decision records.",
+      "source": {
+        "url": "https://github.com/makenotion/notion-cookbook.git",
+        "path": "skills/claude/knowledge-capture",
+        "sha": "74713cb42df8c7c728b789b0b63c577f9f72aef2"
+      },
+      "category": "docs",
+      "tags": [
+        "notion",
+        "documentation",
+        "knowledge-base"
+      ]
+    },
+    {
+      "name": "notion-meeting-intelligence",
+      "description": "Prepare meetings from Notion context: gather related pages, then write an internal pre-read and an external agenda to Notion.",
+      "source": {
+        "url": "https://github.com/makenotion/notion-cookbook.git",
+        "path": "skills/claude/meeting-intelligence",
+        "sha": "74713cb42df8c7c728b789b0b63c577f9f72aef2"
+      },
+      "category": "productivity",
+      "tags": [
+        "notion",
+        "meetings",
+        "agenda"
+      ]
+    },
+    {
+      "name": "stripe-upgrade",
+      "description": "Upgrade Stripe API versions, webhook endpoints, server SDKs, Stripe.js and mobile SDKs safely.",
+      "source": {
+        "url": "https://github.com/stripe/ai.git",
+        "path": "skills/upgrade-stripe",
+        "sha": "c40002aa6047acaa72e290cdbb22d9b77739d798"
+      },
+      "category": "payments",
+      "tags": [
+        "stripe",
+        "upgrade",
+        "sdk"
+      ]
+    },
+    {
+      "name": "terraform-test",
+      "description": "Write and run Terraform tests (.tftest.hcl): run blocks, assertions, mocked providers and CI integration.",
+      "source": {
+        "url": "https://github.com/hashicorp/agent-skills.git",
+        "path": "plugins/terraform/skills/terraform-test",
+        "sha": "f706481af9b8fedb66de909f6243ad29601afa0c"
+      },
+      "category": "testing",
+      "tags": [
+        "terraform",
+        "testing",
+        "iac"
+      ]
+    },
+    {
+      "name": "adr",
+      "description": "Write Architecture Decision Records that capture context, options and consequences.",
+      "source": "./plugins/adr",
+      "category": "docs",
+      "tags": [
+        "architecture",
+        "documentation"
+      ]
+    },
+    {
+      "name": "release-notes",
+      "description": "Draft user-facing release notes from the commits and pull requests since the last tag.",
+      "source": "./plugins/release-notes",
+      "category": "docs",
+      "tags": [
+        "changelog",
+        "release"
+      ]
+    },
+    {
+      "name": "threat-model",
+      "description": "A STRIDE threat model for a feature or service, grounded in the actual code.",
+      "source": "./plugins/threat-model",
+      "category": "security",
+      "tags": [
+        "security",
+        "stride",
+        "review"
+      ]
+    },
+    {
+      "name": "youtube-production",
+      "description": "YouTube content strategist. Performs topic analysis, target audience definition, competitive channel benchmarking, content positioning, and video concept…",
+      "source": "./plugins/youtube-production",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "podcast-studio",
+      "description": "Podcast distribution manager. Generates platform-specific metadata, episode descriptions, promotional copy, social media posts, and newsletter introductions.",
+      "source": "./plugins/podcast-studio",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "newsletter-engine",
+      "description": "Newsletter Editor-in-Chief. Performs final review of brand tone consistency, content flow, and layout structure, and finalizes the publish-ready version.",
+      "source": "./plugins/newsletter-engine",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "content-repurposer",
+      "description": "Source content analyst. Analyzes the source's structure, core messages, target audience, and tone, then develops optimal conversion strategies for each output…",
+      "source": "./plugins/content-repurposer",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "game-narrative",
+      "description": "Game branch architect. Designs story branching structures, ending variations, flag systems, and consequence frameworks.",
+      "source": "./plugins/game-narrative",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "brand-identity",
+      "description": "Visual director. Designs the brand color system, typography, logo concepts, and visual guidelines.",
+      "source": "./plugins/brand-identity",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "comic-creator",
+      "description": "Comic storyboarder. Develops synopses, breaks scenes into panels, designs panel layouts, and creates storyboards.",
+      "source": "./plugins/comic-creator",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "course-builder",
+      "description": "Curriculum designer. Establishes learning objectives, designs curriculum structure, breaks content into modules and lessons, maps prerequisites, and designs…",
+      "source": "./plugins/course-builder",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "documentary-research",
+      "description": "Documentary story architect. Converts research results into a 3-act treatment, designing scene division, narrative arc, emotion curves, and sequence structure.",
+      "source": "./plugins/documentary-research",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "social-media-manager",
+      "description": "SNS strategist. Performs channel-specific analysis, target audience definition, content calendar design and campaign structure planning.",
+      "source": "./plugins/social-media-manager",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "book-publishing",
+      "description": "Metadata manager. Handles ISBN, book classification (BISAC/KDC), book descriptions, keywords, pricing, and distribution platform settings.",
+      "source": "./plugins/book-publishing",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "advertising-campaign",
+      "description": "Creative director. Designs the visual concept for advertising campaigns, writes storyboards, and produces ad visual drafts using Gemini image generation.",
+      "source": "./plugins/advertising-campaign",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "presentation-designer",
+      "description": "Information architect. Selects charts, graphs, and diagrams that visualize data effectively, and structures complex information into a form the audience can…",
+      "source": "./plugins/presentation-designer",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "translation-localization",
+      "description": "Terminology manager. Builds and maintains the translation project's glossary and ensures consistent translation of specialized terms.",
+      "source": "./plugins/translation-localization",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "visual-storytelling",
+      "description": "Story architect. Designs the narrative structure, scene composition and visual-text balance of visual storytelling.",
+      "source": "./plugins/visual-storytelling",
+      "category": "content",
+      "tags": [
+        "content",
+        "creative",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "fullstack-webapp",
+      "description": "System architect. Analyzes requirements and performs system architecture, technology stack selection, DB modeling, and API design.",
+      "source": "./plugins/fullstack-webapp",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "mobile-app-builder",
+      "description": "App store deployment manager. Prepares metadata, screenshot guides, privacy policies, and review response strategies needed for App Store Connect and Google…",
+      "source": "./plugins/mobile-app-builder",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "api-designer",
+      "description": "API Architect. Designs resource modeling, endpoints, URL naming, HTTP method mapping, versioning strategies, pagination, and filtering.",
+      "source": "./plugins/api-designer",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "database-architect",
+      "description": "Migration Manager. Generates DDL scripts, manages migration versioning, designs rollback strategies, creates seed data, and designs zero-downtime migration…",
+      "source": "./plugins/database-architect",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "cicd-pipeline",
+      "description": "CI/CD Pipeline Designer. Designs build, test, security scan, and deployment stages; defines branch strategies (GitFlow, Trunk-based), trigger conditions, and…",
+      "source": "./plugins/cicd-pipeline",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "code-reviewer",
+      "description": "Code Review Synthesizer (QA). Synthesizes style, security, performance, and architecture review results; determines priorities and verifies cross-domain…",
+      "source": "./plugins/code-reviewer",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "legacy-modernizer",
+      "description": "Refactoring strategy expert. Selects optimal refactoring patterns based on legacy analysis results, determines priorities using a risk-impact matrix, and…",
+      "source": "./plugins/legacy-modernizer",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "microservice-designer",
+      "description": "Microservice design expert. Maps bounded contexts to services, defines API contracts, and designs data ownership and deployment units.",
+      "source": "./plugins/microservice-designer",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "test-automation",
+      "description": "Test strategy expert. Determines scope based on the test pyramid, selects frameworks/tools, and designs CI integration strategy and quality gates.",
+      "source": "./plugins/test-automation",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "incident-postmortem",
+      "description": "Remediation planning expert. Establishes short/mid/long-term countermeasures for root causes and contributing factors, generating actionable action items with…",
+      "source": "./plugins/incident-postmortem",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "infra-as-code",
+      "description": "Infrastructure design expert. Designs cloud architecture, defines Terraform/Pulumi module structures, and establishes environment separation strategies and…",
+      "source": "./plugins/infra-as-code",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "data-pipeline",
+      "description": "Data quality manager. Performs data profiling, validation rule design, anomaly detection logic, and data lineage tracking to ensure data reliability across the…",
+      "source": "./plugins/data-pipeline",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "security-audit",
+      "description": "Security consultant. Writes improvement recommendations for discovered vulnerabilities, proposes security architecture, maps findings to frameworks (ISO 27001…",
+      "source": "./plugins/security-audit",
+      "category": "dev-tools",
+      "tags": [
+        "code",
+        "engineering",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "performance-optimizer",
+      "description": "Benchmark manager. Designs and runs performance tests, compares and analyzes results before and after optimization, and builds a CI-integrated benchmark system…",
+      "source": "./plugins/performance-optimizer",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "open-source-launcher",
+      "description": "Community manager. Designs and sets up project governance, the Code of Conduct, issue/PR templates, the CI/CD pipeline, the release strategy, and community…",
+      "source": "./plugins/open-source-launcher",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "ml-experiment",
+      "description": "Training manager. Handles experiment tracking (MLflow/W&B), GPU resource management, training loop implementation, checkpoint management, reproducibility and…",
+      "source": "./plugins/ml-experiment",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "data-analysis",
+      "description": "Analysis report writing specialist. Synthesizes EDA, cleaning, analysis, and visualization results to produce a final report for executives/stakeholders…",
+      "source": "./plugins/data-analysis",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "text-processor",
+      "description": "Text processing report writing specialist. Integrates preprocessing, classification, extraction, and sentiment analysis results to produce a final report…",
+      "source": "./plugins/text-processor",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "data-migration",
+      "description": "Rollback and emergency response specialist. Develops backup strategies, rollback scripts, emergency procedures, decision trees, and communication plans.",
+      "source": "./plugins/data-migration",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "api-client-generator",
+      "description": "API spec parser. Parses API specifications in OpenAPI (Swagger), GraphQL SDL, gRPC Proto, and other formats to systematically extract endpoints, models…",
+      "source": "./plugins/api-client-generator",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "design-system",
+      "description": "Design token specialist. Systematically designs the foundational tokens of the design system: colors, typography, spacing, shadows, motion, and responsive…",
+      "source": "./plugins/design-system",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "web-scraper",
+      "description": "Data manager. Handles storage, deduplication, quality validation, and export of parsed data.",
+      "source": "./plugins/web-scraper",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "chatbot-builder",
+      "description": "Chatbot persona designer. Defines the bot's personality, speech style, tone and manner, and brand alignment.",
+      "source": "./plugins/chatbot-builder",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "changelog-generator",
+      "description": "Release note writer. Creates user-friendly release notes based on change classification results. Supports CHANGELOG.md and GitHub Release formats.",
+      "source": "./plugins/changelog-generator",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "cli-tool-builder",
+      "description": "CLI command designer. Designs subcommand hierarchy, option/argument structure, and UX guidelines. Applies POSIX conventions and modern CLI best practices.",
+      "source": "./plugins/cli-tool-builder",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "llm-app-builder",
+      "description": "RAG pipeline designer. Designs and implements the full RAG pipeline including document processing, chunking, embedding, vector store, retrieval, and reranking.",
+      "source": "./plugins/llm-app-builder",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "bi-dashboard",
+      "description": "KPI designer. Derives key performance indicators from business objectives and defines calculation logic, targets, benchmarks, and drill-down paths.",
+      "source": "./plugins/bi-dashboard",
+      "category": "data",
+      "tags": [
+        "data",
+        "ml",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "startup-launcher",
+      "description": "MVP architect. Performs core feature prioritization, technology stack selection, development roadmap creation, and user flow design.",
+      "source": "./plugins/startup-launcher",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "market-research",
+      "description": "Industry analyst. Performs market size and growth rate estimation, value chain analysis, industry structure (Porter's 5 Forces), and regulatory environment…",
+      "source": "./plugins/market-research",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "gov-funding-plan",
+      "description": "Budget planner. Performs government R&D budget allocation by cost category, personnel cost calculation, indirect cost estimation, private co-funding…",
+      "source": "./plugins/gov-funding-plan",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "product-manager",
+      "description": "Sprint Planner. Calculates team capacity, sets sprint goals, allocates stories, manages risks, and designs retrospective templates.",
+      "source": "./plugins/product-manager",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "strategy-framework",
+      "description": "Strategy Document Writer. Synthesizes OKR, BSC, and SWOT results to produce the vision & mission statement and strategy execution roadmap.",
+      "source": "./plugins/strategy-framework",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "sales-enablement",
+      "description": "Sales Follow-up Management Expert. Develops post-proposal follow-up schedules, email templates, objection handling scripts, and action plans through to…",
+      "source": "./plugins/sales-enablement",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "customer-support",
+      "description": "Escalation management expert. Designs tiered escalation policies, routing rules, SLAs, and crisis response protocols for customer inquiries.",
+      "source": "./plugins/customer-support",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "pricing-strategy",
+      "description": "Value-based pricing expert. Analyzes perceived customer value (WTP, Willingness to Pay), value drivers, and derives optimal pricing by customer segment.",
+      "source": "./plugins/pricing-strategy",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "investor-report",
+      "description": "Strategy update writer. Writes the progress of business strategy, future roadmap, and risk disclosures from an investor perspective.",
+      "source": "./plugins/investor-report",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "scenario-planner",
+      "description": "Response strategy development expert. Based on per-scenario impact analysis results, designs robust strategies, hedge strategies, and option strategies, and…",
+      "source": "./plugins/scenario-planner",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "financial-modeler",
+      "description": "Financial scenario analysis expert. Constructs Base/Bull/Bear scenarios and performs sensitivity analysis on key variables to calculate the range of financial…",
+      "source": "./plugins/financial-modeler",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "grant-writer",
+      "description": "Business plan writing expert. Writes business plans optimized for evaluation criteria based on announcement analysis results.",
+      "source": "./plugins/grant-writer",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "rfp-responder",
+      "description": "Pricing strategy expert. Creates optimal price proposals considering cost estimation, pricing strategy, and competitive positioning.",
+      "source": "./plugins/rfp-responder",
+      "category": "business",
+      "tags": [
+        "business",
+        "strategy",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "language-tutor",
+      "description": "Foreign language curriculum design expert. Designs customized curricula including learning objectives, phased study plans, textbook selection, and milestones…",
+      "source": "./plugins/language-tutor",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "exam-prep",
+      "description": "Customized study plan designer. Creates a personalized learning curriculum, schedule, and materials based on diagnostic results.",
+      "source": "./plugins/exam-prep",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "thesis-advisor",
+      "description": "Thesis writing coach. Designs the overall structure of the thesis, drafts each chapter, and strengthens the argumentation.",
+      "source": "./plugins/thesis-advisor",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "coding-bootcamp",
+      "description": "Curriculum designer. Creates step-by-step learning paths, selects tech stacks, and designs weekly schedules tailored to the learner's level and goals.",
+      "source": "./plugins/coding-bootcamp",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "debate-simulator",
+      "description": "Debate topic analyst. Structures the issues within a topic, identifies core points of contention, and designs the debate framework.",
+      "source": "./plugins/debate-simulator",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "competency-modeler",
+      "description": "Competency Architect. Defines competencies based on job analysis results, creates behavioral indicators, and designs proficiency level frameworks.",
+      "source": "./plugins/competency-modeler",
+      "category": "education",
+      "tags": [
+        "education",
+        "learning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "adr-writer",
+      "description": "ADR Document Author. Synthesizes context analysis, alternative research, and tradeoff evaluation results to produce a formal Architecture Decision Record in…",
+      "source": "./plugins/adr-writer",
+      "category": "docs",
+      "tags": [
+        "research",
+        "documentation",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "research-assistant",
+      "description": "Research Coordinator (QA). Cross-verifies consistency across literature search, notes, critical analysis, and references, confirms research quality standards…",
+      "source": "./plugins/research-assistant",
+      "category": "docs",
+      "tags": [
+        "research",
+        "documentation",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "knowledge-base-builder",
+      "description": "Maintenance Planner. Establishes governance models, update cycles, quality management processes, and contribution guidelines to ensure the long-term quality of…",
+      "source": "./plugins/knowledge-base-builder",
+      "category": "docs",
+      "tags": [
+        "research",
+        "documentation",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "personal-branding",
+      "description": "Positioning Strategist. Analyzes an individual's strengths, experience, and goals, and designs differentiation points and brand narratives for the target…",
+      "source": "./plugins/personal-branding",
+      "category": "docs",
+      "tags": [
+        "research",
+        "documentation",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "contract-analyzer",
+      "description": "Contract coordinator (QA). Synthesizes clause analysis, amendments, risk assessment, and comparison review to produce a final legal opinion and verify…",
+      "source": "./plugins/contract-analyzer",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "compliance-checker",
+      "description": "Remediation planner. Based on gap analysis results, designs specific corrective action plans, schedules, responsibility assignments, and monitoring frameworks.",
+      "source": "./plugins/compliance-checker",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "patent-drafter",
+      "description": "Claim drafter. Designs optimal claim scope based on prior art search results and systematically drafts independent and dependent claims.",
+      "source": "./plugins/patent-drafter",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "privacy-engineer",
+      "description": "Process designer. Designs the full lifecycle of personal data processing, specifies technical and administrative safeguards, and defines operational processes.",
+      "source": "./plugins/privacy-engineer",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "legal-research",
+      "description": "Legal strategy architect. Develops litigation/dispute response strategies, risk assessments, and alternative dispute resolution plans based on legal analysis…",
+      "source": "./plugins/legal-research",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "service-legal-docs",
+      "description": "Terms of Service specialist. Drafts service terms of use, prevents unfair contract clauses, and properly designs the rights and responsibilities of service…",
+      "source": "./plugins/service-legal-docs",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "regulatory-filing",
+      "description": "Licensing & permit requirements investigator. Researches relevant laws, notifications, and administrative rules, then systematically compiles all preliminary…",
+      "source": "./plugins/regulatory-filing",
+      "category": "legal",
+      "tags": [
+        "legal",
+        "compliance",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "meal-planner",
+      "description": "Shopping & cooking coordinator. Consolidates recipe ingredients to generate a shopping list, and establishes an efficient cooking order and meal prep plan.",
+      "source": "./plugins/meal-planner",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "fitness-program",
+      "description": "Exercise program designer. Analyzes the user's goals, fitness level, and available time to design periodized training programs, optimizing volume, intensity…",
+      "source": "./plugins/fitness-program",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "tax-calculator",
+      "description": "Tax savings strategy advisor. Simulates legal tax reduction measures based on tax analysis results and provides a filing preparation guide.",
+      "source": "./plugins/tax-calculator",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "travel-planner",
+      "description": "Travel budget management expert. Calculates overall travel budget including flights, accommodation, meals, transport, sightseeing, and shopping, and designs…",
+      "source": "./plugins/travel-planner",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "space-concept-board",
+      "description": "Budget manager. Creates a budget sheet based on the item list and provides prioritized purchasing strategies and a shopping guide.",
+      "source": "./plugins/space-concept-board",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "personal-finance",
+      "description": "Budget planner. Designs a monthly budget per category based on the financial analysis results, and establishes savings goals and action strategies.",
+      "source": "./plugins/personal-finance",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "side-project-launcher",
+      "description": "MVP designer. Defines the core features, designs the user flows and screen layouts, and writes an implementable MVP specification.",
+      "source": "./plugins/side-project-launcher",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "wedding-planner",
+      "description": "Timeline designer. Works backward from the wedding D-day to design a monthly and weekly preparation schedule, and defines the key milestones.",
+      "source": "./plugins/wedding-planner",
+      "category": "personal",
+      "tags": [
+        "personal",
+        "planning",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "technical-writer",
+      "description": "Information architect. Analyzes the readers of a technical document, designs the best document structure and table of contents, and provides templates for each…",
+      "source": "./plugins/technical-writer",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "report-generator",
+      "description": "Business report writer. Integrates analysis results and visualizations to write logical, persuasive reports, applying the tone and structure suited to the…",
+      "source": "./plugins/report-generator",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "sop-writer",
+      "description": "SOP procedure writer. Writes clear, step-by-step procedures that anyone can follow, based on the process analysis results.",
+      "source": "./plugins/sop-writer",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "meeting-strategist",
+      "description": "Meeting agenda designer. Clearly defines the meeting's purpose and designs the agenda structure, time allocation, participant roles, and facilitation method.",
+      "source": "./plugins/meeting-strategist",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "public-speaking",
+      "description": "Q&A strategist. Prepares for the question-and-answer session after a presentation by classifying expected questions, and writes the optimal answer strategy and…",
+      "source": "./plugins/public-speaking",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "proposal-writer",
+      "description": "Proposal pricing strategist. Establishes cost analysis, pricing model design, competitive price comparison, ROI calculation, and discount/incentive strategies.",
+      "source": "./plugins/proposal-writer",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "crisis-communication",
+      "description": "Crisis message strategist. Designs core messages per stakeholder, communication tone, channel strategy and announcement timing.",
+      "source": "./plugins/crisis-communication",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "risk-register",
+      "description": "Risk monitoring planner. Designs KRIs (key risk indicators), trigger conditions, monitoring cycles, and the review process.",
+      "source": "./plugins/risk-register",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "event-organizer",
+      "description": "Promotion lead. Handles per-channel promotion strategy, content creation, registration management, and attendee communication.",
+      "source": "./plugins/event-organizer",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "hiring-pipeline",
+      "description": "Evaluation and offer lead. Responsible for consolidating final candidate evaluations, designing compensation packages, writing offer letters and linking to…",
+      "source": "./plugins/hiring-pipeline",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "onboarding-system",
+      "description": "Onboarding architect. Designs the onboarding checklist, schedule, milestones, and stakeholder roles from pre-boarding through the first 90 days.",
+      "source": "./plugins/onboarding-system",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "operations-manual",
+      "description": "Step-by-step operations manual writing expert. Creates procedures, checklists, and screenshot guides that anyone can follow based on process analysis results.",
+      "source": "./plugins/operations-manual",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "feedback-analyzer",
+      "description": "Insight report writing expert. Synthesizes sentiment analysis, topic classification, and trend results to produce tailored insight reports for executives and…",
+      "source": "./plugins/feedback-analyzer",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "audit-report",
+      "description": "Implementation tracking ledger management expert. Tracks corrective action implementation status for audit findings and manages follow-up actions, closure…",
+      "source": "./plugins/audit-report",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "procurement-docs",
+      "description": "Procurement requirements definition expert. Systematically defines technical specifications, quantities, delivery dates, budgets, and required/optional…",
+      "source": "./plugins/procurement-docs",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "real-estate-analyst",
+      "description": "Investment report writing expert. Synthesizes market research, location analysis, profitability, and risk analysis results to produce reports with investment…",
+      "source": "./plugins/real-estate-analyst",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "ecommerce-launcher",
+      "description": "E-commerce CS architect. Designs FAQ, response manuals, return/exchange policies, VOC collection systems, and escalation processes to complete CS…",
+      "source": "./plugins/ecommerce-launcher",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "academic-paper",
+      "description": "Academic experiment manager. Develops experiment protocols, data collection procedures, instrument/survey design, and pilot test plans based on the research…",
+      "source": "./plugins/academic-paper",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "sustainability-audit",
+      "description": "ESG improvement planner. Analyzes weaknesses across E/S/G pillars and develops prioritized improvement roadmaps, KPIs, and investment plans.",
+      "source": "./plugins/sustainability-audit",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "ip-portfolio",
+      "description": "IP license strategist. Develops IP asset monetization strategies, cross-licensing, technology transfer, and open source strategies, and designs license…",
+      "source": "./plugins/ip-portfolio",
+      "category": "operations",
+      "tags": [
+        "writing",
+        "operations",
+        "multi-agent"
+      ]
+    },
+    {
+      "name": "team-policy",
+      "description": "A shared pre-ship checklist panel, session context, and a confirmation before deploy tools run.",
+      "source": "./plugins/team-policy",
+      "category": "team",
+      "tags": [
+        "hooks",
+        "checklist",
+        "policy"
+      ]
+    }
+  ]
+}

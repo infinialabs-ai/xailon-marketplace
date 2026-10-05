@@ -1,0 +1,16 @@
+name: sequential-thinking
+kind: mcp
+title: Sequential Thinking
+summary: A scratchpad tool for breaking a hard problem into revisable steps.
+category: reasoning
+tags:
+- planning
+- reasoning
+source: ./plugins/sequential-thinking
+license: Apache-2.0 OR MIT
+upstream: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+rank: 24
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

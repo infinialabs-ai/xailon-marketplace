@@ -1,0 +1,19 @@
+name: investor-report
+kind: recipe
+title: Investor Report
+summary: Strategy update writer. Writes the progress of business strategy, future roadmap, and risk disclosures
+  from an investor perspective.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/investor-report
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/51-investor-report
+official: true
+rank: 51
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

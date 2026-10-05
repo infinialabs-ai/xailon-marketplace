@@ -1,0 +1,19 @@
+name: exam-prep
+kind: recipe
+title: Exam Prep
+summary: Customized study plan designer. Creates a personalized learning curriculum, schedule, and materials
+  based on diagnostic results.
+category: education
+tags:
+- education
+- learning
+- multi-agent
+source: ./plugins/exam-prep
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/57-exam-prep
+official: true
+rank: 57
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

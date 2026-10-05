@@ -1,0 +1,22 @@
+name: chrome-devtools
+kind: mcp
+title: Chrome DevTools
+summary: 'Drive and inspect a live Chrome: navigate, click, fill forms, read console and network, take
+  screenshots, record performance traces.'
+category: browser
+tags:
+- chrome
+- debugging
+- performance
+- automation
+source: ./plugins/chrome-devtools
+license: Apache-2.0
+upstream: https://github.com/ChromeDevTools/chrome-devtools-mcp
+official: true
+rank: 5
+featured: false
+notes: Requires Node ^20.19 || ^22.12 || >=23 and a local Chrome install; launches its own Chrome profile
+  by default. Exposes browser content to the agent.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,26 @@
+name: figma
+kind: mcp
+title: Figma (Framelink)
+summary: Fetch Figma file and frame layout, styles and components as compact context, and download images,
+  to implement designs in code.
+category: design
+tags:
+- figma
+- design
+- ui
+source: ./plugins/figma
+license: MIT
+upstream: https://github.com/GLips/Figma-Context-MCP
+official: false
+rank: 12
+featured: false
+env:
+  FIGMA_API_KEY: Figma personal access token from Settings -> Security -> Personal access tokens (file
+    content read scope)
+notes: Figma's official remote server (https://mcp.figma.com/mcp) only accepts clients listed in Figma's
+  MCP Catalog, so Xailon cannot use it unless listed. The official desktop server (http://127.0.0.1:3845/mcp)
+  needs the Figma desktop app with Dev Mode. For both reasons this entry uses the most-used community
+  server (Framelink, about 16k stars, actively maintained). Reviewer may swap in the official en
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

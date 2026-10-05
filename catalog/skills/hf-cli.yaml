@@ -1,0 +1,24 @@
+name: hf-cli
+kind: skill
+title: Hugging Face CLI
+summary: Use the hf CLI to download, upload and manage models, datasets, Spaces, repos, cache, buckets
+  and jobs on the Hugging Face Hub.
+category: ai
+tags:
+- huggingface
+- models
+- datasets
+- cli
+source:
+  url: https://github.com/huggingface/skills.git
+  path: skills/hf-cli
+  sha: ca0325bb20b2d0a1b2efa893670c4c72f79e707b
+license: Apache-2.0
+upstream: https://github.com/huggingface/skills/tree/main/skills/hf-cli
+official: true
+rank: 21
+featured: false
+notes: Single SKILL.md; requires the huggingface_hub `hf` CLI and an HF token for write operations.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

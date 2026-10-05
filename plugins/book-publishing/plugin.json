@@ -1,0 +1,5 @@
+{
+  "name": "book-publishing",
+  "version": "1.0.0",
+  "description": "Metadata manager. Handles ISBN, book classification (BISAC/KDC), book descriptions, keywords, pricing, and distribution platform settings."
+}

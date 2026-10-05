@@ -1,0 +1,19 @@
+name: academic-paper
+kind: recipe
+title: Academic Paper
+summary: Academic experiment manager. Develops experiment protocols, data collection procedures, instrument/survey
+  design, and pilot test plans based on the research…
+category: operations
+tags:
+- writing
+- operations
+- multi-agent
+source: ./plugins/academic-paper
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/98-academic-paper
+official: true
+rank: 98
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

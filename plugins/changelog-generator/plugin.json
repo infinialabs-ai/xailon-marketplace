@@ -1,0 +1,5 @@
+{
+  "name": "changelog-generator",
+  "version": "1.0.0",
+  "description": "Release note writer. Creates user-friendly release notes based on change classification results. Supports CHANGELOG.md and GitHub Release formats."
+}

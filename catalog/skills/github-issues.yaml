@@ -1,0 +1,24 @@
+name: github-issues
+kind: skill
+title: GitHub Issues
+summary: Create, update, label, link and triage GitHub issues, sub-issues, milestones and projects through
+  the GitHub MCP server.
+category: project-management
+tags:
+- github
+- issues
+- triage
+source:
+  url: https://github.com/github/awesome-copilot.git
+  path: skills/github-issues
+  sha: 143a3d976b3c1603cc8932984d5e1f28501cb5fc
+license: MIT
+upstream: https://github.com/github/awesome-copilot/tree/main/skills/github-issues
+official: true
+rank: 6
+featured: false
+notes: Needs a GitHub MCP server connected (doc names @modelcontextprotocol/server-github). From the community-contributed
+  github/awesome-copilot collection.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

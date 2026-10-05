@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "chrome": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "-p",
+        "mcp-chrome-bridge@1.0.31",
+        "mcp-chrome-stdio"
+      ]
+    }
+  }
+}

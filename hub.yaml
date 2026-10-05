@@ -1,0 +1,9 @@
+# Marketplace identity. `name` is what users type after @ when installing:
+#   xailon plugin install github@infinia
+name: infinia
+title: Infinia Xailon Marketplace
+description: Curated MCP servers, skills, recipes and mods for Xailon, each pinned to a reviewed commit.
+# The address users pass to `xailon plugin marketplace add`. Point this at your
+# self-hosted mirror (Gitea, Forgejo, GitLab) when you run one.
+git_url: https://github.com/infinialabs-ai/xailon-marketplace.git
+repo_url: https://github.com/infinialabs-ai/xailon-marketplace

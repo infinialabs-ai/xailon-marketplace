@@ -1,0 +1,16 @@
+name: git
+kind: mcp
+title: Git
+summary: 'Inspect and operate on a local git repository: status, diff, log, branches and commits.'
+category: dev-tools
+tags:
+- git
+- vcs
+source: ./plugins/git
+license: Apache-2.0 OR MIT
+upstream: https://github.com/modelcontextprotocol/servers/tree/main/src/git
+rank: 16
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,23 @@
+name: stripe-best-practices
+kind: skill
+title: Stripe Best Practices
+summary: 'Choose and build Stripe integrations: Checkout vs PaymentIntents, Billing, Connect, Tax, Treasury,
+  webhooks and key security.'
+category: payments
+tags:
+- stripe
+- payments
+- billing
+source:
+  url: https://github.com/stripe/ai.git
+  path: skills/stripe-best-practices
+  sha: c40002aa6047acaa72e290cdbb22d9b77739d798
+license: MIT
+upstream: https://github.com/stripe/ai/tree/main/skills/stripe-best-practices
+official: true
+rank: 13
+featured: false
+notes: Repo also mirrors this skill under providers/*/plugin/skills; pinned the canonical skills/ copy.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

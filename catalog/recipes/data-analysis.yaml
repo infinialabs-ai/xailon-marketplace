@@ -1,0 +1,19 @@
+name: data-analysis
+kind: recipe
+title: Data Analysis
+summary: Analysis report writing specialist. Synthesizes EDA, cleaning, analysis, and visualization results
+  to produce a final report for executives/stakeholders…
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/data-analysis
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/32-data-analysis
+official: true
+rank: 32
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

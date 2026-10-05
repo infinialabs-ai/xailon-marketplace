@@ -1,0 +1,20 @@
+name: github
+kind: mcp
+title: GitHub
+summary: Issues, pull requests, code search and Actions on GitHub.
+category: dev-tools
+tags:
+- git
+- issues
+- pull-requests
+source: ./plugins/github
+license: MIT
+upstream: https://github.com/github/github-mcp-server
+rank: 1
+featured: true
+env:
+  GITHUB_PERSONAL_ACCESS_TOKEN: A fine-grained personal access token with the repository scopes you want
+    the agent to use.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

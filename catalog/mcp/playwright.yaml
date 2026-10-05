@@ -1,0 +1,17 @@
+name: playwright
+kind: mcp
+title: Playwright
+summary: 'Drive a real browser: navigate, click, fill forms and read pages through accessibility snapshots.'
+category: browser
+tags:
+- browser
+- testing
+- automation
+source: ./plugins/playwright
+license: Apache-2.0
+upstream: https://github.com/microsoft/playwright-mcp
+rank: 2
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

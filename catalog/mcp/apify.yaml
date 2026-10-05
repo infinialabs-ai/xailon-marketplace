@@ -1,0 +1,22 @@
+name: apify
+kind: mcp
+title: Apify
+summary: Search and run Apify Actors to scrape websites, social media, maps and search engines, and fetch
+  their results and docs.
+category: web
+tags:
+- scraping
+- crawling
+- automation
+source: ./plugins/apify
+license: MIT
+upstream: https://github.com/apify/apify-mcp-server
+official: true
+rank: 23
+featured: false
+notes: 'Vendor recommends the hosted server (it has features stdio lacks). OAuth on first use, or header
+  ''Authorization: Bearer <APIFY_TOKEN>''. Running Actors consumes Apify credits. Local alternative: npx
+  -y @apify/actors-mcp-server@0.17.2 with APIFY_TOKEN. The /sse endpoint has been removed.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

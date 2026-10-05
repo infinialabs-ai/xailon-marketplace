@@ -1,0 +1,19 @@
+name: financial-modeler
+kind: recipe
+title: Financial Modeler
+summary: Financial scenario analysis expert. Constructs Base/Bull/Bear scenarios and performs sensitivity
+  analysis on key variables to calculate the range of financial…
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/financial-modeler
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/53-financial-modeler
+official: true
+rank: 53
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

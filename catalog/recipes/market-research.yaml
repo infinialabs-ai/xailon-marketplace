@@ -1,0 +1,19 @@
+name: market-research
+kind: recipe
+title: Market Research
+summary: Industry analyst. Performs market size and growth rate estimation, value chain analysis, industry
+  structure (Porter's 5 Forces), and regulatory environment…
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/market-research
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/44-market-research
+official: true
+rank: 44
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

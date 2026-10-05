@@ -1,0 +1,19 @@
+name: research-assistant
+kind: recipe
+title: Research Assistant
+summary: Research Coordinator (QA). Cross-verifies consistency across literature search, notes, critical
+  analysis, and references, confirms research quality standards…
+category: docs
+tags:
+- research
+- documentation
+- multi-agent
+source: ./plugins/research-assistant
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/63-research-assistant
+official: true
+rank: 63
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

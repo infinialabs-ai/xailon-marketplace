@@ -1,0 +1,19 @@
+name: contract-analyzer
+kind: recipe
+title: Contract Analyzer
+summary: Contract coordinator (QA). Synthesizes clause analysis, amendments, risk assessment, and comparison
+  review to produce a final legal opinion and verify…
+category: legal
+tags:
+- legal
+- compliance
+- multi-agent
+source: ./plugins/contract-analyzer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/66-contract-analyzer
+official: true
+rank: 66
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

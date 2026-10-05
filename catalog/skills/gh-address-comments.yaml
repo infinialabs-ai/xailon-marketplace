@@ -1,0 +1,24 @@
+name: gh-address-comments
+kind: skill
+title: Address GitHub PR Comments
+summary: Fetch and work through review and issue comments on the current branch's GitHub PR using the
+  gh CLI.
+category: dev-tools
+tags:
+- github
+- pull-requests
+- code-review
+source:
+  url: https://github.com/openai/skills.git
+  path: skills/.curated/gh-address-comments
+  sha: 49f948faa9258a0c61caceaf225e179651397431
+license: Apache-2.0
+upstream: https://github.com/openai/skills/tree/main/skills/.curated/gh-address-comments
+official: false
+rank: 8
+featured: false
+notes: Published by OpenAI. Folder LICENSE.txt Apache-2.0. Ships scripts/fetch_comments.py (not marked
+  executable, run with python); needs gh auth.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

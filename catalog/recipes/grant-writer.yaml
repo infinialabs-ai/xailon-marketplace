@@ -1,0 +1,19 @@
+name: grant-writer
+kind: recipe
+title: Grant Writer
+summary: Business plan writing expert. Writes business plans optimized for evaluation criteria based on
+  announcement analysis results.
+category: business
+tags:
+- business
+- strategy
+- multi-agent
+source: ./plugins/grant-writer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/54-grant-writer
+official: true
+rank: 54
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

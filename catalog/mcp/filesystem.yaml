@@ -1,0 +1,16 @@
+name: filesystem
+kind: mcp
+title: Filesystem
+summary: Read, write and search files inside the directories you allow.
+category: files
+tags:
+- files
+- search
+source: ./plugins/filesystem
+license: Apache-2.0 OR MIT
+upstream: https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
+rank: 4
+featured: true
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

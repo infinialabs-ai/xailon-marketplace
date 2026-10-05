@@ -1,0 +1,19 @@
+name: chatbot-builder
+kind: recipe
+title: Chatbot Builder
+summary: Chatbot persona designer. Defines the bot's personality, speech style, tone and manner, and brand
+  alignment.
+category: data
+tags:
+- data
+- ml
+- multi-agent
+source: ./plugins/chatbot-builder
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/38-chatbot-builder
+official: true
+rank: 38
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

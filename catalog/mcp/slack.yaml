@@ -1,0 +1,27 @@
+name: slack
+kind: mcp
+title: Slack
+summary: Read Slack channels, threads and DMs, search messages, list users and channels; posting is opt-in
+  per channel
+category: communication
+tags:
+- slack
+- chat
+- messaging
+- search
+source: ./plugins/slack
+license: MIT
+upstream: https://github.com/korotovsky/slack-mcp-server
+official: false
+rank: 13
+featured: false
+env:
+  SLACK_MCP_XOXP_TOKEN: Slack user OAuth token (xoxp-...) from a Slack app you install in your workspace,
+    with the user scopes listed in the repo's docs/01-authentication-setup.md
+notes: 'Why this server: the reference @modelcontextprotocol/server-slack is deprecated on npm and archived.
+  Slack''s own server is hosted only (https://mcp.slack.com/mcp, docs.slack.dev/ai/slack-mcp-server).
+  It requires confidential OAuth from a registered, directory-published or internal Slack app with a fixed
+  client_id and client_secret, so a generic dynamic-registration client cannot use it; only partn'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

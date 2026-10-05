@@ -1,0 +1,23 @@
+name: notion-meeting-intelligence
+kind: skill
+title: Notion Meeting Intelligence
+summary: 'Prepare meetings from Notion context: gather related pages, then write an internal pre-read
+  and an external agenda to Notion.'
+category: productivity
+tags:
+- notion
+- meetings
+- agenda
+source:
+  url: https://github.com/makenotion/notion-cookbook.git
+  path: skills/claude/meeting-intelligence
+  sha: 74713cb42df8c7c728b789b0b63c577f9f72aef2
+license: MIT
+upstream: https://github.com/makenotion/notion-cookbook/tree/main/skills/claude/meeting-intelligence
+official: true
+rank: 24
+featured: false
+notes: Needs the Notion MCP server connected. Folder contains evaluations/*.json.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

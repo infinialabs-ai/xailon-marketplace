@@ -1,0 +1,5 @@
+{
+  "name": "pricing-strategy",
+  "version": "1.0.0",
+  "description": "Value-based pricing expert. Analyzes perceived customer value (WTP, Willingness to Pay), value drivers, and derives optimal pricing by customer segment."
+}

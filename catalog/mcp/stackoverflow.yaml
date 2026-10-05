@@ -1,0 +1,23 @@
+name: stackoverflow
+kind: mcp
+title: Stack Overflow
+summary: Search Stack Overflow questions and fetch full questions, answers and comments by ID
+category: docs
+tags:
+- stackoverflow
+- q-and-a
+- search
+- knowledge
+source: ./plugins/stackoverflow
+license: Hosted
+upstream: https://api.stackexchange.com/docs/mcp-server
+official: true
+rank: 31
+featured: false
+notes: Hosted only, in beta, with OAuth through a Stack Exchange login on first use. Limited to 100 calls
+  per day per user. The tools are so_search and get_content. The vendor docs configure it through npx
+  mcp-remote mcp.stackoverflow.com rather than a direct http entry. The standard OAuth discovery documents
+  (/.well-known/oauth-protected-resource and oauth-authorization-server) return 404 on mcp.stackov
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,5 @@
+{
+  "name": "test-automation",
+  "version": "1.0.0",
+  "description": "Test strategy expert. Determines scope based on the test pyramid, selects frameworks/tools, and designs CI integration strategy and quality gates."
+}

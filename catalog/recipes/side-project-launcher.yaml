@@ -1,0 +1,19 @@
+name: side-project-launcher
+kind: recipe
+title: Side Project Launcher
+summary: MVP designer. Defines the core features, designs the user flows and screen layouts, and writes
+  an implementable MVP specification.
+category: personal
+tags:
+- personal
+- planning
+- multi-agent
+source: ./plugins/side-project-launcher
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/79-side-project-launcher
+official: true
+rank: 79
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

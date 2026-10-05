@@ -1,0 +1,9 @@
+pricing-strategy: a Xailon recipe from the Xailon Marketplace.
+
+Derived from "50-pricing-strategy" in revfactory/harness-100
+(https://github.com/revfactory/harness-100/tree/8e8d35c6a19166614d1af1df85512266d51121ae/en/50-pricing-strategy),
+licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Changes: the harness's primary agent was converted into an orchestrator recipe and
+each subagent into a role sub-recipe; files were renamed from "50-pricing-strategy" to "pricing-strategy"
+and the title was shortened.

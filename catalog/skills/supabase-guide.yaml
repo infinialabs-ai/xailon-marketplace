@@ -1,0 +1,24 @@
+name: supabase-guide
+kind: skill
+title: Supabase
+summary: 'Build on Supabase: database, auth, Edge Functions, Realtime, Storage, supabase-js and SSR integrations,
+  CLI and MCP.'
+category: infra
+tags:
+- supabase
+- backend
+- auth
+- postgres
+source:
+  url: https://github.com/supabase/agent-skills.git
+  path: skills/supabase
+  sha: c9be0e931b7930f7d02126d04774d904c381e7d7
+license: MIT
+upstream: https://github.com/supabase/agent-skills/tree/main/skills/supabase
+official: true
+rank: 10
+featured: false
+notes: references/skill-feedback.md and assets/ describe filing feedback upstream; no scripts.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

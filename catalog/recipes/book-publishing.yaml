@@ -1,0 +1,19 @@
+name: book-publishing
+kind: recipe
+title: Book Publishing
+summary: Metadata manager. Handles ISBN, book classification (BISAC/KDC), book descriptions, keywords,
+  pricing, and distribution platform settings.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/book-publishing
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/11-book-publishing
+official: true
+rank: 11
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

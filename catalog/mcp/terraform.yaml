@@ -1,0 +1,23 @@
+name: terraform
+kind: mcp
+title: Terraform
+summary: Look up Terraform Registry providers, modules and policies with docs; optionally manage HCP Terraform
+  or TFE workspaces
+category: infra
+tags:
+- terraform
+- iac
+- registry
+- hashicorp
+source: ./plugins/terraform
+license: MPL-2.0
+upstream: https://github.com/hashicorp/terraform-mcp-server
+official: true
+rank: 20
+featured: false
+notes: Needs Docker. Public registry tools need no credentials. For the HCP Terraform or Terraform Enterprise
+  tools, add -e TFE_TOKEN -e TFE_ADDRESS to the docker args and set TFE_TOKEN (API token) and TFE_ADDRESS
+  (for example https://app.terraform.io) in the environment. Licence is MPL-2.0 (allowed).
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

@@ -1,0 +1,29 @@
+name: postgres
+kind: mcp
+title: PostgreSQL
+summary: Inspect PostgreSQL schemas, run SQL, and check queries, indexes, locks and database health.
+category: data
+tags:
+- database
+- sql
+- postgres
+source: ./plugins/postgres
+license: Apache-2.0
+upstream: https://github.com/googleapis/mcp-toolbox
+official: false
+rank: 14
+featured: false
+env:
+  POSTGRES_HOST: Database host name or IP, e.g. localhost
+  POSTGRES_PORT: Database port, usually 5432
+  POSTGRES_DATABASE: Name of the database to connect to
+  POSTGRES_USER: Database user (a read-only role is safest)
+  POSTGRES_PASSWORD: Password for that database user
+notes: 'Replaces the archived reference server in modelcontextprotocol/servers. This is Google''s MCP
+  Toolbox for Databases (Apache-2.0, ~16.6k stars, active), using its prebuilt postgres toolset; it is
+  not from the PostgreSQL project. The npm package downloads the toolbox binary. SQL execution is not
+  restricted to reads, so use a read-only role if needed. crystaldba/postgres-mcp (MIT) was considered,
+  but '
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

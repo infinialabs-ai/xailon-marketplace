@@ -1,0 +1,19 @@
+name: adr-writer
+kind: recipe
+title: Adr Writer
+summary: ADR Document Author. Synthesizes context analysis, alternative research, and tradeoff evaluation
+  results to produce a formal Architecture Decision Record in…
+category: docs
+tags:
+- research
+- documentation
+- multi-agent
+source: ./plugins/adr-writer
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/62-adr-writer
+official: true
+rank: 62
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

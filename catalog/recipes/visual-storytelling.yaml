@@ -1,0 +1,19 @@
+name: visual-storytelling
+kind: recipe
+title: Visual Storytelling
+summary: Story architect. Designs the narrative structure, scene composition and visual-text balance of
+  visual storytelling.
+category: content
+tags:
+- content
+- creative
+- multi-agent
+source: ./plugins/visual-storytelling
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/15-visual-storytelling
+official: true
+rank: 15
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

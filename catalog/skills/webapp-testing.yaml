@@ -1,0 +1,21 @@
+name: webapp-testing
+kind: skill
+title: Web App Testing
+summary: 'Test local web applications with Playwright: verify behaviour, capture screenshots and read
+  browser logs.'
+category: testing
+tags:
+- testing
+- playwright
+- browser
+source:
+  url: https://github.com/anthropics/skills.git
+  path: skills/webapp-testing
+  sha: 8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4
+license: Apache-2.0
+upstream: https://github.com/anthropics/skills/tree/main/skills/webapp-testing
+rank: 4
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'

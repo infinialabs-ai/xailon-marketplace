@@ -1,0 +1,19 @@
+name: test-automation
+kind: recipe
+title: Test Automation
+summary: Test strategy expert. Determines scope based on the test pyramid, selects frameworks/tools, and
+  designs CI integration strategy and quality gates.
+category: dev-tools
+tags:
+- code
+- engineering
+- multi-agent
+source: ./plugins/test-automation
+license: Apache-2.0
+upstream: https://github.com/revfactory/harness-100/tree/main/en/24-test-automation
+official: true
+rank: 24
+featured: false
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-05'
