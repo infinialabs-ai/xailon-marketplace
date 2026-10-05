@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Xailon Marketplace</title>
   <meta name="description" content="Curated plugins, skills, MCP servers and mods for Xailon, each pinned to a reviewed commit.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23161412'/%3E%3Cpath d='M9 9l14 14M23 9L9 23' stroke='%23ff5b1f' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" type="module"></script>
@@ -13,33 +13,39 @@
 <body>
   <a class="skip" href="#ledger">Skip to the catalog</a>
 
-  <header class="masthead">
-    <div class="masthead__rail">
-      <span class="mark" aria-hidden="true">✕</span>
-      <span>Xailon</span><span class="rail-sep">/</span><span>Marketplace</span>
-      <span class="rail-spacer"></span>
-      <a id="repo-link" class="rail-link" href="#">Source repository ↗</a>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="https://infinialabs.ai" aria-label="Infinia Labs"><img src="assets/infinia-labs.svg" alt=""><span>LABS</span></a>
+      <nav aria-label="Page">
+        <a href="#featured-title">Most used</a>
+        <a href="#ledger">Catalog</a>
+        <a id="repo-link" href="#">Source ↗</a>
+      </nav>
     </div>
-    <div class="masthead__body">
-      <div class="masthead__title">
-        <p class="eyebrow" id="manifest-no">Manifest</p>
-        <h1 id="title">Xailon Marketplace</h1>
-        <p class="lede" id="description"></p>
-      </div>
-      <aside class="hookup" aria-labelledby="hookup-title">
-        <h2 id="hookup-title" class="hookup__title">Connect once</h2>
-        <p class="hookup__text">Add this marketplace to Xailon, then install anything below by name.</p>
-        <div class="cmd" data-copy-target>
-          <code id="add-command">xailon plugin marketplace add …</code>
-          <button class="copy" type="button" aria-label="Copy command">Copy</button>
-        </div>
-        <p class="hookup__note">Desktop: <em>Extensions → Plugins &amp; hooks → Add marketplace</em>.</p>
-      </aside>
-    </div>
-    <dl class="tally" id="tally"></dl>
   </header>
 
-  <main>
+  <div class="wrap hero">
+    <div class="hero__copy">
+      <p class="eyebrow" id="manifest-no">Xailon Marketplace</p>
+      <h1 id="title">Xailon Marketplace</h1>
+      <p class="lede" id="description"></p>
+    </div>
+    <aside class="card hookup" aria-labelledby="hookup-title">
+      <h2 id="hookup-title" class="hookup__title">Connect once</h2>
+      <p class="hookup__text">Add this marketplace to Xailon, then install anything below by name.</p>
+      <div class="cmd" data-copy-target>
+        <code id="add-command">xailon plugin marketplace add …</code>
+        <button class="copy" type="button" aria-label="Copy command">Copy</button>
+      </div>
+      <p class="hookup__note">Desktop: <em>Extensions → Plugins &amp; hooks → Add marketplace</em>.</p>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <dl class="tally" id="tally"></dl>
+  </div>
+
+  <main class="wrap">
     <section class="featured" aria-labelledby="featured-title">
       <div class="section-head">
         <h2 id="featured-title">Most used</h2>
@@ -50,7 +56,7 @@
 
     <section class="ledger" id="ledger" aria-labelledby="ledger-title">
       <div class="section-head">
-        <h2 id="ledger-title">The full ledger</h2>
+        <h2 id="ledger-title">The full catalog</h2>
         <p>Every entry is pinned to one commit and lists exactly what it runs.</p>
       </div>
 
@@ -67,16 +73,22 @@
         </label>
       </div>
 
-      <div class="rows" id="rows" aria-live="polite"></div>
+      <div class="card rows" id="rows" aria-live="polite"></div>
+    </section>
+
+    <section class="curate" aria-labelledby="curate-title">
+      <div class="card curate__card">
+        <h2 id="curate-title">Curating this marketplace</h2>
+        <p>Items are added by pull request: one YAML file in <code>catalog/</code>, pinned to a full commit SHA, with an allow-listed licence and a named reviewer. <code>npm run check</code> rejects anything else, and regenerates the index Xailon reads.</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div>
-      <h2>Curating this marketplace</h2>
-      <p>Items are added by pull request: one YAML file in <code>catalog/</code>, pinned to a full commit SHA, with an allow-listed licence and a named reviewer. <code>npm run check</code> rejects anything else, and regenerates the index Xailon reads.</p>
+    <div class="wrap footer__inner">
+      <span>© Infinia Labs · <a href="https://infinialabs.ai">infinialabs.ai</a></span>
+      <span class="footer__meta" id="footer-meta"></span>
     </div>
-    <p class="footer__meta" id="footer-meta"></p>
   </footer>
 
   <dialog class="drawer" id="drawer" aria-labelledby="drawer-title">

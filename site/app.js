@@ -99,7 +99,7 @@ function renderMasthead() {
     .join("");
 
   const reviewed = items.map((item) => item.reviewed.at).sort().at(-1);
-  $("#footer-meta").innerHTML = `@${escapeHtml(marketplace.name)}<br>last review ${escapeHtml(reviewed ?? "—")}<br><a href="catalog.json">catalog.json</a>`;
+  $("#footer-meta").innerHTML = `@${escapeHtml(marketplace.name)} · last review ${escapeHtml(reviewed ?? "—")} · <a href="catalog.json">catalog.json</a>`;
 }
 
 function renderTickets() {
@@ -140,7 +140,7 @@ function renderKinds() {
 function renderRows() {
   const items = visibleItems();
   if (items.length === 0) {
-    $("#rows").innerHTML = `<p class="empty">Nothing on the ledger matches that.</p>`;
+    $("#rows").innerHTML = `<p class="empty">Nothing in the catalog matches that.</p>`;
     return;
   }
   let group = null;
