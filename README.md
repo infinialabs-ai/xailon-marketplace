@@ -23,8 +23,9 @@ hub.yaml                          marketplace name, title and the URL users add
 catalog/{mcp,skills,recipes,mods,plugins}/<name>.yaml   one entry per item (source of truth)
 plugins/<name>/                   items that live in this repository
 .xailon-plugin/marketplace.json   GENERATED: the index Xailon reads
-site/                             static catalog page; site/catalog.json is GENERATED
+site/                             static catalog page; site/catalog.json and site/workflows.json are GENERATED
 scripts/catalog.mjs               validate, inspect and generate
+scripts/workflow.mjs              derive each recipe's team workflow from its definitions
 scripts/ci.sh                     merge gate
 scripts/deploy.sh                 publish site/ to Cloudflare Pages (reads .env, never committed)
 ```
@@ -106,6 +107,13 @@ To publish, copy `site/` to any static host after `npm run build`, or run
 `scripts/deploy.sh` to publish to Cloudflare Pages. It reads `CLOUDFLARE_API_TOKEN` and
 `CLOUDFLARE_ACCOUNT_ID` from `.env` and creates the project, custom domain and DNS record
 on first run.
+
+Each recipe's page draws how its team works: who leads, which stage hands what to whom,
+where a review sends work back, and the workflow patterns that adds up to. None of it is
+written by hand. `scripts/workflow.mjs` reads the recipe's orchestrator and sub-recipe
+files on every build, taking the handoffs from each role's "Team Communication Protocol"
+list and the stage order from the `_workspace/NN_*` files the roles write. Names in those
+lists that match no role in the recipe are shown on the page rather than guessed.
 
 ## Self-hosting
 

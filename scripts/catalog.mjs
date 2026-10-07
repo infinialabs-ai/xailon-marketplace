@@ -11,11 +11,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import YAML from "yaml";
+import { recipeWorkflow } from "./workflow.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CACHE = path.join(ROOT, ".cache", "repos");
 const INDEX_FILE = ".xailon-plugin/marketplace.json";
 const SITE_DATA_FILE = "site/catalog.json";
+// Loaded only when a recipe is opened, so the catalog itself stays small.
+const SITE_WORKFLOWS_FILE = "site/workflows.json";
 
 const KINDS = { mcp: "mcp", skill: "skills", recipe: "recipes", mod: "mods", plugin: "plugins" };
 const LICENSES = new Set([
@@ -333,6 +336,15 @@ function inspect(entry, fail) {
   const verdict = kindRules[entry.kind]();
   if (verdict !== true) fail(verdict);
 
+  const workflows = {};
+  for (const recipe of recipes) {
+    try {
+      workflows[recipe] = recipeWorkflow(tree.read, recipe);
+    } catch (error) {
+      fail(`could not read recipe ${recipe}: ${error.message.split("\n")[0]}`);
+    }
+  }
+
   const remoteOnly = contents.mcpServers.length > 0 && contents.mcpServers.every((server) => server.url);
   if (entry.license === HOSTED && (entry.kind !== "mcp" || !remoteOnly)) {
     fail(`license ${HOSTED} is only for mcp items whose servers are all remote endpoints`);
@@ -346,7 +358,7 @@ function inspect(entry, fail) {
   if (declaredEnv.join() !== usedEnv.join()) {
     fail(`env must describe exactly the variables its MCP servers read: ${usedEnv.join(", ") || "none"}`);
   }
-  return contents;
+  return { contents, workflows };
 }
 
 // Shown on the page for MCP items while Xailon does not start plugin MCP servers.
@@ -399,6 +411,7 @@ function generate() {
   const loaded = loadEntries(errors);
   const seen = new Map();
   const items = [];
+  const workflows = {};
 
   for (const record of loaded) {
     const before = errors.length;
@@ -408,8 +421,10 @@ function generate() {
     seen.set(entry.name, where);
     if (errors.length !== before) continue;
 
-    const contents = inspect(entry, (message) => errors.push(`${where}: ${message}`));
-    if (!contents) continue;
+    const inspected = inspect(entry, (message) => errors.push(`${where}: ${message}`));
+    if (!inspected) continue;
+    const { contents } = inspected;
+    if (Object.keys(inspected.workflows).length) workflows[entry.name] = inspected.workflows;
     items.push({
       ...entry,
       install: `${entry.name}@${hub.name}`,
@@ -446,6 +461,7 @@ function generate() {
     files: {
       [INDEX_FILE]: `${JSON.stringify(index, null, 2)}\n`,
       [SITE_DATA_FILE]: `${JSON.stringify(site, null, 2)}\n`,
+      [SITE_WORKFLOWS_FILE]: `${JSON.stringify(Object.fromEntries(items.filter((item) => workflows[item.name]).map((item) => [item.name, workflows[item.name]])))}\n`,
     },
     count: items.length,
   };
