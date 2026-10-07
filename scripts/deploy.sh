@@ -26,14 +26,14 @@ fi
 npx --yes wrangler@4 pages deploy site --project-name "$PROJECT" --branch main --commit-dirty=true
 
 domains="$(api "$base/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT/domains")"
-if ! grep -q "\"name\":\"$DOMAIN\"" <<<"$domains"; then
+if ! node -e 'process.exit(JSON.parse(process.argv[1]).result.some((d) => d.name === process.argv[2]) ? 0 : 1)' "$domains" "$DOMAIN"; then
   api -X POST "$base/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT/domains" --data "{\"name\":\"$DOMAIN\"}" >/dev/null
   echo "Added custom domain $DOMAIN"
 fi
 
 zone_id="$(api "$base/zones?name=$ZONE" | node -p 'JSON.parse(require("fs").readFileSync(0)).result[0].id')"
 records="$(api "$base/zones/$zone_id/dns_records?name=$DOMAIN")"
-if grep -q '"count":0' <<<"$records"; then
+if [ "$(node -p 'JSON.parse(process.argv[1]).result.length' "$records")" = "0" ]; then
   api -X POST "$base/zones/$zone_id/dns_records" \
     --data "{\"type\":\"CNAME\",\"name\":\"$DOMAIN\",\"content\":\"$PROJECT.pages.dev\",\"proxied\":true}" >/dev/null
   echo "Created DNS record $DOMAIN -> $PROJECT.pages.dev"
