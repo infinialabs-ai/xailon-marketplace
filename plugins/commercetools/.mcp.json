@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "commercetools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@commercetools/commerce-mcp@4.2.2"
+      ],
+      "env": {
+        "TOOLS": "read_all",
+        "CLIENT_ID": "${CTP_CLIENT_ID}",
+        "CLIENT_SECRET": "${CTP_CLIENT_SECRET}",
+        "PROJECT_KEY": "${CTP_PROJECT_KEY}",
+        "AUTH_URL": "${CTP_AUTH_URL}",
+        "API_URL": "${CTP_API_URL}"
+      }
+    }
+  }
+}

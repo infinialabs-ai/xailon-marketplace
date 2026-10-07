@@ -1,0 +1,1297 @@
+# Which business systems have an MCP server, how to run one, and which marketplace
+# packages cover them. Each fact is checked against the vendor's or project's own docs.
+# status: ga | preview | sample | announced | none
+systems:
+- system: Acumatica
+  vendor: Acumatica
+  segment: erp
+  status: ga
+  summary: 'Acumatica 2026 R2 (GA 2026-10-01) adds MCP Connection: admins configure MCP servers that expose
+    published Generic Inquiries as tools, giving Claude, ChatGPT, Gemini and other clients governed, read-only
+    access under each user''s roles with field-level masking. A public endpoint URL format and OAuth client-registration
+    details were not found in vendor docs as of the verification date.'
+  refs:
+  - https://www.acumatica.com/corporate-newsroom/press-releases/acumatica-2026-r2-release-with-embedded-ai/
+  open_source:
+  - repo: https://github.com/hallboys/MCP4Acumatica
+    license: Apache-2.0
+    transport: workers
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Deploy MCP4Acumatica to your own Cloudflare account (Workers paid plan for Durable Objects;
+    a Deploy button or setup.sh creates the KV and R2 bindings) with a Connected Application in SM303010,
+    then point clients at https://<worker-host>/mcp.
+  gap: The official server is read-only and limited to Generic Inquiries, with no documented URL shape
+    yet. Writes and pre-2026 R2 instances need a self-deployed community Worker.
+  packages: []
+  verified: '2026-10-07'
+- system: Dolibarr
+  vendor: Dolibarr
+  segment: erp
+  status: none
+  summary: Dolibarr does not ship an MCP server.
+  refs: []
+  open_source:
+  - repo: https://github.com/latinogino/dolibarr-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  self_host: Run latinogino/dolibarr-mcp from source with a Dolibarr API key.
+  gap: There is no official server, and the community option is minor.
+  packages: []
+  verified: '2026-10-07'
+- system: Epicor Kinetic
+  vendor: Epicor
+  segment: erp
+  status: announced
+  summary: At Epicor Insights 2026 (May 2026) Epicor announced the Prism Agent Foundry and an open agentic
+    ecosystem that includes MCP connectivity. No public MCP endpoint, auth model or setup documentation
+    was found.
+  refs:
+  - https://www.epicor.com/en/newsroom/news-releases/epicor-introduces-agentic-ai-stack/
+  open_source:
+  - repo: https://github.com/acroston1/epicor-mcp-oss
+    license: Apache-2.0
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CData Connect AI
+  - Cutova.ai
+  self_host: Run epicor-mcp-oss on an internal server with a scoped Epicor service account and API key,
+    and connect clients through its stdio bridge.
+  gap: There is no official server yet, and the community option is read-only and unproven.
+  packages: []
+  verified: '2026-10-07'
+- system: ERPNext / Frappe
+  vendor: Frappe Technologies
+  segment: erp
+  status: none
+  summary: Frappe ships frappe/mcp, an experimental library that lets Frappe apps expose streamable-HTTP
+    MCP endpoints, but ERPNext has no built-in MCP server.
+  refs:
+  - https://github.com/frappe/mcp
+  open_source:
+  - repo: https://github.com/frappe/mcp
+    license: MIT
+    transport: http
+    read_write: read-write
+  - repo: https://github.com/buildswithpaul/Frappe_Assistant_Core
+    license: AGPL-3.0
+    transport: http
+    read_write: read-write
+  - repo: https://github.com/rakeshgangwar/erpnext-mcp-server
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Install Frappe Assistant Core as a Frappe app on your own site (bench get-app / install-app)
+    and connect over its OAuth MCP endpoint.
+  gap: There is no official server, and the leading community app is AGPL, so nothing is packageable.
+  packages: []
+  verified: '2026-10-07'
+- system: IFS Cloud
+  vendor: IFS
+  segment: erp
+  status: none
+  summary: IFS describes MCP servers in its strategy blog, but no published product MCP server was found.
+  refs:
+  - https://blog.ifs.com/context-engineering-from-erp-to-ai-and-the-future-of-work/
+  open_source:
+  - repo: https://github.com/knakit/ifs-mcp-server-local
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Run knakit/ifs-mcp-server-local locally with an IFS OAuth client.
+  gap: There is no official server, and community options are small.
+  packages: []
+  verified: '2026-10-07'
+- system: Infor (CloudSuite / M3 / LN)
+  vendor: Infor
+  segment: erp
+  status: ga
+  summary: Infor OS 2026.10 ION API Gateway can register and proxy MCP servers built by Infor teams, customers
+    or third parties. Calls run as the user through OAuth 2.1, and admins create MCP Client authorized
+    apps for external tools. The docs give no standard ERP endpoint shape.
+  refs:
+  - https://docs.infor.com/inforos/2026.10/en-us/useradminlib_cloud/apigatewayag_cloud/bzw1785134480799.html
+  alternatives:
+  - CData Connect AI
+  - Makini
+  self_host: Register an MCP server in ION API Gateway and create an authorized app for each external
+    client.
+  gap: There is no documented out-of-the-box ERP MCP endpoint, and clients must be pre-authorized as ION
+    apps.
+  packages: []
+  verified: '2026-10-07'
+- system: Microsoft Dynamics 365 Business Central
+  vendor: Microsoft
+  segment: erp
+  status: ga
+  summary: Business Central online includes a hosted MCP server at https://mcp.businesscentral.dynamics.com
+    (streamable HTTP). You select the tenant, environment, company and configuration with the headers
+    TenantId, EnvironmentName, Company and ConfigurationName. By default it gives read-only API discovery.
+    Admins enable create, modify, delete and actions per API page in MCP Server Configurations, and data
+    query tools are in preview. Auth is Microsoft Entra delegated (Financials.ReadWrite.All). Entra does
+    not support DCR, so each MCP host needs a pre-registered Entra app client ID.
+  refs:
+  - https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/mcp-overview
+  - https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server
+  - https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/use-mcp-server-non-microsoft
+  open_source:
+  - repo: https://github.com/SShadowS/business-central-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/knowall-ai/mcp-business-central
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: For on-prem BC27/BC28 run `npx -y business-central-mcp@1.7.1` on a machine that can reach
+    the BC web client, using a NavUserPassword service user. It can also be wrapped in a container next
+    to the BC server tier.
+  gap: The official server is online-only and needs a pre-registered Entra client ID. Xailon does OAuth
+    only through dynamic client registration or client metadata documents, so it cannot use the official
+    endpoint directly. On-prem has only the reverse-engineered community bridge.
+  packages:
+  - business-central-onprem
+  verified: '2026-10-07'
+- system: Microsoft Dynamics 365 Finance & Operations
+  vendor: Microsoft
+  segment: erp
+  status: ga
+  summary: The dynamic Dynamics 365 ERP MCP server (10.0.47, or 10.0.46 PQU-2 / 10.0.45 PQU-7, Tier 2+
+    or UDE only) offers data, form and action tools with CRUD under the user's F&O roles. The static 13-tool
+    server retires on 2026-10-01. Access is limited to Entra client IDs on the Allowed MCP clients list
+    (by default Copilot Studio, VS Code, Microsoft Cowork and Finance Agent); other platforms need an
+    Entra app registration that an admin allow-lists. Non-Copilot-Studio clients are billed 0.1 Copilot
+    Credits per tool call unless the user holds Finance or SCM Premium.
+  refs:
+  - https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp
+  - https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security
+  - https://learn.microsoft.com/en-us/dynamics365/finance/business-performance-analytics/erp-analytics-mcp-overview
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable. The server runs inside each F&O environment; customers register an Entra
+    app for their client and add it under Allowed MCP clients.
+  gap: The client allow-list and the lack of DCR mean Xailon cannot connect without a pre-registered,
+    admin-approved client ID. Per-call credit billing applies, the server is US English only, and Cloud
+    Hosted Environments are not supported.
+  packages: []
+  verified: '2026-10-07'
+- system: Microsoft Dynamics GP
+  vendor: Microsoft
+  segment: erp
+  status: none
+  summary: Microsoft has no MCP server for Dynamics GP, and no maintained community server was found.
+  refs: []
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable.
+  gap: No MCP server exists.
+  packages: []
+  verified: '2026-10-07'
+- system: Odoo
+  vendor: Odoo S.A.
+  segment: erp
+  status: ga
+  summary: 'Odoo 20 includes an MCP server in the Odoo AI app at <database URL>/mcp. Auth is a static
+    user API key generated with the MCP scope and sent as Authorization: Bearer; plain RPC keys are refused.
+    By default it exposes three AI tools (get models, get fields, plus one more), and admins can expose
+    more server actions as tools. It supports reads and writes under the user''s access rights.'
+  refs:
+  - https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html
+  open_source:
+  - repo: https://github.com/erpipe-org/mcp-odoo
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/ivnvxd/mcp-server-odoo
+    license: MPL-2.0
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: For Odoo 16-19 run `uvx odoo-mcp==1.3.0` locally with a dedicated Odoo user and API key,
+    or use the repo's Dockerfile to run it in a container close to the database.
+  gap: The built-in server exists only on Odoo 20, and its default tool set is small until admins expose
+    server actions. Older versions depend on the community bridge.
+  packages:
+  - odoo
+  - odoo-legacy
+  verified: '2026-10-07'
+- system: Oracle Fusion Cloud ERP
+  vendor: Oracle
+  segment: erp
+  status: ga
+  summary: Fusion Applications 26A added MCP client support in AI Agent Studio, so Fusion agents can call
+    external servers. Oracle Fusion Data Intelligence (FDI) offers an MCP server for analytics (semantic
+    models, KPIs, workbooks, Logical SQL) with OAuth 2.0 through IDCS or IAM, not for transactional ERP.
+  refs:
+  - https://blogs.oracle.com/fusioninsider/what-you-need-to-know-about-mcp-a2a-in-fusion-apps
+  - https://blogs.oracle.com/analytics/fusion-data-intelligencefdi-integrated-mcp-server
+  - https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/add-mcp-tool.html
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable; use FDI for analytics, or Oracle Integration's MCP server capability for
+    custom flows.
+  gap: There is no official transactional Fusion ERP MCP server. FDI needs its own licence and gives read-only
+    analytics.
+  packages: []
+  verified: '2026-10-07'
+- system: Oracle NetSuite
+  vendor: Oracle
+  segment: erp
+  status: ga
+  summary: The NetSuite AI Connector Service exposes an account-specific streamable-HTTP MCP endpoint
+    at https://<accountid>.suitetalk.api.netsuite.com/services/mcp/v1/all (or /suiteapp/<applicationid>).
+    The MCP Standard Tools SuiteApp adds record create, read and update, reports, saved searches and read-only
+    SuiteQL. Auth is OAuth 2.0 authorization code with PKCE. Integration records are created automatically
+    on first connection for supported clients, and the Administrator role is not allowed.
+  refs:
+  - https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_4160616848.html
+  - https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_0714082142.html
+  - https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_3200541651.html
+  open_source:
+  - repo: https://github.com/oracle-samples/netsuite-suitecloud-samples
+    license: UPL-1.0
+    transport: http
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Not needed; the official endpoint is hosted in each NetSuite account. To add custom tools,
+    deploy an SDF custom-tool SuiteApp and use the /suiteapp/<applicationid> URL.
+  gap: Writes are limited to records the role can edit, SuiteQL is read-only, reports take only date and
+    subsidiary filters, there is no admin-role access, and clients that cannot complete automatic integration-record
+    creation need a manually created integration record.
+  packages:
+  - netsuite
+  verified: '2026-10-07'
+- system: Sage 300
+  vendor: Sage
+  segment: erp
+  status: none
+  summary: No Sage MCP server for Sage 300 was found.
+  refs: []
+  open_source:
+  - repo: https://github.com/CDataSoftware/sage-300-mcp-server-by-cdata
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable.
+  gap: No MCP server exists.
+  packages: []
+  verified: '2026-10-07'
+- system: Sage Intacct
+  vendor: Sage
+  segment: erp
+  status: ga
+  summary: The Sage Intacct AI Gateway (2026 R2, May 2026) includes the Sage Intacct MCP Server, a read-only,
+    OAuth 2.0 governed endpoint over the REST API covering AP, AR, GL, Cash Management, Purchasing and
+    Order Entry. It is available in the US, UK, Canada, Australia, South Africa and Singapore. The public
+    developer page does not show the endpoint URL or licensing terms; they sit in a setup guide we could
+    not retrieve.
+  refs:
+  - https://developer.sage.com/intacct/ais/intacct-ai-gateway/latest/intacct-ai-gateway
+  - https://preview.intacct.com/ia/docs/en_US/releasenotes/2026/2026_Release_2/2026-R2-home.htm
+  open_source:
+  - repo: https://github.com/CDataSoftware/intacct-mcp-server-by-cdata
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CData Connect AI
+  - Apideck
+  self_host: Use the official gateway; community options are small single-author projects.
+  gap: The official server is read-only, limited to the listed regions, and has an unverified endpoint
+    URL and client-registration model, so it was not packaged.
+  packages: []
+  verified: '2026-10-07'
+- system: Sage X3
+  vendor: Sage
+  segment: erp
+  status: preview
+  summary: The Sage X3 MCP Server 1.0 is in Early Access through the Sage AI Gateway. Access is by registration;
+    tools depend on the X3 folder configuration and the user's permissions, and auth uses the Sage X3
+    authorization process.
+  refs:
+  - https://developer.sage.com/x3/docs/latest/guides/mcp-server/overview
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable.
+  gap: It is Early Access only and its endpoint is not public.
+  packages: []
+  verified: '2026-10-07'
+- system: SAP Business ByDesign
+  vendor: SAP
+  segment: erp
+  status: none
+  summary: SAP has not published an MCP server for Business ByDesign.
+  refs: []
+  open_source:
+  - repo: https://github.com/CDataSoftware/sap-bydesign-mcp-server-by-cdata
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CData Connect AI
+  self_host: The only route is a custom server built on ByDesign OData services, or a commercial aggregator.
+  gap: No official or maintained open-source MCP server exists.
+  packages: []
+  verified: '2026-10-07'
+- system: SAP Business One
+  vendor: SAP
+  segment: erp
+  status: sample
+  summary: From SAP Business One 10.0 FP 2608, SAP ships downloadable sample code for an MCP server that
+    sits on the Service Layer. It speaks streamable HTTP, offers full CRUD with MCP-elicitation approval
+    before writes, OAuth 2.0 bearer validation or a direct dev mode, and multi-company support through
+    the SLD. It is sample code you host yourself, not a managed service.
+  refs:
+  - https://help.sap.com/docs/SAP_BUSINESS_ONE/bb89a9939c294f14a7f532f7e76ade9e/9bdaeca12a424e6f9e3a0f4354651829.html
+  open_source:
+  - repo: https://github.com/CDataSoftware/sap-business-one-mcp-server-by-cdata
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CompuTec AppEngine MCP Server (commercial)
+  - CData Connect AI
+  self_host: Download SAP's sample from SAP Help, run it next to the Service Layer (on-prem or partner
+    cloud) behind HTTPS, and turn on its OAuth mode for production. Each team then points a remote MCP
+    client at its own URL.
+  gap: There is no SAP-hosted endpoint and no versioned package; the sample's licence terms are SAP sample-code
+    terms rather than an OSI licence, so it cannot be redistributed as a plugin.
+  packages: []
+  verified: '2026-10-07'
+- system: SAP S/4HANA and ECC
+  vendor: SAP
+  segment: erp
+  status: ga
+  summary: SAP Integration Suite's MCP Gateway (API Management plus an Integration Cell) turns APIs, iFlows
+    and RFC connections into governed MCP servers on a customer-defined path. Productive use needs the
+    Premium or Enhanced Edition, and the tutorial uses OAuth client-credentials bearer tokens. SAP API
+    Policy v.4.2026a s.2.2.2 forbids using SAP APIs from (semi-)autonomous or generative AI systems except
+    through SAP-endorsed pathways.
+  refs:
+  - https://developers.sap.com/tutorials/btp-integration-suite-mcp-gateway/
+  - https://help.sap.com/doc/sap-api-policy/latest/en-US/API_Policy_latest.pdf
+  open_source:
+  - repo: https://github.com/oisee/odata_mcp_go
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/lemaiwo/btp-sap-odata-to-mcp-server
+    license: MIT
+    transport: http
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Customers on BTP should expose published OData APIs through Integration Suite's MCP Gateway,
+    which is the SAP-endorsed route. Teams without it can deploy lemaiwo/btp-sap-odata-to-mcp-server to
+    Cloud Foundry with a BTP destination to S/4HANA, or run the odata_mcp_go binary on-prem in --read-only
+    mode, at their own risk under the API Policy.
+  gap: There is no standard SAP endpoint shape (each Integration Suite MCP server has its own host and
+    path), and SAP API Policy v.4.2026a restricts non-SAP AI agents. Nothing can be packaged in a way
+    that is reproducible and also compliant with the policy.
+  packages: []
+  verified: '2026-10-07'
+- system: SYSPRO
+  vendor: SYSPRO
+  segment: erp
+  status: announced
+  summary: SYSPRO 8 2026 R2 help describes Syspro Torque, which uses MCP connectors and provides an MCP
+    bundle that gives external LLMs scoped access to SYSPRO data. No install, auth or endpoint details
+    are published.
+  refs:
+  - https://help.syspro.com/syspro-8-2026-r2/topics/torque/torque.htm
+  alternatives:
+  - Makini
+  self_host: Not applicable.
+  gap: No public setup details exist, so nothing can be packaged.
+  packages: []
+  verified: '2026-10-07'
+- system: Unit4 ERPx
+  vendor: Unit4
+  segment: erp
+  status: none
+  summary: No Unit4 MCP server was found in vendor materials.
+  refs: []
+  alternatives:
+  - CData Connect AI
+  self_host: Not applicable.
+  gap: No MCP server exists.
+  packages: []
+  verified: '2026-10-07'
+- system: FreshBooks
+  vendor: FreshBooks
+  segment: accounting
+  status: ga
+  summary: FreshBooks ships a read-only MCP connector in Claude's connector directory (profit, cash, invoices,
+    clients), connected by FreshBooks sign-in. It documents no server URL for other clients, and the help
+    article says availability is limited to specific users.
+  refs:
+  - https://support.freshbooks.com/hc/en-us/articles/47907329443597-How-does-the-FreshBooks-connector-in-Claude-work
+  open_source:
+  - repo: https://github.com/chrischall/freshbooks-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - Composio
+  - Zapier
+  - Apideck
+  self_host: A team would have to self-run a small community server against the FreshBooks OAuth2 API
+    with its own registered app.
+  gap: There is no documented endpoint outside Claude, no writes, and no community server mature enough
+    to package.
+  packages: []
+  verified: '2026-10-07'
+- system: MYOB
+  vendor: MYOB
+  segment: accounting
+  status: none
+  summary: MYOB has no official MCP server or AI connector; access is through third-party aggregators
+    over the MYOB Business/AccountRight APIs.
+  refs: []
+  alternatives:
+  - CData Connect AI
+  - Apideck
+  - SyncHub
+  - Peliqan
+  self_host: Only commercial aggregators or a custom server over the MYOB API.
+  gap: There is no vendor or community MCP server worth packaging.
+  packages: []
+  verified: '2026-10-07'
+- system: QuickBooks Online
+  vendor: Intuit
+  segment: accounting
+  status: ga
+  summary: Intuit's hosted QuickBooks connector is GA inside Claude (connector directory) and ChatGPT,
+    US customers only; it reads P&L, cash flow and benchmarks and writes invoices, estimates, customers,
+    items and GL imports, with confirmation for destructive actions. The hosted endpoint is not documented
+    for third-party clients and is blocked to direct access, so only those allow-listed assistants can
+    use it. Intuit also publishes an open-source local stdio server (intuit/quickbooks-online-mcp-server)
+    that needs your own Intuit developer app and an OAuth refresh token.
+  refs:
+  - https://quickbooks.intuit.com/learn-support/en-us/help-article/accounting-bookkeeping/use-quickbooks-connector-claude/L3YBlo6Ht_US_en_US
+  - https://quickbooks.intuit.com/r/news/quickbooks-expands-into-claude-and-chatgpt-with-new-features/
+  - https://github.com/intuit/quickbooks-online-mcp-server
+  open_source:
+  - repo: https://github.com/intuit/quickbooks-online-mcp-server
+    license: Apache-2.0
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  - Apideck
+  - Merge
+  self_host: Run the official open-source server as a stdio process (or in a container with QUICKBOOKS_TOKEN_STORE_PATH
+    on a writable volume) with your own Intuit app credentials and a refresh token from its `npm run auth`
+    helper.
+  gap: Intuit's hosted connector is US-only and limited to Claude and ChatGPT, and the self-run server
+    has no registry release and needs a per-company OAuth handshake.
+  packages:
+  - quickbooks
+  verified: '2026-10-07'
+- system: Sage Business Cloud Accounting
+  vendor: Sage
+  segment: accounting
+  status: none
+  summary: Sage has no MCP server for Sage Business Cloud Accounting (Sage Accounting); its MCP work covers
+    Sage Intacct, a separate product.
+  refs:
+  - https://www.sage.com/en-us/sage-business-cloud/intacct/product-capabilities/platform/ai-gateway/
+  open_source:
+  - repo: https://github.com/chrisjohnleah/sage-business-cloud-accounting-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Apideck
+  - Merge
+  self_host: Self-run a community server or an aggregator against the Sage Accounting v3.1 API with your
+    own registered app.
+  gap: There is no vendor server at all and no community server with real adoption.
+  packages: []
+  verified: '2026-10-07'
+- system: TallyPrime
+  vendor: Tally Solutions
+  segment: accounting
+  status: ga
+  summary: Tally Solutions documents an official TallyPrime MCP plug-in for Claude Desktop (TallyCare
+    Assist articles 'Configure Claude Desktop with TallyPrime MCP' and 'TallyPrime MCP Tools', with release
+    notes) exposing company, master, accounting, inventory, outstanding and transaction data from a locally
+    running TallyPrime. The setup steps sit behind a TallyHelp login, so I could not confirm the install
+    mechanism or whether it writes. There is no public source or package.
+  refs:
+  - https://help.tallysolutions.com/configure-claude-desktop-with-tallyprime-mcp/
+  - https://help.tallysolutions.com/tallyprime-mcp-tools/
+  - https://help.tallysolutions.com/release-notes-tallyprime-mcp/
+  open_source:
+  - repo: https://github.com/dhananjay1405/tally-mcp-server
+    license: MIT
+    transport: stdio|http
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Download the versioned v7.7 zip on the Windows host that runs TallyPrime, enable the XML
+    gateway on port 9000, and run `node dist/index.mjs` (stdio) or its remote mode behind your own TLS.
+  gap: Nothing works without a reachable desktop TallyPrime instance, and neither the official plug-in
+    nor the community server has a registry release that can be pinned.
+  packages: []
+  verified: '2026-10-07'
+- system: Wave
+  vendor: Wave Financial (H&R Block)
+  segment: accounting
+  status: none
+  summary: Wave publishes no MCP server; community servers wrap Wave's public GraphQL API.
+  refs: []
+  open_source:
+  - repo: https://github.com/vinnividivicci/wave_mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - Composio
+  - Zapier
+  self_host: Self-run a community stdio server with a Wave full-access token.
+  gap: There is no official server and the community options are hobby-scale.
+  packages: []
+  verified: '2026-10-07'
+- system: Xero
+  vendor: Xero
+  segment: accounting
+  status: ga
+  summary: Xero runs a hosted MCP endpoint at https://mcp.xero.com/mcp behind its official Claude connector
+    (launched May 2026), read-only with scopes for invoices, aged, balance sheet and P&L reports. Its
+    authorization server (identity.xero.com) advertises no dynamic client registration, so a client needs
+    a pre-registered Xero app and cannot connect by URL alone. Xero also publishes the open-source @xeroapi/xero-mcp-server
+    (stdio, read-write incl. payroll timesheets) using a Custom Connection or a bearer token.
+  refs:
+  - https://central.xero.com/0/article/Connect-Xero-using-the-Xero-connector-in-Claude
+  - https://www.xero.com/us/media-releases/xero-delivers-claude-integration-to-advance-ai-powered-financial-intelligence/
+  - https://mcp.xero.com/.well-known/oauth-protected-resource/mcp
+  - https://github.com/XeroAPI/xero-mcp-server
+  - https://developer.xero.com/documentation/guides/oauth2/custom-connections/
+  open_source:
+  - repo: https://github.com/XeroAPI/xero-mcp-server
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  - Apideck
+  - Merge
+  self_host: Run @xeroapi/xero-mcp-server@0.0.17 via npx or in a Node container with Custom Connection
+    credentials; for multi-org use, pass a per-org bearer token instead.
+  gap: The hosted endpoint is read-only and needs a pre-registered OAuth client, while the writable local
+    server relies on Custom Connections, which Xero offers only in some regions and charges for.
+  packages:
+  - xero
+  verified: '2026-10-07'
+- system: Zoho Books
+  vendor: Zoho
+  segment: accounting
+  status: ga
+  summary: 'Zoho Books is available as a built-in Claude connector and, for any other MCP client, through
+    Zoho MCP (mcp.zoho.com and regional mcp.zoho.eu/.in/.com.au/.jp), where you create a server, choose
+    which Books tools (read and write: invoices, expenses, bank reconciliation, contacts, items) to enable,
+    and get a URL of the form https://<server-name>-<org-id>.zohomcp.<dc>/mcp/<api-key>/message. The key
+    embedded in the URL authorizes the server, and Zoho app access is granted per user (OAuth on demand)
+    or through admin-shared Connections.'
+  refs:
+  - https://www.zoho.com/us/books/help/mcp/zoho-books-mcp.html
+  - https://www.zoho.com/mcp/
+  - https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation
+  - https://www.zoho.com/us/billing/help/ai/mcp.html
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: 'No self-hosted option is needed: Zoho MCP is vendor-hosted and generic clients connect by
+    pasting the server URL.'
+  gap: The server URL is a bearer secret with no per-request user auth unless OAuth-on-demand is configured,
+    and Zoho does not publish limits for each plan.
+  packages:
+  - zoho
+  verified: '2026-10-07'
+- system: Zoho Inventory
+  vendor: Zoho
+  segment: accounting
+  status: none
+  summary: Zoho Inventory is not listed among the apps on the Zoho MCP product page (Books, People, CRM,
+    Billing, Expense and others are), so there is no confirmed first-party MCP path.
+  refs:
+  - https://www.zoho.com/mcp/
+  open_source:
+  - repo: https://github.com/vinamrasangal/zoho-inventory-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: Check whether your Zoho MCP account offers Inventory tools; otherwise self-run a small read-only
+    server with a Zoho OAuth client.
+  gap: There is no confirmed official coverage and no community server with adoption.
+  packages: []
+  verified: '2026-10-07'
+- system: ADP Workforce Now
+  vendor: ADP
+  segment: hr
+  status: none
+  summary: ADP ships no MCP server; integration is through ADP API Central (paid add-on with OAuth plus
+    mutual-TLS certificates), whose only AI feature is ADP Assist for developers.
+  refs:
+  - https://www.adp.com/what-we-offer/integrations/api-central.aspx
+  - https://mediacenter.adp.com/adp-api-central-just-got-smarter
+  alternatives:
+  - StackOne
+  - Knit
+  - Apideck
+  - Merge
+  - Unified.to
+  - CData Connect AI
+  self_host: A team would write its own server against API Central using its mTLS client certificate,
+    hosted inside its network.
+  gap: There is no vendor or credible community MCP server, and API Central's mTLS and subscription requirements
+    make a generic package impractical.
+  packages: []
+  verified: '2026-10-07'
+- system: BambooHR
+  vendor: BambooHR
+  segment: hr
+  status: preview
+  summary: 'BambooHR hosts a beta MCP server at https://{subdomain}.bamboohr.com/api/mcp (streamable HTTP)
+    that powers its Claude and ChatGPT connectors. Most tools are read-only, some write or delete, and
+    all are bounded by the user''s BambooHR permissions. An admin must enable the AI Connectors app, and
+    OAuth does not support dynamic client registration: clients must be registered in the developer portal.'
+  refs:
+  - https://documentation.bamboohr.com/docs/mcp-server
+  open_source:
+  - repo: https://github.com/acalder-techpm/bamboohr-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - StackOne
+  - Merge
+  - Knit
+  - Apideck
+  - Unified.to
+  self_host: Use the vendor-hosted endpoint with a developer-portal OAuth app; there is no reason to self-host.
+  gap: No dynamic client registration means a DCR-only client such as Xailon cannot connect by URL alone,
+    and the server is still beta.
+  packages: []
+  verified: '2026-10-07'
+- system: Deel
+  vendor: Deel
+  segment: hr
+  status: ga
+  summary: Deel hosts an official MCP server at https://api.letsdeel.com/mcp (streamable HTTP, JSON-RPC
+    with SSE) exposing organization-, worker- and public-level tools that map to Deel API operations,
+    read and write (e.g. contracts, people, time-off requests). Auth is OAuth 2.1 with dynamic client
+    registration (/oauth/register advertised), with a personal access token as fallback, and the account
+    needs API access enabled.
+  refs:
+  - https://developer.deel.com/mcp/introduction
+  - https://api.letsdeel.com/.well-known/oauth-authorization-server
+  alternatives:
+  - StackOne
+  - Merge
+  - Knit
+  - Zapier
+  - Composio
+  self_host: Vendor-hosted; no self-hosting needed.
+  gap: OAuth scopes are broad and Deel does not document separate regional endpoints or approval workflows
+    for write tools.
+  packages:
+  - deel
+  verified: '2026-10-07'
+- system: Gusto
+  vendor: Gusto
+  segment: hr
+  status: ga
+  summary: Gusto runs an official hosted MCP server (https://mcp.api.gusto.com, streamable HTTP) behind
+    its Claude and ChatGPT connectors and states that any MCP-compatible client can use it. Payroll, employee,
+    contractor, time and onboarding tools inherit the user's Gusto permissions, and payroll can be run
+    from chat where Gusto marks the company eligible. OAuth metadata advertises dynamic client registration
+    (/oauth/register).
+  refs:
+  - https://support.gusto.com/article/250715155353740/connect-gusto-to-chatgpt-claude-and-slack
+  - https://gusto.com/product/integrations/gusto-mcp
+  - https://mcp.api.gusto.com/.well-known/oauth-authorization-server
+  alternatives:
+  - StackOne
+  - Composio
+  - Merge
+  - Knit
+  self_host: Vendor-hosted; no self-hosting needed.
+  gap: Payroll-run tools depend on company eligibility, and Gusto asks users to connect only through trusted
+    MCP clients.
+  packages:
+  - gusto
+  verified: '2026-10-07'
+- system: HiBob
+  vendor: HiBob
+  segment: hr
+  status: preview
+  summary: HiBob hosts the Bob MCP server (beta announced Apr 2026; the OAuth-based version has been rolling
+    out gradually since June 2026) for people data, time off, tasks, reviews, goals, compensation, hiring
+    and documents, read and write within the signed-in employee's Bob permissions. Both the documented
+    URL https://api.hibob.com/ai-mcp-public/mcp/public and https://mcp.hibob.com/mcp/public return protected-resource
+    metadata naming https://mcp.hibob.com/mcp/public, whose OAuth server advertises dynamic client registration.
+    Service-user Basic auth is still accepted but superseded.
+  refs:
+  - https://www.hibob.com/platform/core/ai/mcp/
+  - https://apidocs.hibob.com/changelog/developer-docs-update-bob-mcp-server-now-uses-oauth
+  - https://apidocs.hibob.com/changelog/new-hibob-mcp-server-beta
+  - https://help.hibob.com/hc/en-us/articles/47317999547921-Use-Bob-MCP-Server
+  - https://mcp.hibob.com/.well-known/oauth-protected-resource
+  alternatives:
+  - StackOne
+  - Merge
+  - Knit
+  self_host: Vendor-hosted; no self-hosting needed.
+  gap: The rollout is gradual, the current setup page is in the login-gated Help Center, and HiBob lists
+    only ChatGPT, Claude and Cursor as supported clients.
+  packages:
+  - hibob
+  verified: '2026-10-07'
+- system: Paychex
+  vendor: Paychex
+  segment: hr
+  status: none
+  summary: Paychex publishes no MCP server; the only open-source project is an unaffiliated demo that
+    queries Paychex API documentation, not tenant data.
+  refs: []
+  open_source:
+  - repo: https://github.com/ryanemitchell/paychex-mcp-server
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-only
+  alternatives:
+  - StackOne
+  - Knit
+  - Merge
+  self_host: Only via aggregators or a custom server over the Paychex Flex API with partner credentials.
+  gap: There is no usable server.
+  packages: []
+  verified: '2026-10-07'
+- system: Paycor
+  vendor: Paycor (Paychex)
+  segment: hr
+  status: none
+  summary: Paycor publishes no MCP server and no open-source one exists; only commercial aggregators offer
+    Paycor tools.
+  refs: []
+  alternatives:
+  - StackOne
+  - Knit
+  - Unified.to
+  - Merge
+  self_host: Only via aggregators or a custom server over Paycor's partner API.
+  gap: There is no MCP server of any kind outside aggregators.
+  packages: []
+  verified: '2026-10-07'
+- system: Rippling
+  vendor: Rippling
+  segment: hr
+  status: ga
+  summary: Rippling MCP (launched Aug 2026) is first-party, managed in Rippling's MCP Gateway, and per
+    Rippling works with any MCP-compliant client. Admins assign access and tools, users copy the Remote
+    MCP server URL from My IT > MCP connectors, and sensitive fields (SSN, pay, addresses, tax IDs) are
+    excluded. It needs an active Rippling AI subscription. The URL is shown only in-product, and the endpoint's
+    OAuth metadata sits behind Cloudflare, so dynamic client registration could not be verified.
+  refs:
+  - https://www.rippling.com/platform/ai/rippling-mcp
+  - https://developer.rippling.com/documentation/rippling-platform/rippling-mcp/setup
+  open_source:
+  - repo: https://github.com/bifrost-mcp/rippling-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - StackOne
+  - Merge
+  - Knit
+  - Apideck
+  - Unified.to
+  self_host: Vendor-hosted through the Rippling MCP Gateway; no self-hosting needed.
+  gap: The server URL is not published and DCR is unverified, so it cannot be pre-packaged, and it requires
+    a paid Rippling AI subscription.
+  packages: []
+  verified: '2026-10-07'
+- system: SAP SuccessFactors
+  vendor: SAP
+  segment: hr
+  status: none
+  summary: SAP ships no first-party SuccessFactors MCP server. SAP's route is to expose SuccessFactors
+    OData APIs as MCP tools through the MCP Gateway in SAP Integration Suite (BTP), which you configure
+    yourself, or to custom servers for Joule Studio.
+  refs:
+  - https://community.sap.com/t5/technology-blog-posts-by-sap/mcp-gateway-in-sap-integration-suite-your-apis-ready-for-the-age-of-agents/ba-p/14438250
+  open_source:
+  - repo: https://github.com/aiadiguru2025/sf-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - StackOne
+  - Merge
+  - Knit
+  self_host: Expose SuccessFactors OData APIs through SAP Integration Suite's MCP Gateway on BTP, or run
+    sf-mcp on-premises with an API user.
+  gap: 'There is no turnkey vendor endpoint: the official path needs BTP Integration Suite configuration
+    per tenant.'
+  packages: []
+  verified: '2026-10-07'
+- system: Workday
+  vendor: Workday
+  segment: hr
+  status: preview
+  summary: Workday's Agent-Ready Tools (hundreds of HR, payroll, finance and procurement tools exposed
+    over MCP, inheriting Workday security, business-process controls and audit) are in early access through
+    the paid Workday Extend Professional SKU, with GA projected for the second half of 2026. Workday has
+    not published an endpoint shape or client-auth details.
+  refs:
+  - https://newsroom.workday.com/2026-06-02-Workday-Launches-New-Tools-for-Developers-to-Build,-Connect,-and-Verify-AI-Agents-For-HR,-Finance,-and-IT
+  open_source:
+  - repo: https://github.com/chrischall/workday-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - StackOne
+  - Merge
+  - Knit
+  - Unified.to
+  self_host: Until GA, a team would build on Extend Professional or front Workday's REST/SOAP APIs with
+    its own server under an ISU account.
+  gap: Access is early-access and paid-SKU only, and Workday documents no public tenant endpoint or OAuth
+    details for third-party clients.
+  packages: []
+  verified: '2026-10-07'
+- system: Zoho People
+  vendor: Zoho
+  segment: hr
+  status: ga
+  summary: 'Zoho People is one of the apps on Zoho MCP: you create a server at mcp.zoho.com (or the regional
+    DC), enable People tools, and connect any MCP client with the generated https://<server-name>-<org-id>.zohomcp.<dc>/mcp/<api-key>/message
+    URL. This is the same mechanism as Zoho Books.'
+  refs:
+  - https://www.zoho.com/mcp/
+  - https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation
+  alternatives:
+  - StackOne
+  - Merge
+  - Composio
+  self_host: Vendor-hosted; no self-hosting needed.
+  gap: The secret URL is the only credential unless per-user OAuth is configured, and Zoho does not publish
+    the People tool catalogue.
+  packages:
+  - zoho
+  verified: '2026-10-07'
+- system: Adobe Commerce / Magento Open Source
+  vendor: Adobe
+  segment: commerce
+  status: announced
+  summary: Adobe announced Commerce MCP at Summit 2026 (April 20) for agentic discovery, cart and checkout.
+    Experience League marks it 'Coming Soon' (page updated 2026-06-17) and gives no endpoint, editions
+    or auth details yet.
+  refs:
+  - https://experienceleague.adobe.com/en/docs/commerce-learn/ai-and-agentic-commerce/commerce-mcp/commerce-mcp-overview
+  open_source:
+  - repo: https://github.com/magebitcom/magento2-mcp-module
+    license: MIT
+    transport: http
+    read_write: read-write
+  - repo: https://github.com/Genaker/AgentoAI
+    license: MIT
+    transport: http
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: Install the Magebit module (plus magento2-mcp-suite for domain tools) with composer on the
+    store, run setup:upgrade, then mint a scoped bearer token. The MCP endpoint is the store's own /mcp
+    route, so it works on-premises and on Adobe Commerce Cloud PaaS.
+  gap: No Adobe-supported MCP yet. The community module needs code deployed to the store, and its OAuth
+    path needs a pre-registered client.
+  packages:
+  - magento
+  verified: '2026-10-07'
+- system: Amazon Seller Central
+  vendor: Amazon
+  segment: commerce
+  status: preview
+  summary: 'The Amazon Selling Partner Connector is a hosted MCP at https://sellingpartner-ai.amazon.com/mcp,
+    launched 2026-09-23. It is GA in Amazon Quick and in beta for Claude, US stores only. Auth is Seller
+    Central OAuth consent, and tools are limited by the user''s Seller Central roles. It covers analytics,
+    inventory, listings and FBA inbound, and writes are drafted for approval. The authorization server
+    advertises Client ID Metadata Documents (client_id_metadata_document_supported: true) and no DCR registration
+    endpoint.'
+  refs:
+  - https://github.com/amzn/selling-partner-agentic-toolkit
+  - https://sellingpartner-ai.amazon.com/.well-known/oauth-protected-resource/mcp
+  - https://sellingpartner-ai.amazon.com/.well-known/oauth-authorization-server/mcp
+  open_source:
+  - repo: https://github.com/amzn/selling-partner-agentic-toolkit
+    license: Apache-2.0
+    transport: http
+    read_write: read-write
+  - repo: https://github.com/mattcoatsworth/AmazonSeller-mcp-server
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Composio
+  - Zapier
+  self_host: No maintained community SP-API MCP server leads adoption. A team would register an SP-API
+    developer app and wrap SP-API itself.
+  gap: Beta, US marketplaces only. Amazon names only Amazon Quick and Claude as supported clients, so
+    a CIMD-identified third-party client may be refused at consent.
+  packages:
+  - amazon-seller
+  verified: '2026-10-07'
+- system: BigCommerce
+  vendor: BigCommerce
+  segment: commerce
+  status: preview
+  summary: BigCommerce runs a Storefront MCP server in open beta, enabled under Settings > Early access.
+    There is one unique HTTP URL per storefront, shown in the control panel. It provides guest shopper
+    tools (catalog search, product details, cart, checkout URL), with B2B Buyer Portal tools and customer
+    login listed as coming. There is no admin or back-office MCP. A public docs MCP is at https://docs.bigcommerce.com/_mcp/server.
+  refs:
+  - https://docs.bigcommerce.com/developer/api-reference/mcp/overview
+  - https://docs.bigcommerce.com/developer/changelog/2026/5/7
+  open_source:
+  - repo: https://github.com/isaacgounton/bigcommerce-api-mcp
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/ackm04/bigcommerce-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Apideck
+  - Zapier
+  - Composio
+  self_host: No community admin server has meaningful adoption. Teams needing back-office access would
+    wrap the V3 Management API themselves or use an aggregator.
+  gap: The official server is shopper-facing only. There is no MCP for orders, inventory, customers or
+    pricing administration, and the URL is not a documented pattern.
+  packages:
+  - bigcommerce-storefront
+  verified: '2026-10-07'
+- system: commercetools
+  vendor: commercetools
+  segment: commerce
+  status: ga
+  summary: commercetools offers Commerce MCP (GA) as Managed MCP Servers configured in Merchant Center,
+    or self-hosted with the MIT npm package @commercetools/commerce-mcp. Both cover products, categories,
+    carts, orders, customers and more, using API client credentials (or Identity login for managed servers).
+    Read-only mode is --tools=read_all. A free Knowledge MCP serves docs and API specs.
+  refs:
+  - https://docs.commercetools.com/dev-tooling/mcp/overview
+  - https://docs.commercetools.com/dev-tooling/mcp/commerce-mcp
+  - https://docs.commercetools.com/api/managed-mcp-servers-overview
+  - https://github.com/commercetools/commerce-mcp
+  open_source:
+  - repo: https://github.com/commercetools/commerce-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/commercetools/mcp-essentials
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  self_host: Run the official package over stdio, or with --remote=true as a streamable-HTTP container,
+    using a scoped API client. Managed servers are an alternative inside Merchant Center.
+  gap: The managed server URL shape is not publicly documented, so only the self-hosted package can be
+    packaged reproducibly.
+  packages:
+  - commercetools
+  verified: '2026-10-07'
+- system: Lightspeed (Retail X-Series / R-Series)
+  vendor: Lightspeed Commerce
+  segment: commerce
+  status: none
+  summary: Lightspeed publishes REST APIs (Retail X-Series, R-Series, K-Series) but no MCP server.
+  refs:
+  - https://x-series-api.lightspeedhq.com/
+  - https://developers.lightspeedhq.com/retail/
+  open_source:
+  - repo: https://github.com/BusyBee3333/lightspeed-mcp-2026-complete
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - Zapier
+  - Composio
+  - SyncHub
+  - viaSocket
+  self_host: No adopted community server. A team would wrap the X-Series 2.0 API with a personal token.
+  gap: No official or adopted MCP for Lightspeed POS or inventory.
+  packages: []
+  verified: '2026-10-07'
+- system: PayPal
+  vendor: PayPal
+  segment: commerce
+  status: ga
+  summary: PayPal hosts a remote MCP server at https://mcp.paypal.com/mcp (sandbox at mcp.sandbox.paypal.com).
+    It uses OAuth 2.1 with DCR, with a registration_endpoint verified in the metadata. It covers invoices,
+    orders, payments, disputes, shipment tracking, catalog, subscriptions and reporting for merchants.
+    The local server @paypal/mcp is Apache-2.0.
+  refs:
+  - https://developer.paypal.com/ai-tools/mcp-server
+  - https://mcp.paypal.com/.well-known/oauth-authorization-server
+  - https://github.com/paypal/agent-toolkit
+  open_source:
+  - repo: https://github.com/paypal/agent-toolkit
+    license: Apache-2.0
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - Composio
+  - Zapier
+  self_host: Run the official @paypal/mcp locally with a PayPal REST app's access token and PAYPAL_ENVIRONMENT=SANDBOX
+    for testing.
+  gap: The hosted server is production by default. Use the sandbox host or the local server for non-production
+    testing.
+  packages:
+  - paypal
+  verified: '2026-10-07'
+- system: Salesforce Commerce Cloud (B2C Commerce)
+  vendor: Salesforce
+  segment: commerce
+  status: ga
+  summary: Salesforce ships the B2C DX MCP server (npm @salesforce/b2c-dx-mcp, Apache-2.0) as a local
+    stdio server for developers. It provides docs search, the SCAPI Admin API, cartridge deploy and debug,
+    logs and MRT. Auth is an Account Manager API client (SFCC_CLIENT_ID and SFCC_CLIENT_SECRET) plus the
+    instance host, short code and tenant ID. Some toolsets are preview-only behind --allow-non-ga-tools.
+  refs:
+  - https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/mcp-dx-intro.html
+  - https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp/
+  - https://github.com/SalesforceCommerceCloud/b2c-developer-tooling
+  open_source:
+  - repo: https://github.com/SalesforceCommerceCloud/b2c-developer-tooling
+    license: Apache-2.0
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  self_host: Run the official npm package locally over stdio, pinned, with an Account Manager API client
+    scoped to the instance.
+  gap: Developer-oriented. There is no hosted merchant or business-user MCP for orders and inventory,
+    and B2B Commerce on Lightning is not covered.
+  packages:
+  - sfcc-b2c
+  verified: '2026-10-07'
+- system: Shippo
+  vendor: Shippo
+  segment: commerce
+  status: ga
+  summary: Shippo hosts an MCP server at https://mcp.shippo.com, listed in the MCP Registry as com.shippo/shippo-mcp.
+    It uses OAuth sign-in only, and DCR is available via the goshippo.com registration endpoint. It covers
+    rates, labels, tracking, address validation, customs and batches. It runs against the live account
+    only, and label purchases are charged.
+  refs:
+  - https://docs.goshippo.com/guides/mcp-server
+  - https://goshippo.com/.well-known/oauth-authorization-server
+  - https://github.com/goshippo/ai
+  open_source:
+  - repo: https://github.com/goshippo/ai
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - Zapier
+  - Composio
+  self_host: Not needed. Use the hosted endpoint, or the official @shippo/shippo-mcp bridge for stdio-only
+    clients.
+  gap: No test mode on the hosted server; testing needs shippo_test_ keys against the REST API directly.
+  packages:
+  - shippo
+  verified: '2026-10-07'
+- system: ShipStation
+  vendor: ShipStation (Auctane)
+  segment: commerce
+  status: ga
+  summary: ShipStation hosts a public Documentation MCP at https://docs.shipstation.com/mcp (no auth,
+    docs and API schema only; verified it responds to initialize). It also published shipstation/mcp-shipstation-api
+    for API v2 (shipments, labels, rates, carriers, inventory, batches, manifests) with an API key, but
+    that repo has no licence, no npm release and no commits since 2025-08.
+  refs:
+  - https://docs.shipstation.com/connect-mcp
+  - https://github.com/shipstation/mcp-shipstation-api
+  open_source:
+  - repo: https://github.com/shipstation/mcp-shipstation-api
+    license: NOASSERTION
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: Teams could build the vendor repo's Dockerfile locally with SHIPSTATION_API_KEY. Because
+    it has no licence, redistribution is not permitted, so each team builds its own image.
+  gap: No licensed, maintained MCP that can act on a ShipStation account. Only the docs server is usable.
+  packages:
+  - shipstation-docs
+  verified: '2026-10-07'
+- system: Shopify (store admin)
+  vendor: Shopify
+  segment: commerce
+  status: ga
+  summary: Shopify runs a hosted store-management MCP server at https://setup.shopify.com/mcp (serverInfo
+    shopify-mcp-server), used by its connectors for ChatGPT, Claude, Perplexity and Muse. It has about
+    25 read and write tools (products, collections, inventory, orders read-only, customers, ShopifyQL
+    analytics, discounts) plus GraphQL query and mutation. OAuth 2.1 with PKCE, but the authorization
+    server publishes no registration_endpoint and no client_id_metadata_document support, so only Shopify-approved
+    clients can connect. Separately, every store has a public shopper-facing Storefront/UCP MCP at https://{shop}/api/ucp/mcp;
+    the Dev MCP is already shipped as shopify-dev.
+  refs:
+  - https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools
+  - https://setup.shopify.com/.well-known/oauth-protected-resource
+  - https://setup.shopify.com/.well-known/oauth-authorization-server/auth
+  - https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront
+  - https://github.com/Shopify/shopify-ai-toolkit
+  open_source:
+  - repo: https://github.com/GeLi2001/shopify-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/Cesarjoquin/shopify-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/Shopify/shopify-ai-toolkit
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Composio
+  - Zapier
+  - Gumloop
+  - Pipeboard
+  self_host: Run shopify-mcp over stdio (npx, pinned) with a Dev Dashboard custom app's client ID and
+    secret installed on the store. Each store needs its own app and set of scopes.
+  gap: Shopify's own Admin MCP accepts only allow-listed clients, so generic MCP clients have to use a
+    community server and a per-store custom app.
+  packages:
+  - shopify-admin
+  verified: '2026-10-07'
+- system: Square
+  vendor: Block (Square)
+  segment: commerce
+  status: preview
+  summary: Square runs a hosted MCP in beta at https://mcp.squareup.com/mcp (SSE at /sse), with OAuth
+    and full Square API access through three tools (service discovery, type info, API execution). Production
+    only. DCR is advertised, but Square documents an allowlist of MCP clients. Square also publishes a
+    local server, npm square-mcp-server (Apache-2.0), with ACCESS_TOKEN, SANDBOX and DISALLOW_WRITES.
+  refs:
+  - https://developer.squareup.com/docs/mcp
+  - https://github.com/square/square-mcp-server
+  - https://mcp.squareup.com/.well-known/oauth-authorization-server
+  open_source:
+  - repo: https://github.com/square/square-mcp-server
+    license: Apache-2.0
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: Run the official square-mcp-server locally with a personal or OAuth access token. SANDBOX=true
+    targets the sandbox.
+  gap: The hosted server allow-lists clients, and the local package has had no release since April 2025.
+  packages: []
+  verified: '2026-10-07'
+- system: Walmart Marketplace
+  vendor: Walmart
+  segment: commerce
+  status: none
+  summary: Walmart publishes no MCP server for Marketplace sellers. Sellers use the Marketplace REST APIs
+    with OAuth client credentials from developer.walmart.com.
+  refs:
+  - https://developer.walmart.com/
+  open_source:
+  - repo: https://github.com/luke-nielsen/walmart-mcp
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/hey-nate/Walmart-Marketplace-MCP
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: No community server has a clear lead. A team would have to build a thin MCP over the Marketplace
+    Items, Inventory, Orders and Prices APIs.
+  gap: No official or adopted MCP server for Walmart seller operations.
+  packages: []
+  verified: '2026-10-07'
+- system: WooCommerce
+  vendor: Automattic / WooCommerce
+  segment: commerce
+  status: preview
+  summary: WooCommerce core has an MCP integration in developer preview, enabled with the mcp_integration
+    feature flag. Its abilities are exposed through the WordPress MCP Adapter default server at https://<store>/wp-json/mcp/mcp-adapter-default-server,
+    authenticated with WordPress Application Passwords. It can read, create, update and delete products
+    and query orders and update their status, all under existing WooCommerce permissions. The older /wp-json/woocommerce/mcp
+    endpoint is deprecated.
+  refs:
+  - https://developer.woocommerce.com/docs/features/mcp/
+  - https://github.com/WordPress/mcp-adapter
+  - https://github.com/Automattic/mcp-wordpress-remote
+  open_source:
+  - repo: https://github.com/Automattic/mcp-wordpress-remote
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  - repo: https://github.com/WordPress/mcp-adapter
+    license: GPL-2.0
+    transport: http
+    read_write: read-write
+  - repo: https://github.com/techspawn/woocommerce-mcp-server
+    license: MIT
+    transport: stdio
+    read_write: read-write
+  alternatives:
+  - CData Connect AI
+  - Zapier
+  - Composio
+  self_host: Enable the WooCommerce MCP feature on the store (WordPress MCP Adapter), create an Application
+    Password for a least-privilege user, and run the official mcp-wordpress-remote proxy locally. On a
+    self-hosted box you can also use `wp mcp-adapter serve` over stdio.
+  gap: Developer preview only. The tool surface is limited to products and orders, and the API may change.
+  packages:
+  - woocommerce
+  verified: '2026-10-07'

@@ -1,0 +1,5 @@
+{
+  "name": "sfcc-b2c",
+  "version": "1.0.0",
+  "description": "Search B2C Commerce docs, call SCAPI Admin APIs, inspect logs and deploy cartridges on a B2C Commerce instance."
+}

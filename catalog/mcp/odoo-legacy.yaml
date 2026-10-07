@@ -1,0 +1,27 @@
+name: odoo-legacy
+kind: mcp
+title: Odoo (16-19)
+summary: Read, aggregate and diagnose Odoo 16-19 data, with approval-gated writes, using your existing
+  Odoo credentials.
+category: erp
+tags:
+- erp
+- odoo
+- self-hosted
+source: ./plugins/odoo-legacy
+license: MIT
+upstream: https://github.com/erpipe-org/mcp-odoo
+official: false
+rank: 36
+featured: false
+env:
+  ODOO_URL: Odoo base URL over https (e.g. https://erp.example.com).
+  ODOO_DB: Odoo database name (shown in the database selector or Settings > Technical).
+  ODOO_USERNAME: Login of the Odoo user the agent acts as; use a dedicated, least-privilege user.
+  ODOO_PASSWORD: That user's API key (My Preferences > Security > API Keys) or password.
+notes: Community server for Odoo 16-19 (XML-RPC, or JSON-2 on 19). No Odoo-side module needed. Writes
+  are blocked by default and need an env gate plus same-session approval tokens. Prefer the official odoo
+  plugin on Odoo 20.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

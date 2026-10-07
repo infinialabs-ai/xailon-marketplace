@@ -1,0 +1,5 @@
+{
+  "name": "woocommerce",
+  "version": "1.0.0",
+  "description": "Query, create and update WooCommerce products and orders through the store's WordPress MCP Adapter endpoint."
+}

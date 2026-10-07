@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "odoo": {
+      "type": "http",
+      "url": "${ODOO_URL}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ODOO_API_KEY}"
+      }
+    }
+  }
+}

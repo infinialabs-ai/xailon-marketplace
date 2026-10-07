@@ -1,0 +1,5 @@
+{
+  "name": "paypal",
+  "version": "1.0.0",
+  "description": "Create and manage PayPal invoices, orders, refunds, disputes, subscriptions and transaction reports."
+}

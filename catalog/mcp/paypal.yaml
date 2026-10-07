@@ -1,0 +1,21 @@
+name: paypal
+kind: mcp
+title: PayPal
+summary: Create and manage PayPal invoices, orders, refunds, disputes, subscriptions and transaction reports.
+category: commerce
+tags:
+- paypal
+- payments
+- invoices
+source: ./plugins/paypal
+license: Hosted
+upstream: https://developer.paypal.com/ai-tools/mcp-server
+official: true
+rank: 49
+featured: false
+notes: OAuth 2.1 with dynamic client registration and PayPal login and consent. Production account; for
+  testing use https://mcp.sandbox.paypal.com or the local @paypal/mcp. Write tools can move money, so
+  review before approving. Sign-in from Xailon is untested; try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

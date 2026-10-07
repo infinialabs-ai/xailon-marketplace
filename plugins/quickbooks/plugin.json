@@ -1,0 +1,5 @@
+{
+  "name": "quickbooks",
+  "version": "1.0.0",
+  "description": "Read and write QuickBooks Online customers, invoices, bills, journal entries and payments, and run P&L, balance sheet and aging reports."
+}

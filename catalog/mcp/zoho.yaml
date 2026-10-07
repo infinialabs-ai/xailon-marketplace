@@ -1,0 +1,26 @@
+name: zoho
+kind: mcp
+title: Zoho MCP (Books, People)
+summary: 'Use the Zoho Books and Zoho People tools you enable in Zoho MCP: invoices, expenses, contacts,
+  employees, leave.'
+category: accounting
+tags:
+- accounting
+- hr
+- zoho
+source: ./plugins/zoho
+license: Hosted
+upstream: https://www.zoho.com/us/books/help/mcp/zoho-books-mcp.html
+official: true
+rank: 40
+featured: false
+env:
+  ZOHO_MCP_URL: Full https Server URL from your Zoho MCP dashboard (mcp.zoho.com or your regional mcp.zoho.eu/.in/.com.au/.jp
+    > your server > Connect), shaped https://<server-name>-<org-id>.zohomcp.<dc>/mcp/<api-key>/message.
+    It contains the API key; treat it as a password.
+notes: Create a server in Zoho MCP and pick which Books/People tools (read and write) it exposes. The
+  URL embeds the key; app access uses per-user OAuth on demand or admin-shared Connections. Also covers
+  the Zoho People system. Sign-in from Xailon is untested; try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

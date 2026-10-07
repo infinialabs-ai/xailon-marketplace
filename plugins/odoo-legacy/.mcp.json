@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "odoo-legacy": {
+      "command": "uvx",
+      "args": [
+        "odoo-mcp==1.3.0"
+      ],
+      "env": {
+        "ODOO_URL": "${ODOO_URL}",
+        "ODOO_DB": "${ODOO_DB}",
+        "ODOO_USERNAME": "${ODOO_USERNAME}",
+        "ODOO_PASSWORD": "${ODOO_PASSWORD}"
+      }
+    }
+  }
+}

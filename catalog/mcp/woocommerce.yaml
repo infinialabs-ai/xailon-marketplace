@@ -1,0 +1,29 @@
+name: woocommerce
+kind: mcp
+title: WooCommerce
+summary: Query, create and update WooCommerce products and orders through the store's WordPress MCP Adapter
+  endpoint.
+category: commerce
+tags:
+- woocommerce
+- wordpress
+- ecommerce
+- orders
+source: ./plugins/woocommerce
+license: MIT
+upstream: https://developer.woocommerce.com/docs/features/mcp/
+official: true
+rank: 45
+featured: false
+env:
+  WOOCOMMERCE_URL: The store's https base URL with no trailing slash, e.g. https://store.example.com.
+    Enable the WooCommerce mcp_integration feature (wp option update woocommerce_feature_mcp_integration_enabled
+    yes).
+  WP_API_USERNAME: WordPress username that owns the Application Password. Use a least-privilege shop manager.
+  WP_APP_PASSWORD: WordPress Application Password from Users > Profile > Application Passwords (not the
+    account password).
+notes: WooCommerce MCP is a developer preview, so APIs may change. Do not use the deprecated /wp-json/woocommerce/mcp
+  endpoint. Operations follow the user's WooCommerce capabilities.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

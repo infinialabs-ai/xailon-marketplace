@@ -1,0 +1,22 @@
+name: hibob
+kind: mcp
+title: HiBob (Bob)
+summary: Find employees, check time off and balances, submit requests, and read tasks, goals and reviews
+  in Bob within your permissions.
+category: hr
+tags:
+- hr
+- people
+- hibob
+source: ./plugins/hibob
+license: Hosted
+upstream: https://www.hibob.com/platform/core/ai/mcp/
+official: true
+rank: 43
+featured: false
+notes: Beta, rolling out gradually; each employee signs in with OAuth and gets only their own Bob permissions.
+  HiBob lists ChatGPT, Claude and Cursor as supported clients; other DCR clients are untested by the vendor.
+  The older service-user Basic auth is superseded.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

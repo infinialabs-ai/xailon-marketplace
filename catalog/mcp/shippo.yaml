@@ -1,0 +1,23 @@
+name: shippo
+kind: mcp
+title: Shippo
+summary: Compare carrier rates, buy labels, track packages, validate addresses and prepare customs for
+  shipments via Shippo.
+category: commerce
+tags:
+- shippo
+- shipping
+- labels
+- tracking
+source: ./plugins/shippo
+license: Hosted
+upstream: https://docs.goshippo.com/guides/mcp-server
+official: true
+rank: 50
+featured: false
+notes: OAuth sign-in only, with DCR. Live account only, with no test mode, and label purchases are charged
+  to the account. For stdio-only setups the official @shippo/shippo-mcp@3.0.4 bridge exists. Sign-in from
+  Xailon is untested; try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

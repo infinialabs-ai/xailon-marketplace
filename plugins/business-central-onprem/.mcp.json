@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "business-central-onprem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "business-central-mcp@1.7.1"
+      ],
+      "env": {
+        "BC_BASE_URL": "${BC_BASE_URL}",
+        "BC_USERNAME": "${BC_USERNAME}",
+        "BC_PASSWORD": "${BC_PASSWORD}"
+      }
+    }
+  }
+}

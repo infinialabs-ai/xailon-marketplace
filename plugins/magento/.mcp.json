@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "magento": {
+      "type": "http",
+      "url": "${MAGENTO_BASE_URL}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MAGENTO_MCP_TOKEN}"
+      }
+    }
+  }
+}

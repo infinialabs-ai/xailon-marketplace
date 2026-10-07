@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "woocommerce": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@automattic/mcp-wordpress-remote@0.5.1"
+      ],
+      "env": {
+        "WP_API_URL": "${WOOCOMMERCE_URL}/wp-json/mcp/mcp-adapter-default-server",
+        "WP_API_USERNAME": "${WP_API_USERNAME}",
+        "WP_API_PASSWORD": "${WP_APP_PASSWORD}"
+      }
+    }
+  }
+}

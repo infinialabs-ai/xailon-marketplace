@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "sfcc-b2c": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@salesforce/b2c-dx-mcp@3.3.0"
+      ],
+      "env": {
+        "SFCC_SERVER": "${SFCC_SERVER}",
+        "SFCC_CLIENT_ID": "${SFCC_CLIENT_ID}",
+        "SFCC_CLIENT_SECRET": "${SFCC_CLIENT_SECRET}",
+        "SFCC_SHORTCODE": "${SFCC_SHORTCODE}",
+        "SFCC_TENANT_ID": "${SFCC_TENANT_ID}",
+        "SFCC_DISABLE_TELEMETRY": "true"
+      }
+    }
+  }
+}

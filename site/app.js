@@ -2,7 +2,16 @@ const KIND_LABELS = { mcp: "MCP server", skill: "Skill", recipe: "Recipe", mod: 
 const KIND_TABS = { mcp: "MCP", skill: "Skills", recipe: "Recipes", mod: "Mods", plugin: "Plugins" };
 const KIND_ORDER = Object.keys(KIND_LABELS);
 
-const state = { items: [], marketplace: {}, kind: "all", query: "", noCode: false };
+const state = { items: [], marketplace: {}, systems: [], kind: "all", segment: "all", query: "", noCode: false };
+
+const SEGMENT_LABELS = { erp: "ERP", accounting: "Accounting", hr: "HR & payroll", commerce: "Commerce" };
+const STATUS_LABELS = {
+  ga: "Official, GA",
+  preview: "Official, preview",
+  sample: "Sample code",
+  announced: "Announced",
+  none: "No official server",
+};
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -554,8 +563,9 @@ function routeFromHash() {
 
 function bindEvents() {
   document.addEventListener("click", (event) => {
-    const target = event.target.closest("[data-open], [data-copy], [data-kind], [data-close], .hookup .copy");
+    const target = event.target.closest("[data-open], [data-copy], [data-kind], [data-segment], [data-close], .hookup .copy");
     if (!target) return;
+    if (target.closest("summary")) event.preventDefault();
     if (target.matches("[data-copy]")) copy(target.dataset.copy, target);
     else if (target.matches(".hookup .copy")) copy(addCommand(), target);
     else if (target.matches("[data-open]")) openItem(target.dataset.open);
@@ -564,6 +574,10 @@ function bindEvents() {
       state.kind = target.dataset.kind;
       renderKinds();
       renderRows();
+    } else if (target.matches("[data-segment]")) {
+      state.segment = target.dataset.segment;
+      renderSegments();
+      renderSystems();
     }
   });
 
@@ -592,6 +606,58 @@ function bindEvents() {
   window.addEventListener("hashchange", routeFromHash);
 }
 
+function renderSegments() {
+  const count = (segment) => state.systems.filter((s) => segment === "all" || s.segment === segment).length;
+  $("#segments").innerHTML = ["all", ...Object.keys(SEGMENT_LABELS)]
+    .map(
+      (segment) =>
+        `<button class="kind-tab" type="button" role="tab" data-segment="${segment}" aria-selected="${state.segment === segment}">${segment === "all" ? "All" : SEGMENT_LABELS[segment]}<span>${count(segment)}</span></button>`,
+    )
+    .join("");
+}
+
+function systemCard(system) {
+  const packages = (system.packages ?? [])
+    .map((name) => state.items.find((item) => item.name === name))
+    .filter(Boolean)
+    .map((item) => `<button class="pkg" type="button" data-open="${escapeHtml(item.name)}">${escapeHtml(item.title)}</button>`)
+    .join("");
+  const list = (title, rows) => (rows.length ? `<h4>${title}</h4><ul>${rows.join("")}</ul>` : "");
+  const link = (url) => `<a href="${escapeHtml(url)}" rel="noopener">${escapeHtml(url.replace(/^https:\/\/(www\.)?/, "").replace(/\/$/, ""))}</a>`;
+  const oss = (system.open_source ?? []).map(
+    (o) => `<li>${link(o.repo)} <span class="meta">${[o.license, o.transport, o.read_write].filter(Boolean).map(escapeHtml).join(" · ")}</span></li>`,
+  );
+  return `
+    <details class="card system">
+      <summary>
+        <span class="system__name">${escapeHtml(system.system)}<small>${escapeHtml(system.vendor)} · ${escapeHtml(SEGMENT_LABELS[system.segment])}</small></span>
+        <span class="status status--${system.status}">${STATUS_LABELS[system.status]}</span>
+        <span class="system__pkgs">${packages || `<span class="meta">Not packaged</span>`}</span>
+      </summary>
+      <div class="system__body">
+        <p>${escapeHtml(system.summary)}</p>
+        ${system.self_host ? `<h4>Run it yourself</h4><p>${escapeHtml(system.self_host)}</p>` : ""}
+        ${system.gap ? `<h4>Still missing</h4><p>${escapeHtml(system.gap)}</p>` : ""}
+        ${list("Open-source servers", oss)}
+        ${system.alternatives?.length ? `<h4>Hosted alternatives</h4><p>${system.alternatives.map(escapeHtml).join(", ")}</p>` : ""}
+        ${list("Vendor references", (system.refs ?? []).map((ref) => `<li>${link(ref)}</li>`))}
+        <p class="meta">Checked ${escapeHtml(system.verified)}</p>
+      </div>
+    </details>`;
+}
+
+function renderSystems() {
+  if (!state.systems.length) {
+    $("#systems").hidden = true;
+    return;
+  }
+  const order = Object.keys(STATUS_LABELS);
+  const systems = state.systems
+    .filter((s) => state.segment === "all" || s.segment === state.segment)
+    .sort((a, b) => order.indexOf(a.status) - order.indexOf(b.status) || a.system.localeCompare(b.system));
+  $("#system-list").innerHTML = systems.map(systemCard).join("");
+}
+
 async function main() {
   try {
     const response = await fetch("catalog.json", { cache: "no-cache" });
@@ -599,6 +665,7 @@ async function main() {
     const data = await response.json();
     state.items = data.items;
     state.marketplace = data.marketplace;
+    state.systems = data.systems ?? [];
   } catch (error) {
     $("#rows").innerHTML = `<p class="empty">Could not load catalog.json (${escapeHtml(error.message)}). Run <code>npm run build</code>.</p>`;
     return;
@@ -607,6 +674,8 @@ async function main() {
   renderTickets();
   renderKinds();
   renderRows();
+  renderSegments();
+  renderSystems();
   bindEvents();
   routeFromHash();
 }

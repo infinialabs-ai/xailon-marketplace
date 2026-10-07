@@ -1,0 +1,24 @@
+name: amazon-seller
+kind: mcp
+title: Amazon Selling Partner
+summary: Ask about Amazon sales, inventory and listing health, and draft listing or FBA inbound changes
+  for approval.
+category: commerce
+tags:
+- amazon
+- marketplace
+- fba
+- listings
+source: ./plugins/amazon-seller
+license: Hosted
+upstream: https://github.com/amzn/selling-partner-agentic-toolkit
+official: true
+rank: 51
+featured: false
+notes: Beta, US stores only. OAuth via Seller Central consent. There is no DCR; the server advertises
+  Client ID Metadata Documents, which Xailon uses. Amazon names only Amazon Quick and Claude as clients,
+  so check consent works before publishing. Writes are drafted for approval. Sign-in from Xailon is untested;
+  try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

@@ -1,0 +1,5 @@
+{
+  "name": "commercetools",
+  "version": "1.0.0",
+  "description": "Read and manage commercetools products, categories, carts, orders and customers through the official Commerce MCP."
+}

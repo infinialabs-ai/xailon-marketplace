@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hibob": {
+      "type": "http",
+      "url": "https://mcp.hibob.com/mcp/public"
+    }
+  }
+}

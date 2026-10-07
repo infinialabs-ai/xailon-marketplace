@@ -1,0 +1,5 @@
+{
+  "name": "odoo-legacy",
+  "version": "1.0.0",
+  "description": "Read, aggregate and diagnose Odoo 16-19 data, with approval-gated writes, using your existing Odoo credentials."
+}

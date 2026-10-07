@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "quickbooks": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "npm@11.21.0",
+        "exec",
+        "-y",
+        "--",
+        "github:intuit/quickbooks-online-mcp-server#31a1dd5c3e170e368dbff651abbaf61aabde6ed9"
+      ],
+      "env": {
+        "QUICKBOOKS_CLIENT_ID": "${QUICKBOOKS_CLIENT_ID}",
+        "QUICKBOOKS_CLIENT_SECRET": "${QUICKBOOKS_CLIENT_SECRET}",
+        "QUICKBOOKS_REFRESH_TOKEN": "${QUICKBOOKS_REFRESH_TOKEN}",
+        "QUICKBOOKS_REALM_ID": "${QUICKBOOKS_REALM_ID}",
+        "QUICKBOOKS_ENVIRONMENT": "${QUICKBOOKS_ENVIRONMENT}"
+      }
+    }
+  }
+}

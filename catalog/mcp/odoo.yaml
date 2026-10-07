@@ -1,0 +1,26 @@
+name: odoo
+kind: mcp
+title: Odoo
+summary: Query and update an Odoo 20 database through Odoo's built-in MCP server and the server actions
+  exposed as AI tools.
+category: erp
+tags:
+- erp
+- odoo
+- crm
+- inventory
+source: ./plugins/odoo
+license: Hosted
+upstream: https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html
+official: true
+rank: 35
+featured: false
+env:
+  ODOO_URL: Your Odoo 20 database URL over https, with no trailing slash (e.g. https://mycompany.odoo.com).
+  ODOO_API_KEY: API key created under My Preferences > Security > Add API Key with Scope set to MCP. Plain
+    RPC keys are rejected; the key is shown once.
+notes: Odoo 20 only, and needs the Odoo AI app. Acts with the key owner's access rights; reads and writes
+  come from server actions exposed as AI tools (3 by default). Use odoo-legacy for Odoo 16-19.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

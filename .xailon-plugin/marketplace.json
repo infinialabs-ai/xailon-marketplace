@@ -377,6 +377,239 @@
       ]
     },
     {
+      "name": "netsuite",
+      "description": "Read, create and update NetSuite records, run reports and saved searches, and query with SuiteQL through Oracle's AI Connector.",
+      "source": "./plugins/netsuite",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "netsuite",
+        "oracle",
+        "finance"
+      ]
+    },
+    {
+      "name": "odoo",
+      "description": "Query and update an Odoo 20 database through Odoo's built-in MCP server and the server actions exposed as AI tools.",
+      "source": "./plugins/odoo",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "odoo",
+        "crm",
+        "inventory"
+      ]
+    },
+    {
+      "name": "odoo-legacy",
+      "description": "Read, aggregate and diagnose Odoo 16-19 data, with approval-gated writes, using your existing Odoo credentials.",
+      "source": "./plugins/odoo-legacy",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "odoo",
+        "self-hosted"
+      ]
+    },
+    {
+      "name": "business-central-onprem",
+      "description": "Open pages, read and edit records, and run actions in on-prem Business Central 27/28 through its web client protocol.",
+      "source": "./plugins/business-central-onprem",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "business-central",
+        "dynamics",
+        "on-prem"
+      ]
+    },
+    {
+      "name": "quickbooks",
+      "description": "Read and write QuickBooks Online customers, invoices, bills, journal entries and payments, and run P&L, balance sheet and aging reports.",
+      "source": "./plugins/quickbooks",
+      "category": "accounting",
+      "tags": [
+        "accounting",
+        "invoicing",
+        "quickbooks",
+        "intuit"
+      ]
+    },
+    {
+      "name": "xero",
+      "description": "Manage Xero contacts, invoices, quotes, payments, bank transactions and payroll timesheets, and pull P&L, balance sheet and aged reports.",
+      "source": "./plugins/xero",
+      "category": "accounting",
+      "tags": [
+        "accounting",
+        "invoicing",
+        "payroll",
+        "xero"
+      ]
+    },
+    {
+      "name": "zoho",
+      "description": "Use the Zoho Books and Zoho People tools you enable in Zoho MCP: invoices, expenses, contacts, employees, leave.",
+      "source": "./plugins/zoho",
+      "category": "accounting",
+      "tags": [
+        "accounting",
+        "hr",
+        "zoho"
+      ]
+    },
+    {
+      "name": "gusto",
+      "description": "Ask about Gusto payroll, employees, contractors and time off, build reports, and run payroll where the company is eligible.",
+      "source": "./plugins/gusto",
+      "category": "hr",
+      "tags": [
+        "hr",
+        "payroll",
+        "gusto"
+      ]
+    },
+    {
+      "name": "deel",
+      "description": "Query and act on Deel contracts, people, time off, payroll and IT assets with your Deel permissions.",
+      "source": "./plugins/deel",
+      "category": "hr",
+      "tags": [
+        "hr",
+        "payroll",
+        "eor",
+        "deel"
+      ]
+    },
+    {
+      "name": "hibob",
+      "description": "Find employees, check time off and balances, submit requests, and read tasks, goals and reviews in Bob within your permissions.",
+      "source": "./plugins/hibob",
+      "category": "hr",
+      "tags": [
+        "hr",
+        "people",
+        "hibob"
+      ]
+    },
+    {
+      "name": "shopify-admin",
+      "description": "Manage a Shopify store's products, orders, customers, inventory and metafields through the Admin GraphQL API.",
+      "source": "./plugins/shopify-admin",
+      "category": "commerce",
+      "tags": [
+        "shopify",
+        "ecommerce",
+        "orders",
+        "inventory"
+      ]
+    },
+    {
+      "name": "woocommerce",
+      "description": "Query, create and update WooCommerce products and orders through the store's WordPress MCP Adapter endpoint.",
+      "source": "./plugins/woocommerce",
+      "category": "commerce",
+      "tags": [
+        "woocommerce",
+        "wordpress",
+        "ecommerce",
+        "orders"
+      ]
+    },
+    {
+      "name": "magento",
+      "description": "Query and update a Magento 2 store's orders, catalog, customers, inventory and CMS through the Magebit MCP module on the store.",
+      "source": "./plugins/magento",
+      "category": "commerce",
+      "tags": [
+        "magento",
+        "adobe-commerce",
+        "ecommerce",
+        "orders"
+      ]
+    },
+    {
+      "name": "sfcc-b2c",
+      "description": "Search B2C Commerce docs, call SCAPI Admin APIs, inspect logs and deploy cartridges on a B2C Commerce instance.",
+      "source": "./plugins/sfcc-b2c",
+      "category": "commerce",
+      "tags": [
+        "salesforce",
+        "sfcc",
+        "scapi",
+        "ecommerce"
+      ]
+    },
+    {
+      "name": "commercetools",
+      "description": "Read and manage commercetools products, categories, carts, orders and customers through the official Commerce MCP.",
+      "source": "./plugins/commercetools",
+      "category": "commerce",
+      "tags": [
+        "commercetools",
+        "composable",
+        "ecommerce",
+        "orders"
+      ]
+    },
+    {
+      "name": "paypal",
+      "description": "Create and manage PayPal invoices, orders, refunds, disputes, subscriptions and transaction reports.",
+      "source": "./plugins/paypal",
+      "category": "commerce",
+      "tags": [
+        "paypal",
+        "payments",
+        "invoices"
+      ]
+    },
+    {
+      "name": "shippo",
+      "description": "Compare carrier rates, buy labels, track packages, validate addresses and prepare customs for shipments via Shippo.",
+      "source": "./plugins/shippo",
+      "category": "commerce",
+      "tags": [
+        "shippo",
+        "shipping",
+        "labels",
+        "tracking"
+      ]
+    },
+    {
+      "name": "amazon-seller",
+      "description": "Ask about Amazon sales, inventory and listing health, and draft listing or FBA inbound changes for approval.",
+      "source": "./plugins/amazon-seller",
+      "category": "commerce",
+      "tags": [
+        "amazon",
+        "marketplace",
+        "fba",
+        "listings"
+      ]
+    },
+    {
+      "name": "bigcommerce-storefront",
+      "description": "Search a BigCommerce storefront's catalog, build a cart and hand off a checkout URL as a guest shopper.",
+      "source": "./plugins/bigcommerce-storefront",
+      "category": "commerce",
+      "tags": [
+        "bigcommerce",
+        "storefront",
+        "catalog"
+      ]
+    },
+    {
+      "name": "shipstation-docs",
+      "description": "Search ShipStation API documentation, endpoints and schemas while building shipping integrations.",
+      "source": "./plugins/shipstation-docs",
+      "category": "commerce",
+      "tags": [
+        "shipstation",
+        "shipping",
+        "docs"
+      ]
+    },
+    {
       "name": "frontend-design",
       "description": "Distinctive, intentional visual design for new UI: typography, colour, layout and motion.",
       "source": {

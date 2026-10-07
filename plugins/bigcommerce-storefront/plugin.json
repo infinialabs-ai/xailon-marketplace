@@ -1,0 +1,5 @@
+{
+  "name": "bigcommerce-storefront",
+  "version": "1.0.0",
+  "description": "Search a BigCommerce storefront's catalog, build a cart and hand off a checkout URL as a guest shopper."
+}

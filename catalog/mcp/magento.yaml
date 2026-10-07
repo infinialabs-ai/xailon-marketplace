@@ -1,0 +1,28 @@
+name: magento
+kind: mcp
+title: Magento / Adobe Commerce
+summary: Query and update a Magento 2 store's orders, catalog, customers, inventory and CMS through the
+  Magebit MCP module on the store.
+category: commerce
+tags:
+- magento
+- adobe-commerce
+- ecommerce
+- orders
+source: ./plugins/magento
+license: MIT
+upstream: https://github.com/magebitcom/magento2-mcp-module
+official: false
+rank: 46
+featured: false
+env:
+  MAGENTO_BASE_URL: 'The store''s https base URL with no trailing slash, e.g. https://shop.example.com.
+    The module must be installed: composer require magebitcom/magento2-mcp-module (v1.3.3) or magebitcom/magento2-mcp-suite.'
+  MAGENTO_MCP_TOKEN: Bearer token from `bin/magento magebit:mcp:token:create --admin-user <user> --name
+    xailon [--allow-writes]` or System > MCP > Connections. It is shown once.
+notes: Community module, not Adobe (Adobe Commerce MCP is announced, not shipped). Works on-prem and PaaS.
+  Writes need --allow-writes plus the global write toggle. Its OAuth path needs a pre-registered client
+  (no DCR), so this package uses a bearer token.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

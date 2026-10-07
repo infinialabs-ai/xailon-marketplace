@@ -1,0 +1,28 @@
+name: business-central-onprem
+kind: mcp
+title: Business Central (on-prem)
+summary: Open pages, read and edit records, and run actions in on-prem Business Central 27/28 through
+  its web client protocol.
+category: erp
+tags:
+- erp
+- business-central
+- dynamics
+- on-prem
+source: ./plugins/business-central-onprem
+license: MIT
+upstream: https://github.com/SShadowS/business-central-mcp
+official: false
+rank: 37
+featured: false
+env:
+  BC_BASE_URL: Base URL of the on-prem BC web client over https, e.g. https://bc.example.com/BC (the server
+    instance path).
+  BC_USERNAME: BC user with NavUserPassword credential type; use a dedicated, least-privilege user.
+  BC_PASSWORD: Password of that NavUserPassword user.
+notes: Community server for on-prem BC27/BC28 with NavUserPassword auth. It drives the reverse-engineered
+  WebUI protocol, so it can break on BC updates. For BC online use the official server, which Xailon cannot
+  use without a pre-registered Entra client ID.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

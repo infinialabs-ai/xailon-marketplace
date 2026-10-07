@@ -1,0 +1,5 @@
+{
+  "name": "shopify-admin",
+  "version": "1.0.0",
+  "description": "Manage a Shopify store's products, orders, customers, inventory and metafields through the Admin GraphQL API."
+}

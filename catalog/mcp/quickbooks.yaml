@@ -1,0 +1,30 @@
+name: quickbooks
+kind: mcp
+title: QuickBooks Online
+summary: Read and write QuickBooks Online customers, invoices, bills, journal entries and payments, and
+  run P&L, balance sheet and aging reports.
+category: accounting
+tags:
+- accounting
+- invoicing
+- quickbooks
+- intuit
+source: ./plugins/quickbooks
+license: Apache-2.0
+upstream: https://github.com/intuit/quickbooks-online-mcp-server
+official: true
+rank: 38
+featured: false
+env:
+  QUICKBOOKS_CLIENT_ID: Client ID of your app on developer.intuit.com (Keys & credentials).
+  QUICKBOOKS_CLIENT_SECRET: Client secret of the same Intuit app.
+  QUICKBOOKS_REFRESH_TOKEN: OAuth refresh token from the one-time handshake (the repo's `npm run auth`,
+    or Intuit's OAuth Playground).
+  QUICKBOOKS_REALM_ID: Company ID (realmId) returned by the OAuth handshake.
+  QUICKBOOKS_ENVIRONMENT: '`sandbox` or `production`.'
+notes: Official Intuit open-source server (early preview). Needs your own Intuit app; production OAuth
+  needs a public HTTPS redirect for the first handshake. Rotated refresh tokens are saved to .env in the
+  npx cache. Set QUICKBOOKS_DISABLE_WRITE/UPDATE/DELETE=true to limit. Intuit's hosted connector is Claude/ChatGPT-only.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

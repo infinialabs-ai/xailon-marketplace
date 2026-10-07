@@ -674,3 +674,54 @@ pre.snippet {
   .flow__row { grid-auto-flow: row; }
   .noscript { padding: 24px 16px; }
 }
+
+/* Business systems map */
+
+.systems #segments { margin: 0 0 16px; }
+.systems__list { display: grid; gap: 10px; }
+.system > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1.6fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  list-style: none;
+}
+.system > summary::-webkit-details-marker { display: none; }
+.system > summary:hover .system__name { color: var(--accent); }
+.system__name { font-weight: 600; color: var(--ink); min-width: 0; }
+.system__name small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); }
+.system__pkgs { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.pkg {
+  padding: 5px 10px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent-deep);
+  font: 500 13px/1.2 inherit;
+  cursor: pointer;
+}
+.pkg:hover { background: var(--accent); color: #fff; }
+.status {
+  justify-self: start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.status--ga { background: #e3f4ea; color: #1f6b43; }
+.status--preview { background: #fff3d6; color: #7a5300; }
+.status--sample, .status--announced { background: #eef0ff; color: var(--accent-deep); }
+.status--none { background: #f1f0f5; color: #5d5a73; }
+.system__body { padding: 0 20px 18px; border-top: 1px solid rgba(22, 18, 63, 0.08); }
+.system__body p { margin: 12px 0 0; color: var(--body); font-size: 15px; }
+.system__body h4 { margin: 16px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.system__body ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; overflow-wrap: anywhere; }
+.system__body .meta, .system .meta { color: var(--muted); font-size: 13px; }
+
+@media (max-width: 720px) {
+  .system > summary { grid-template-columns: minmax(0, 1fr) auto; }
+  .system__pkgs { grid-column: 1 / -1; justify-content: flex-start; }
+}

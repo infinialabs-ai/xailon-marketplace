@@ -1,0 +1,5 @@
+{
+  "name": "netsuite",
+  "version": "1.0.0",
+  "description": "Read, create and update NetSuite records, run reports and saved searches, and query with SuiteQL through Oracle's AI Connector."
+}

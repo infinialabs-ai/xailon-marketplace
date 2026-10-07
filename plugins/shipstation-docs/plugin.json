@@ -1,0 +1,5 @@
+{
+  "name": "shipstation-docs",
+  "version": "1.0.0",
+  "description": "Search ShipStation API documentation, endpoints and schemas while building shipping integrations."
+}

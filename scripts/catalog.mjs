@@ -236,7 +236,7 @@ function mcpServersOf(tree, fail) {
         // Variables the user must supply, referenced as ${VAR}; anything else is a fixed value.
         env: [
           ...new Set(
-            [...Object.values(server.env ?? {}), ...Object.values(server.headers ?? {})].flatMap((value) =>
+            [server.url ?? "", ...Object.values(server.env ?? {}), ...Object.values(server.headers ?? {})].flatMap((value) =>
               [...String(value).matchAll(/\$\{(\w+)\}/g)].map((m) => m[1]),
             ),
           ),
@@ -350,7 +350,10 @@ function inspect(entry, fail) {
     fail(`license ${HOSTED} is only for mcp items whose servers are all remote endpoints`);
   }
   for (const server of contents.mcpServers) {
-    if (server.url && !/^https:\/\//.test(server.url)) fail(`MCP server ${server.name} must use an https URL`);
+    // A tenant-specific endpoint may start with a ${VAR} holding the tenant's https base URL.
+    if (server.url && !/^(?:https:\/\/|\$\{\w+\})/.test(server.url)) {
+      fail(`MCP server ${server.name} must use an https URL or start with a \${VAR} base URL`);
+    }
   }
 
   const declaredEnv = Object.keys(entry.env ?? {}).sort();
@@ -398,6 +401,34 @@ function configSnippet(contents) {
 
 function indexSource(source) {
   return typeof source === "string" ? source : { url: source.url, ...(source.path ? { path: source.path } : {}), sha: source.sha };
+}
+
+const SEGMENTS = ["erp", "accounting", "hr", "commerce"];
+const STATUSES = ["ga", "preview", "sample", "announced", "none"];
+
+// The business-systems map: which vendors ship an MCP server and which packages cover them.
+function loadSystems(items, errors) {
+  const file = path.join(ROOT, "catalog", "business-systems.yaml");
+  if (!fs.existsSync(file)) return [];
+  const systems = readYaml(file)?.systems ?? [];
+  const mcpNames = new Set(items.filter((item) => item.kind === "mcp").map((item) => item.name));
+  const seen = new Set();
+  for (const system of systems) {
+    const fail = (message) => errors.push(`catalog/business-systems.yaml: ${system.system ?? "?"}: ${message}`);
+    if (typeof system.system !== "string" || !system.system.trim()) fail("system is required");
+    if (seen.has(system.system)) fail("listed twice");
+    seen.add(system.system);
+    if (!SEGMENTS.includes(system.segment)) fail(`segment must be one of ${SEGMENTS.join(", ")}`);
+    if (!STATUSES.includes(system.status)) fail(`status must be one of ${STATUSES.join(", ")}`);
+    if (!DATE.test(String(system.verified))) fail("verified must be YYYY-MM-DD");
+    for (const ref of [...(system.refs ?? []), ...(system.open_source ?? []).map((o) => o.repo)]) {
+      if (!/^https:\/\//.test(ref)) fail(`reference ${ref} must be an https URL`);
+    }
+    for (const name of system.packages ?? []) {
+      if (!mcpNames.has(name)) fail(`package ${name} is not an mcp item in the catalog`);
+    }
+  }
+  return systems;
 }
 
 function byKindThenRank(a, b) {
@@ -455,6 +486,7 @@ function generate() {
   const site = {
     marketplace: { name: hub.name, title: hub.title, description: hub.description, gitUrl: hub.git_url, repoUrl: hub.repo_url },
     items,
+    systems: loadSystems(items, errors),
   };
   return {
     errors,

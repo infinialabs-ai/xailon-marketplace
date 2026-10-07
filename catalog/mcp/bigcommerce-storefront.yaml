@@ -1,0 +1,26 @@
+name: bigcommerce-storefront
+kind: mcp
+title: BigCommerce Storefront
+summary: Search a BigCommerce storefront's catalog, build a cart and hand off a checkout URL as a guest
+  shopper.
+category: commerce
+tags:
+- bigcommerce
+- storefront
+- catalog
+source: ./plugins/bigcommerce-storefront
+license: Hosted
+upstream: https://docs.bigcommerce.com/developer/api-reference/mcp/overview
+official: true
+rank: 52
+featured: false
+env:
+  BIGCOMMERCE_STOREFRONT_MCP_URL: The storefront's https MCP URL, copied from Control Panel > Settings
+    > Early access after enabling the MCP server and picking the storefront. Each storefront has a unique
+    URL, and it can take up to 10 minutes to go live.
+notes: Open beta. Shopper-facing only (catalog, cart, checkout handoff), no back-office or order admin.
+  Guest flow needs no credentials; customer login and B2B tools are listed as coming. Sign-in from Xailon
+  is untested; try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

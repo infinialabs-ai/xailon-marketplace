@@ -1,0 +1,5 @@
+{
+  "name": "business-central-onprem",
+  "version": "1.0.0",
+  "description": "Open pages, read and edit records, and run actions in on-prem Business Central 27/28 through its web client protocol."
+}

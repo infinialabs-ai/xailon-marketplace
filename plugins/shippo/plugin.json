@@ -1,0 +1,5 @@
+{
+  "name": "shippo",
+  "version": "1.0.0",
+  "description": "Compare carrier rates, buy labels, track packages, validate addresses and prepare customs for shipments via Shippo."
+}

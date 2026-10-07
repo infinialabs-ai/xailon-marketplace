@@ -1,0 +1,5 @@
+{
+  "name": "odoo",
+  "version": "1.0.0",
+  "description": "Query and update an Odoo 20 database through Odoo's built-in MCP server and the server actions exposed as AI tools."
+}

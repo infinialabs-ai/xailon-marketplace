@@ -1,0 +1,29 @@
+name: commercetools
+kind: mcp
+title: commercetools
+summary: Read and manage commercetools products, categories, carts, orders and customers through the official
+  Commerce MCP.
+category: commerce
+tags:
+- commercetools
+- composable
+- ecommerce
+- orders
+source: ./plugins/commercetools
+license: MIT
+upstream: https://github.com/commercetools/commerce-mcp
+official: true
+rank: 48
+featured: false
+env:
+  CTP_CLIENT_ID: API client ID from Merchant Center > Settings > Developer settings.
+  CTP_CLIENT_SECRET: API client secret (shown once at creation).
+  CTP_PROJECT_KEY: commercetools project key.
+  CTP_AUTH_URL: Region auth URL, e.g. https://auth.europe-west1.gcp.commercetools.com.
+  CTP_API_URL: Region API URL, e.g. https://api.europe-west1.gcp.commercetools.com.
+notes: Ships read-only (TOOLS=read_all). Set TOOLS=all, or a list such as read_products,update_orders,
+  to allow writes. Managed Commerce MCP Servers exist in Merchant Center, but their URL shape is not public,
+  so this uses the self-hosted package.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

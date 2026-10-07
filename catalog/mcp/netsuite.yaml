@@ -1,0 +1,28 @@
+name: netsuite
+kind: mcp
+title: NetSuite
+summary: Read, create and update NetSuite records, run reports and saved searches, and query with SuiteQL
+  through Oracle's AI Connector.
+category: erp
+tags:
+- erp
+- netsuite
+- oracle
+- finance
+source: ./plugins/netsuite
+license: Hosted
+upstream: https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_4160616848.html
+official: true
+rank: 34
+featured: false
+env:
+  NETSUITE_ACCOUNT_HOST: Your NetSuite account ID exactly as it appears in your account's own hostnames
+    (e.g. the part before .app.netsuite.com in your NetSuite URL; sandbox IDs use the hyphenated lowercase
+    form such as 1234567-sb1). Account ID is under Setup > Company > Company Information.
+notes: 'Install the MCP Standard Tools SuiteApp; enable Server SuiteScript, OAuth 2.0 and REST Web Services;
+  use a non-Administrator role with MCP Server Connection and OAuth 2.0 Access Tokens. OAuth with PKCE;
+  the integration record is created on first connection. If it is not, create a public-client integration
+  record. SuiteQL is read-only. Sign-in from Xailon is untested; try it once before relying on '
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shipstation-docs": {
+      "type": "http",
+      "url": "https://docs.shipstation.com/mcp"
+    }
+  }
+}

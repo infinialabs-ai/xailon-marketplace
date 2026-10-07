@@ -1,0 +1,22 @@
+name: gusto
+kind: mcp
+title: Gusto
+summary: Ask about Gusto payroll, employees, contractors and time off, build reports, and run payroll
+  where the company is eligible.
+category: hr
+tags:
+- hr
+- payroll
+- gusto
+source: ./plugins/gusto
+license: Hosted
+upstream: https://support.gusto.com/article/250715155353740/connect-gusto-to-chatgpt-claude-and-slack
+official: true
+rank: 41
+featured: false
+notes: OAuth sign-in with your Gusto account (DCR advertised; registration not exercised). Tools inherit
+  your Gusto role. Payroll-run actions only for companies Gusto marks eligible. Gusto asks that it be
+  used only from trusted MCP clients. Sign-in from Xailon is untested; try it once before relying on it
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

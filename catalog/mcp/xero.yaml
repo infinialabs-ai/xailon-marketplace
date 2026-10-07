@@ -1,0 +1,27 @@
+name: xero
+kind: mcp
+title: Xero
+summary: Manage Xero contacts, invoices, quotes, payments, bank transactions and payroll timesheets, and
+  pull P&L, balance sheet and aged reports.
+category: accounting
+tags:
+- accounting
+- invoicing
+- payroll
+- xero
+source: ./plugins/xero
+license: MIT
+upstream: https://github.com/XeroAPI/xero-mcp-server
+official: true
+rank: 39
+featured: false
+env:
+  XERO_CLIENT_ID: Client ID of a Xero Custom Connection app (developer.xero.com > My Apps), connected
+    to one organisation.
+  XERO_CLIENT_SECRET: Client secret of that Custom Connection.
+notes: Official Xero server, read-write. Custom Connections are a paid Xero feature available only in
+  some regions, and every scope listed in the README must be granted. The hosted mcp.xero.com endpoint
+  is read-only and needs a pre-registered OAuth client (no DCR), so it is not packaged.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

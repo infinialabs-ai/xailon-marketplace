@@ -1,0 +1,29 @@
+name: shopify-admin
+kind: mcp
+title: Shopify Admin
+summary: Manage a Shopify store's products, orders, customers, inventory and metafields through the Admin
+  GraphQL API.
+category: commerce
+tags:
+- shopify
+- ecommerce
+- orders
+- inventory
+source: ./plugins/shopify-admin
+license: MIT
+upstream: https://github.com/GeLi2001/shopify-mcp
+official: false
+rank: 44
+featured: false
+env:
+  SHOPIFY_CLIENT_ID: Client ID of a Dev Dashboard custom app installed on the store (Settings > Apps and
+    sales channels > Develop apps > Build app in dev dashboard).
+  SHOPIFY_CLIENT_SECRET: Client secret of the same app. The server exchanges it for a roughly 24-hour
+    Admin API token and refreshes it.
+  MYSHOPIFY_DOMAIN: The store's permanent domain, e.g. your-store.myshopify.com (no scheme).
+notes: Community, not Shopify. Shopify's own Admin MCP (setup.shopify.com/mcp) has no DCR or CIMD and
+  is limited to approved clients, so it can't be used directly. Grant only the Admin API scopes you need;
+  the app can cancel orders and issue refunds.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

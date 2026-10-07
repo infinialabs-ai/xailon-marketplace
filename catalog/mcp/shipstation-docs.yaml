@@ -1,0 +1,20 @@
+name: shipstation-docs
+kind: mcp
+title: ShipStation API Docs
+summary: Search ShipStation API documentation, endpoints and schemas while building shipping integrations.
+category: commerce
+tags:
+- shipstation
+- shipping
+- docs
+source: ./plugins/shipstation-docs
+license: Hosted
+upstream: https://docs.shipstation.com/connect-mcp
+official: true
+rank: 53
+featured: false
+notes: Documentation only, no account access and no auth. ShipStation's API MCP repo has no licence and
+  no commits since 2025-08, so it is not packaged.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

@@ -1,0 +1,5 @@
+{
+  "name": "magento",
+  "version": "1.0.0",
+  "description": "Query and update a Magento 2 store's orders, catalog, customers, inventory and CMS through the Magebit MCP module on the store."
+}

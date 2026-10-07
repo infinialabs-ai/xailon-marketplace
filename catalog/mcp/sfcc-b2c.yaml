@@ -1,0 +1,29 @@
+name: sfcc-b2c
+kind: mcp
+title: Salesforce B2C Commerce
+summary: Search B2C Commerce docs, call SCAPI Admin APIs, inspect logs and deploy cartridges on a B2C
+  Commerce instance.
+category: commerce
+tags:
+- salesforce
+- sfcc
+- scapi
+- ecommerce
+source: ./plugins/sfcc-b2c
+license: Apache-2.0
+upstream: https://github.com/SalesforceCommerceCloud/b2c-developer-tooling
+official: true
+rank: 47
+featured: false
+env:
+  SFCC_SERVER: Instance hostname, e.g. zzxx-001.dx.commercecloud.salesforce.com (no scheme).
+  SFCC_CLIENT_ID: Account Manager API client ID with access to the instance and SCAPI.
+  SFCC_CLIENT_SECRET: Secret for that API client.
+  SFCC_SHORTCODE: SCAPI short code from Business Manager > Salesforce Commerce API Settings.
+  SFCC_TENANT_ID: Tenant (organization) ID, e.g. zzxx_001.
+notes: Developer-oriented, not a merchant ops tool. Needs Node >= 22.16. Docs tools work without credentials.
+  Preview toolsets need --allow-non-ga-tools. Telemetry is on by default upstream, and this package turns
+  it off.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

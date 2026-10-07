@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bigcommerce-storefront": {
+      "type": "http",
+      "url": "${BIGCOMMERCE_STOREFRONT_MCP_URL}"
+    }
+  }
+}

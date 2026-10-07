@@ -87,6 +87,22 @@ Everything Xailon installs is a plugin, so each kind is a plugin shaped for its 
 `scripts/ci.sh` also installs every item with the real `xailon` binary into a
 throwaway `XAILON_PATH_ROOT` when `xailon` is on `PATH`.
 
+## Business systems
+
+`catalog/business-systems.yaml` maps ERP, accounting, HR and commerce systems to the MCP
+servers that exist for them: whether the vendor ships one (`ga`, `preview`, `sample`,
+`announced` or `none`), the open-source servers and how to run them yourself, what is still
+missing, and which marketplace packages cover the system. Every entry cites the vendor's or
+the project's own documentation and the date it was checked. The site renders it under
+*Business systems*; `npm run check` rejects unknown statuses, non-https references and
+packages that are not MCP items in the catalog.
+
+Tenant-specific endpoints are written with variables, for example
+`"url": "${ODOO_URL}/mcp"` with `"Authorization": "Bearer ${ODOO_API_KEY}"`; the item's `env`
+describes each variable. Some official servers (Dynamics 365 Business Central and Finance &
+Operations, Shopify, Square, BambooHR) only accept pre-registered OAuth clients, so the map
+lists them but no package can connect to them directly yet.
+
 ## Recipes
 
 The 100 multi-agent recipes are derived from

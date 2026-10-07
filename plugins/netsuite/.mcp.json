@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "netsuite": {
+      "type": "http",
+      "url": "https://${NETSUITE_ACCOUNT_HOST}.suitetalk.api.netsuite.com/services/mcp/v1/all"
+    }
+  }
+}
