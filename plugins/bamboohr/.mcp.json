@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "bamboohr": {
+      "type": "http",
+      "url": "https://${BAMBOOHR_SUBDOMAIN}.bamboohr.com/api/mcp",
+      "oauth": {
+        "clientId": "${BAMBOOHR_CLIENT_ID}",
+        "clientSecret": "${BAMBOOHR_CLIENT_SECRET}",
+        "scopes": [
+          "mcp",
+          "employee",
+          "employee_directory",
+          "time_off",
+          "offline_access"
+        ],
+        "callbackPort": 33418
+      }
+    }
+  }
+}

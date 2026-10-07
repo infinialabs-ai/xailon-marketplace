@@ -11,7 +11,7 @@ source: ./plugins/paypal
 license: Hosted
 upstream: https://developer.paypal.com/ai-tools/mcp-server
 official: true
-rank: 49
+rank: 52
 featured: false
 notes: OAuth 2.1 with dynamic client registration and PayPal login and consent. Production account; for
   testing use https://mcp.sandbox.paypal.com or the local @paypal/mcp. Write tools can move money, so

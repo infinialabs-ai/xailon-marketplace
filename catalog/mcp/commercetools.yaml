@@ -13,7 +13,7 @@ source: ./plugins/commercetools
 license: MIT
 upstream: https://github.com/commercetools/commerce-mcp
 official: true
-rank: 48
+rank: 51
 featured: false
 env:
   CTP_CLIENT_ID: API client ID from Merchant Center > Settings > Developer settings.

@@ -13,7 +13,7 @@ source: ./plugins/magento
 license: MIT
 upstream: https://github.com/magebitcom/magento2-mcp-module
 official: false
-rank: 46
+rank: 49
 featured: false
 env:
   MAGENTO_BASE_URL: 'The store''s https base URL with no trailing slash, e.g. https://shop.example.com.

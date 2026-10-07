@@ -12,7 +12,7 @@ source: ./plugins/hibob
 license: Hosted
 upstream: https://www.hibob.com/platform/core/ai/mcp/
 official: true
-rank: 43
+rank: 45
 featured: false
 notes: Beta, rolling out gradually; each employee signs in with OAuth and gets only their own Bob permissions.
   HiBob lists ChatGPT, Claude and Cursor as supported clients; other DCR clients are untested by the vendor.

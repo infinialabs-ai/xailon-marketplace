@@ -389,6 +389,28 @@
       ]
     },
     {
+      "name": "business-central",
+      "description": "Microsoft's hosted MCP server for Business Central online: API pages, queries and actions as the signed-in user.",
+      "source": "./plugins/business-central",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "microsoft",
+        "finance"
+      ]
+    },
+    {
+      "name": "dynamics-finance-operations",
+      "description": "Microsoft's Dynamics 365 ERP MCP server in your F&O environment: data entities, forms and actions as the signed-in user.",
+      "source": "./plugins/dynamics-finance-operations",
+      "category": "erp",
+      "tags": [
+        "erp",
+        "microsoft",
+        "supply-chain"
+      ]
+    },
+    {
       "name": "odoo",
       "description": "Query and update an Odoo 20 database through Odoo's built-in MCP server and the server actions exposed as AI tools.",
       "source": "./plugins/odoo",
@@ -490,6 +512,17 @@
         "hr",
         "people",
         "hibob"
+      ]
+    },
+    {
+      "name": "bamboohr",
+      "description": "BambooHR's hosted MCP server (beta) for employee, directory and time-off data, using an OAuth app you register.",
+      "source": "./plugins/bamboohr",
+      "category": "hr",
+      "tags": [
+        "hr",
+        "people",
+        "time-off"
       ]
     },
     {

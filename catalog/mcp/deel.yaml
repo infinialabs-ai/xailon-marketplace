@@ -12,7 +12,7 @@ source: ./plugins/deel
 license: Hosted
 upstream: https://developer.deel.com/mcp/introduction
 official: true
-rank: 42
+rank: 44
 featured: false
 notes: OAuth 2.1 with DCR; the account needs API access enabled. Read and write tools at organization
   and worker level, bounded by OAuth scopes. Personal access tokens are a fallback the vendor offers for

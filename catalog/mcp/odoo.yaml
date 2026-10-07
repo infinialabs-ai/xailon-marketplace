@@ -13,7 +13,7 @@ source: ./plugins/odoo
 license: Hosted
 upstream: https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html
 official: true
-rank: 35
+rank: 37
 featured: false
 env:
   ODOO_URL: Your Odoo 20 database URL over https, with no trailing slash (e.g. https://mycompany.odoo.com).

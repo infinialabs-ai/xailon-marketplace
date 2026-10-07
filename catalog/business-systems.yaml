@@ -155,10 +155,10 @@ systems:
   self_host: For on-prem BC27/BC28 run `npx -y business-central-mcp@1.7.1` on a machine that can reach
     the BC web client, using a NavUserPassword service user. It can also be wrapped in a container next
     to the BC server tier.
-  gap: The official server is online-only and needs a pre-registered Entra client ID. Xailon does OAuth
-    only through dynamic client registration or client metadata documents, so it cannot use the official
-    endpoint directly. On-prem has only the reverse-engineered community bridge.
+  gap: The official server is online-only and needs your own Entra app registration (the business-central
+    package signs in with it). On-premises has only the reverse-engineered community bridge.
   packages:
+  - business-central
   - business-central-onprem
   verified: '2026-10-07'
 - system: Microsoft Dynamics 365 Finance & Operations
@@ -179,10 +179,10 @@ systems:
   - CData Connect AI
   self_host: Not applicable. The server runs inside each F&O environment; customers register an Entra
     app for their client and add it under Allowed MCP clients.
-  gap: The client allow-list and the lack of DCR mean Xailon cannot connect without a pre-registered,
-    admin-approved client ID. Per-call credit billing applies, the server is US English only, and Cloud
-    Hosted Environments are not supported.
-  packages: []
+  gap: Each client ID must be added to the environment's Allowed MCP clients list by an admin, and calls
+    from clients other than Copilot Studio are billed per tool call.
+  packages:
+  - dynamics-finance-operations
   verified: '2026-10-07'
 - system: Microsoft Dynamics GP
   vendor: Microsoft
@@ -694,9 +694,10 @@ systems:
   - Apideck
   - Unified.to
   self_host: Use the vendor-hosted endpoint with a developer-portal OAuth app; there is no reason to self-host.
-  gap: No dynamic client registration means a DCR-only client such as Xailon cannot connect by URL alone,
-    and the server is still beta.
-  packages: []
+  gap: You must register your own OAuth app in the BambooHR developer portal (the bamboohr package uses
+    it), and the server is still in beta with no payroll tools.
+  packages:
+  - bamboohr
   verified: '2026-10-07'
 - system: Deel
   vendor: Deel

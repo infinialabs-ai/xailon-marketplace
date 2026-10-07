@@ -13,7 +13,7 @@ source: ./plugins/woocommerce
 license: MIT
 upstream: https://developer.woocommerce.com/docs/features/mcp/
 official: true
-rank: 45
+rank: 48
 featured: false
 env:
   WOOCOMMERCE_URL: The store's https base URL with no trailing slash, e.g. https://store.example.com.

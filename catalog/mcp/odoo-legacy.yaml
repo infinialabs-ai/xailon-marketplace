@@ -12,7 +12,7 @@ source: ./plugins/odoo-legacy
 license: MIT
 upstream: https://github.com/erpipe-org/mcp-odoo
 official: false
-rank: 36
+rank: 38
 featured: false
 env:
   ODOO_URL: Odoo base URL over https (e.g. https://erp.example.com).

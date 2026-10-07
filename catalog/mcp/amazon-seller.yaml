@@ -13,7 +13,7 @@ source: ./plugins/amazon-seller
 license: Hosted
 upstream: https://github.com/amzn/selling-partner-agentic-toolkit
 official: true
-rank: 51
+rank: 54
 featured: false
 notes: Beta, US stores only. OAuth via Seller Central consent. There is no DCR; the server advertises
   Client ID Metadata Documents, which Xailon uses. Amazon names only Amazon Quick and Claude as clients,

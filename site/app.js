@@ -185,7 +185,10 @@ function runsList(item) {
   const { mcpServers, hooks, executables } = item.contents;
   const rows = [
     ...mcpServers.map(
-      (s) => `<li><b>MCP</b><span><strong>${escapeHtml(s.name)}</strong>: <code>${escapeHtml(s.url ?? [s.command, ...s.args].join(" "))}</code></span></li>`,
+      (s) =>
+        `<li><b>MCP</b><span><strong>${escapeHtml(s.name)}</strong>: <code>${escapeHtml(s.url ?? [s.command, ...s.args].join(" "))}</code>${
+          s.oauth?.clientId ? `<br>Signs in with your own OAuth app (client ID <code>${escapeHtml(s.oauth.clientId)}</code>)` : ""
+        }</span></li>`,
     ),
     ...hooks.map(
       (h) => `<li><b>Hook</b><span>${escapeHtml(h.event)}${h.matcher ? ` (${escapeHtml(h.matcher)})` : ""}: <code>${escapeHtml(h.run)}</code></span></li>`,

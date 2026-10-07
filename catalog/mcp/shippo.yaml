@@ -13,7 +13,7 @@ source: ./plugins/shippo
 license: Hosted
 upstream: https://docs.goshippo.com/guides/mcp-server
 official: true
-rank: 50
+rank: 53
 featured: false
 notes: OAuth sign-in only, with DCR. Live account only, with no test mode, and label purchases are charged
   to the account. For stdio-only setups the official @shippo/shippo-mcp@3.0.4 bridge exists. Sign-in from

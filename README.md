@@ -99,9 +99,12 @@ packages that are not MCP items in the catalog.
 
 Tenant-specific endpoints are written with variables, for example
 `"url": "${ODOO_URL}/mcp"` with `"Authorization": "Bearer ${ODOO_API_KEY}"`; the item's `env`
-describes each variable. Some official servers (Dynamics 365 Business Central and Finance &
-Operations, Shopify, Square, BambooHR) only accept pre-registered OAuth clients, so the map
-lists them but no package can connect to them directly yet.
+describes each variable. Servers that only accept a pre-registered OAuth client (Dynamics 365
+Business Central and Finance & Operations, BambooHR) are packaged with an `oauth` block:
+you register your own app with the redirect URI `http://localhost:33418/oauth_callback`, and
+`clientId` and any secret come from `${VAR}`s. This needs a Xailon release that supports
+pre-registered OAuth clients. Shopify's and Square's own servers only accept clients the
+vendor approves, so the map lists them without a package.
 
 ## Recipes
 

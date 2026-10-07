@@ -12,7 +12,7 @@ source: ./plugins/zoho
 license: Hosted
 upstream: https://www.zoho.com/us/books/help/mcp/zoho-books-mcp.html
 official: true
-rank: 40
+rank: 42
 featured: false
 env:
   ZOHO_MCP_URL: Full https Server URL from your Zoho MCP dashboard (mcp.zoho.com or your regional mcp.zoho.eu/.in/.com.au/.jp

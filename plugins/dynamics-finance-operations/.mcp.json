@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "dynamics-finance-operations": {
+      "type": "http",
+      "url": "https://${FNO_ENVIRONMENT_HOST}/mcp",
+      "oauth": {
+        "clientId": "${FNO_CLIENT_ID}",
+        "scopes": [
+          "https://${FNO_ENVIRONMENT_HOST}/.default"
+        ],
+        "authorizationServer": "https://login.microsoftonline.com/${FNO_TENANT_ID}/v2.0",
+        "callbackPort": 33418
+      }
+    }
+  }
+}

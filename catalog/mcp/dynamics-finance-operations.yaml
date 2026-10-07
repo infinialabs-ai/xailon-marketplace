@@ -1,0 +1,29 @@
+name: dynamics-finance-operations
+kind: mcp
+title: Dynamics 365 Finance & Operations (ERP MCP)
+summary: 'Microsoft''s Dynamics 365 ERP MCP server in your F&O environment: data entities, forms and actions
+  as the signed-in user.'
+category: erp
+tags:
+- erp
+- microsoft
+- supply-chain
+source: ./plugins/dynamics-finance-operations
+license: Hosted
+upstream: https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp
+official: true
+rank: 36
+featured: false
+env:
+  FNO_ENVIRONMENT_HOST: Host name of the finance and operations environment, without https://, for example
+    contoso.operations.dynamics.com.
+  FNO_CLIENT_ID: Application (client) ID of the Entra app you registered; the same ID must be listed in
+    Allowed MCP clients.
+  FNO_TENANT_ID: Microsoft Entra tenant ID (Entra app registration > Overview).
+notes: 'Needs your own OAuth app. Entra app: redirect http://localhost:33418/oauth_callback (Mobile and
+  desktop), API permissions > Dynamics ERP > Delegated mcp.tools, admin consent. In F&O (10.0.47+, Tier
+  2+): System administration > Setup > Allowed MCP clients > New, ClientId = app ID, Allowed = true. Non-Copilot
+  Studio clients: 0.1 Copilot Credits per tool call.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

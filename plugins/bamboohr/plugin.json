@@ -1,0 +1,5 @@
+{
+  "name": "bamboohr",
+  "version": "1.0.0",
+  "description": "BambooHR's hosted MCP server (beta) for employee, directory and time-off data, using an OAuth app you register."
+}

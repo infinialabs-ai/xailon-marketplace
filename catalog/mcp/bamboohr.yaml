@@ -1,0 +1,28 @@
+name: bamboohr
+kind: mcp
+title: BambooHR
+summary: BambooHR's hosted MCP server (beta) for employee, directory and time-off data, using an OAuth
+  app you register.
+category: hr
+tags:
+- hr
+- people
+- time-off
+source: ./plugins/bamboohr
+license: Hosted
+upstream: https://documentation.bamboohr.com/docs/mcp-server
+official: true
+rank: 46
+featured: false
+env:
+  BAMBOOHR_SUBDOMAIN: Your company subdomain, the <name> in https://<name>.bamboohr.com.
+  BAMBOOHR_CLIENT_ID: Client ID of the application you created at developers.bamboohr.com.
+  BAMBOOHR_CLIENT_SECRET: Client secret of that application; keep it in the secret store or environment,
+    never in a file.
+notes: Needs your own OAuth app. Create an application at developers.bamboohr.com, set its redirect URI
+  to exactly http://localhost:33418/oauth_callback and select the mcp scope plus the entity scopes you
+  need. A BambooHR admin must enable the AI Connectors app (Settings > Apps) for your access level. The
+  MCP server is in beta.
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

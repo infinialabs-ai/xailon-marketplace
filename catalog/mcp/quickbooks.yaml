@@ -13,7 +13,7 @@ source: ./plugins/quickbooks
 license: Apache-2.0
 upstream: https://github.com/intuit/quickbooks-online-mcp-server
 official: true
-rank: 38
+rank: 40
 featured: false
 env:
   QUICKBOOKS_CLIENT_ID: Client ID of your app on developer.intuit.com (Keys & credentials).

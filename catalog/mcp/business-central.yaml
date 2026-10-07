@@ -1,0 +1,30 @@
+name: business-central
+kind: mcp
+title: Dynamics 365 Business Central
+summary: 'Microsoft''s hosted MCP server for Business Central online: API pages, queries and actions as
+  the signed-in user.'
+category: erp
+tags:
+- erp
+- microsoft
+- finance
+source: ./plugins/business-central
+license: Hosted
+upstream: https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/use-mcp-server-non-microsoft
+official: true
+rank: 35
+featured: false
+env:
+  BC_CLIENT_ID: Application (client) ID of the Entra app you registered for this client (Entra admin center
+    > App registrations > Overview).
+  BC_TENANT_ID: Microsoft Entra tenant ID (GUID) of the Business Central environment.
+  BC_ENVIRONMENT: Business Central environment name, for example Production.
+  BC_COMPANY: Company name, for example CRONUS USA, Inc. Non-ASCII names must be sent as =?base64?<UTF-8
+    base64>?=.
+notes: 'Needs your own OAuth app. Entra: New registration (Multiple Entra ID tenants), Authentication
+  > Add Redirect URI > Mobile and desktop applications: http://localhost:33418/oauth_callback. API permissions
+  > Dynamics 365 Business Central > Delegated > Financials.ReadWrite.All, then Grant admin consent. Business
+  Central online only.'
+reviewed:
+  by: subhransusekhar
+  at: '2026-10-07'

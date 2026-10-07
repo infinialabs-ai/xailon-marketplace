@@ -12,7 +12,7 @@ source: ./plugins/bigcommerce-storefront
 license: Hosted
 upstream: https://docs.bigcommerce.com/developer/api-reference/mcp/overview
 official: true
-rank: 52
+rank: 55
 featured: false
 env:
   BIGCOMMERCE_STOREFRONT_MCP_URL: The storefront's https MCP URL, copied from Control Panel > Settings

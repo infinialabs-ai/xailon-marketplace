@@ -11,7 +11,7 @@ source: ./plugins/shipstation-docs
 license: Hosted
 upstream: https://docs.shipstation.com/connect-mcp
 official: true
-rank: 53
+rank: 56
 featured: false
 notes: Documentation only, no account access and no auth. ShipStation's API MCP repo has no licence and
   no commits since 2025-08, so it is not packaged.

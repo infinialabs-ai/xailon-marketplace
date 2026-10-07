@@ -12,7 +12,7 @@ source: ./plugins/gusto
 license: Hosted
 upstream: https://support.gusto.com/article/250715155353740/connect-gusto-to-chatgpt-claude-and-slack
 official: true
-rank: 41
+rank: 43
 featured: false
 notes: OAuth sign-in with your Gusto account (DCR advertised; registration not exercised). Tools inherit
   your Gusto role. Payroll-run actions only for companies Gusto marks eligible. Gusto asks that it be

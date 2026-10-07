@@ -1,0 +1,5 @@
+{
+  "name": "dynamics-finance-operations",
+  "version": "1.0.0",
+  "description": "Microsoft's Dynamics 365 ERP MCP server in your F&O environment: data entities, forms and actions as the signed-in user."
+}

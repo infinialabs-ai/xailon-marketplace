@@ -1,0 +1,5 @@
+{
+  "name": "business-central",
+  "version": "1.0.0",
+  "description": "Microsoft's hosted MCP server for Business Central online: API pages, queries and actions as the signed-in user."
+}

@@ -13,7 +13,7 @@ source: ./plugins/business-central-onprem
 license: MIT
 upstream: https://github.com/SShadowS/business-central-mcp
 official: false
-rank: 37
+rank: 39
 featured: false
 env:
   BC_BASE_URL: Base URL of the on-prem BC web client over https, e.g. https://bc.example.com/BC (the server

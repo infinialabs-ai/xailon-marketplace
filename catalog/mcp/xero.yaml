@@ -13,7 +13,7 @@ source: ./plugins/xero
 license: MIT
 upstream: https://github.com/XeroAPI/xero-mcp-server
 official: true
-rank: 39
+rank: 41
 featured: false
 env:
   XERO_CLIENT_ID: Client ID of a Xero Custom Connection app (developer.xero.com > My Apps), connected

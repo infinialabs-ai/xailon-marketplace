@@ -233,10 +233,16 @@ function mcpServersOf(tree, fail) {
         url: server.url ?? null,
         type: server.type ?? (server.url ? "http" : "stdio"),
         headers: server.headers ?? {},
+        oauth: server.oauth ?? null,
         // Variables the user must supply, referenced as ${VAR}; anything else is a fixed value.
         env: [
           ...new Set(
-            [server.url ?? "", ...Object.values(server.env ?? {}), ...Object.values(server.headers ?? {})].flatMap((value) =>
+            [
+              server.url ?? "",
+              ...Object.values(server.env ?? {}),
+              ...Object.values(server.headers ?? {}),
+              ...Object.values(server.oauth ?? {}).flat(),
+            ].flatMap((value) =>
               [...String(value).matchAll(/\$\{(\w+)\}/g)].map((m) => m[1]),
             ),
           ),
@@ -385,6 +391,13 @@ function configSnippet(contents) {
             name: server.name,
             uri: server.url,
             ...(Object.keys(server.headers).length ? { headers: server.headers } : {}),
+            ...(server.oauth
+              ? {
+                  oauth: Object.fromEntries(
+                    Object.entries(server.oauth).map(([key, value]) => [key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`), value]),
+                  ),
+                }
+              : {}),
             ...(server.env.length ? { env_keys: server.env } : {}),
             enabled: true,
             timeout: 300,

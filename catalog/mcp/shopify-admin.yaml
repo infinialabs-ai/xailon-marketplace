@@ -13,7 +13,7 @@ source: ./plugins/shopify-admin
 license: MIT
 upstream: https://github.com/GeLi2001/shopify-mcp
 official: false
-rank: 44
+rank: 47
 featured: false
 env:
   SHOPIFY_CLIENT_ID: Client ID of a Dev Dashboard custom app installed on the store (Settings > Apps and
